@@ -1,0 +1,94 @@
+{
+ "name": "IT",
+ "children": [
+  {
+   "name": "BU Specific",
+   "children": [
+    {
+     "name": "Change the Business",
+     "children": [
+      {"name": "Investment Projects", "size": 3938},
+      {"name": "MADO", "size": 3812}
+     ]
+    },
+    {
+     "name": "Run the Business",
+     "children": [
+      {"name": "Project Driven RtB", "size": 3534},
+      {"name": "Application  Hosting", "size": 5731},
+      {"name": "Application Production Operation & Support", "size": 7840},
+      {"name": "Software Assigned to Apps", "size": 5914},
+      {"name": "Software BU Direct", "size": 3416},
+      {"name": "Non IT App Hosting", "size": 3416},
+      {"name": "Contact Center", "size": 3416}            
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Core IT Services",
+   "children": [
+    {
+     "name": "Client Computing",
+     "children": [
+      {"name": "Client Computing", "size": 1983}
+     ]
+    },
+    {
+     "name": "Collaboration",
+     "children": [
+      {"name": "Collaboration", "size": 1983},
+      {"name": "Unified Communication", "size": 2047}
+     ]
+    },
+    {
+     "name": "Communication",
+     "children": [
+      {"name": "Mobile Subscription", "size": 1983},
+      {"name": "Audio Conference", "size": 2047},
+      {"name": "Video Conference", "size": 1375},
+      {"name": "Office Phone", "size": 8746}
+     ]
+    }       
+   ]
+  },
+
+  {
+   "name": "Enterprise IT Services",
+   "children": [
+    {
+     "name": "Change the Business",
+     "children": [
+      {"name": "Strategic Initiatives", "size": 721}
+     ]
+    },
+    {
+     "name": "Run the Business",
+     "children": [
+      {"name": "Enterprise Applications", "size": 1983}
+     ]
+    },
+    {
+     "name": "Infrastructure",
+     "children": [
+      {"name": "LAN/WLAN", "size": 1983},
+      {"name": "Wide Area Network", "size": 2047},
+      {"name": "Office Print", "size": 1375}
+     ]
+    },
+    {
+     "name": "Enterprise Software",
+     "children": [
+      {"name": "ELAs", "size": 1983}
+     ]
+    },
+    {
+     "name": "IT Management, & Technology Services",
+     "children": [
+      {"name": "OoCIO, Architecture", "size": 1983}
+     ]
+    }                
+   ]
+  }
+ ]
+}

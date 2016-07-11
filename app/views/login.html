@@ -1,0 +1,31 @@
+<div id="container" >
+    <div class="login-wrapper">
+        <div id="form-login"> 
+           <div class="login-text-wrapper">
+                <img src="images/droid.png">
+           </div>    
+            <form name="form" ng-submit="signin(form.$valid, form)" role="form" novalidate="" class="ng-pristine ng-valid-email ng-invalid ng-invalid-required">
+                <div class="login-text-wrapper">
+                    <h3 class="modal-title">Login To Contra Program</h3>
+                </div>
+                <div class="login-text-wrapper">
+                    <p>Please enter your HPE email address and password</p>
+                </div>
+                <div class="form-group" ng-class="{ 'has-error': form.email.$dirty &amp;&amp; form.email.$invalid}">
+                    <input type="email" required="" class="form-control ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-touched" name="email" ng-model="credentials.email" placeholder="HPE EMAIL" autofocus="" style="">
+                    <span ng-show="form.email.$touched&amp;&amp;form.email.$dirty &amp;&amp; form.email.$invalid" class="help-block ng-hide">Administrator email is required</span>
+                </div>
+                <div class="form-group" ng-class="{'has-error': form.password.$dirty &amp;&amp; form.password.$invalid}">
+                    <input type="password" required="" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" ng-model="credentials.password" name="password" placeholder="PASSWORD">
+                    <span ng-show="form.password.$dirty &amp;&amp; form.password.$invalid" class="help-block ng-hide">Password is required</span>
+                </div>
+                <div class="form-group has-error ng-hide" ng-show="errorMsg">
+                    <span class="help-block ng-binding"></span>
+                </div>
+                <div class="form-group">
+                    <a type="submit" href="#/" class="btn btn-primary btn-block">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

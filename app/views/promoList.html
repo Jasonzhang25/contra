@@ -1,0 +1,344 @@
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/jquery-1.10.2.min.js"></script>
+<script src="scripts/modernizr.min.js"></script>
+<script src="scripts/jquery.nicescroll.js"></script>
+<script src="scripts/scripts.js"></script>
+
+<section ng-hide="fakeIntro">
+  <!-- left side start-->
+  <div class="left-side sticky-left-side">
+    <!--logo and iconic logo start-->
+    <div class="logo">
+      <a href="#/">
+        <img src="images/HPE_logo.png" alt=""></a>
+    </div>
+
+    <div class="logo-icon text-center">
+      <a href="#/">
+        <img src="images/logo_icon.png" alt=""></a>
+    </div>
+    <!--logo and iconic logo end-->
+
+    <div class="left-side-inner">
+      <!--sidebar nav start-->
+      <ul class="nav nav-pills nav-stacked custom-nav">
+        <li>
+          <a href="#/promo"> <i class="fa fa-th"></i>
+            <span>1. Budgeting & Planning</span>
+          </a>
+        </li>
+
+        <li>
+          <a href=""> <i class="fa fa-clock-o"></i>
+            <span>2. Contra Performance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href=""> <i class="fa fa-balance-scale"></i>
+            <span>3. Competitive Pricing</span>
+          </a>
+        </li>
+
+        <li class="menu-list nav-active">
+          <a href=""> <i class="fa fa-bar-chart"></i>
+            <span>4. ROI Analysis</span>
+          </a>
+          <ul class="sub-menu-list">
+            <li class="active">
+              <a href="#/promo">Promo List</a>
+            </li>
+            <li >
+              <a href="#/promo/new">Promo New</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href=""> <i class="fa fa-signal"></i>
+            <span>5. Execute Campaign</span>
+          </a>
+        </li>
+
+        <li>
+          <a href=""> <i class="fa fa-dashboard"></i>
+            <span>6. Weekly Tracking</span>
+          </a>
+        </li>                       
+
+        <li class="menu-list">
+          <a href=""> <i class="fa fa-briefcase"></i>
+            <span>Promo Approval</span>
+          </a>
+          <ul class="sub-menu-list">
+            <li>
+              <a href="#/approval">Promo Approval</a>
+            </li>
+          </ul>
+        </li>                
+
+        <li class="menu-list">
+          <a href="">
+            <i class="fa fa-cogs"></i>
+            <span>Approver Management</span>
+          </a>
+          <ul class="sub-menu-list">
+            <li>
+              <a href="#/approver">Approver Group</a>
+            </li>
+            <li>
+              <a href="#/approver/edit">Approver Edit</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!--sidebar nav end--> </div>
+  </div>
+  <!-- left side end-->
+
+  <!-- main content start-->
+  <div class="main-content" >
+
+    <!-- header section start-->
+    <div class="header-section">
+      <!--toggle button start-->
+      <a class="toggle-btn">
+        <i class="fa fa-bars"></i>
+      </a>
+      <!--toggle button end-->
+      <span>
+        <img src="images/droid.png" class="projecticon"></span>
+    </div>
+    <!-- header section end-->
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+      <div class="section">
+        <div class="filter-seperator">
+          <!--
+              <div class="btn filter-float btn-filter btn-filter-color" ng-click="toggle()">
+          Filter
+          <i class="marR10 icon-chevron-up icon-blue"></i>
+        </div>
+        -->
+        <div class="row form-inline">
+          <div  class="col-xs-12 col-sm-10 ctr-filter">
+            <div ng-if="filterBtn == true" id="btnFilter2" 
+                  class="btn filter-float btn-filter clearEffects btn-filter-color" 
+                  ng-click="clickFn('filter')">
+              Filter
+              <i class="marR10 icon-chevron-down icon-blue btn-filter-color"></i>
+            </div>
+            <div ng-if="filterBtn == false" id="btnFilter2" 
+                  class="btn filter-float btn-filter btn-filter-color withEffects" 
+                  ng-click="clickFn('filter-close')">
+              Filter
+              <i class="marR10 icon-chevron-up icon-blue"></i>
+            </div>
+          </div>
+        </div>
+
+        <div id="filterId" ng-show="filterPanel">
+            <div class="form-group">
+              <form role="form">
+                <div class="row">
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label class="nowrap">Incident Date From:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text" ui-date="dateOptions" name="From" class="form-control ng-pristine ng-untouched ng-valid ng-valid-date ng-valid-min ng-valid-max" ng-model="fromDate" data-max-date="05/20/2016" placeholder="From" bs-datepicker="" data-bs-show="dpd1.show" autoclose="1">
+                      <span class="input-group-addon" tabindex="0" ng-click="dpd1.show = !dpd1.show">
+                        <i class="icon-calendar"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label>Incident Date To:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text"  class="form-control"  placeholder="From"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label class="nowrap">Incident Date From:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text"  class="form-control"  placeholder="From"></div>
+                  </div>
+
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label>Incident Date To:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Until" style="width:100%"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label class="nowrap">Incident Date From:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text"  class="form-control"  placeholder="From"></div>
+                  </div>
+
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label>Incident Date To:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Until" style="width:100%"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label class="nowrap">Incident Date From:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+<a class="btn-select" id="btn_select" style="width:100%"> 
+<span class="cur-select" style="width:100%">Choose...</span> 
+<select style="width:100%"> 
+<option>select1</option> 
+<option>select2</option> 
+<option>select3</option> 
+<option>select4</option> 
+<option>select5</option> 
+</select> 
+</a>                   
+                    </div>
+                  </div>
+
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label>Incident Date To:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group" class="btn-select">
+                        <select name="cars" style="width:100%" >
+                          <option value="volvo">Choose...</option>
+                          <option value="saab">Select2</option>
+                          <option value="fiat">Select3</option>
+                          <option value="audi" style="background-color:eeeeee">Select4</option>
+                        </select>
+                      
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-6  col-lgf-2 col-h">
+                    <button type="button" class="btn btn-primary">Search</button>
+                  </div>
+
+                  <div class="col-sm-6 col-md-6  col-lgf-2 col-h">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" 
+                                data-target="#myModal">Reset</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>  
+      </div>
+    </div>
+
+    <div class="section bg-white ptop10">
+
+      <div class="row search-bar">
+        <div class="col-sm-8">
+          <div class="input-group">
+            <span class="input-group-addon marL5">
+              <i class="icon-search"></i>
+            </span>
+            <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Quick find for..." type="text" ng-model="gridOptions.quickFilterText"></div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="input-group">
+                      <span class="input-group-addon marL5">
+              <i class="icon-table"></i>
+            </span>
+            <div class="dropdown input-group">
+              <button type="button" id="dropdownMenu1" 
+                  data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                <span class="btntext zselect">View Mode</span>
+                <span  class="icon-chevron-down pull-right icon-blue"></span>
+              </button>
+               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation">
+                     <a role="menuitem" tabindex="-1" href="#">View Mode 1</a>
+                  </li>
+                  <li role="presentation">
+                     <a role="menuitem" tabindex="-1" href="#">View Mode 2</a>
+                  </li>
+                  <li role="presentation">
+                     <a role="menuitem" tabindex="-1" href="#">
+                        View Mode 3
+                     </a>
+                  </li>
+               </ul>
+            </div>               
+          </div>
+        </div>        
+      </div>
+
+      <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
+
+      <div class="butttonBackground padding10 text-right">
+        <div class="row">
+          <div class="col-sm-8 col-md-8  col-lgf-8 addtolist">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>
+            <button type="button" class="btn btn-primary disabled" data-toggle="modal" data-target="#myModalDelete">Disable</button>
+          </div>
+
+          <div class="col-sm-4 col-md-4  col-lgf-4">
+            <button type="button" class="btn btn-primary">Save Later</button>
+            <a class="btn btn-primary" href="#/financial" role="button">Financial Revie</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- 模态框（Modal） -->
+  <div class="modal container-fluid ng-scope top am-fade" id="myModal" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-sheet">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" 
+                     data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Approval Detail Status</h4>
+        </div>
+        <div class="modal-body">
+          <div id="grid1" ui-grid="{ data: myData1 }" class="grid" ui-grid-auto-resize></div>
+        </div>
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">OK</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!--body wrapper end-->
+  <!--footer section start-->
+  <!--
+        <footer>© Copyright 2016 Hewlett Packard Enterprise Development LP</footer>
+-->
+<!--footer section end-->
+</div>
+<!-- main content end-->
+</section>

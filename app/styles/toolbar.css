@@ -1,0 +1,25 @@
+.filter-seperator {
+border: #ddd solid 1px;
+background-color: #F5F5F5;
+margin-bottom: -1px;
+}
+.marR10 {
+margin-right: 10px;
+}
+.icon-blue {
+color: #00B388;
+}
+.btn-filter {
+border-left: 0px;
+border-top: 0px;
+border-bottom: 0px;
+border-radius: 0px;
+border-right: 1px solid #ddd;
+margin-left: 0px;
+background-color: #fff;
+padding: 6px 10px;
+}
+#filterId {
+background-color: #FFF;
+padding: 10px;
+}

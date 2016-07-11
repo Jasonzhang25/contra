@@ -1,0 +1,9 @@
+<input type="text" class="form-control" ng-model="inputTime" placeholder="Date" bs-datepicker data-bs-show="dpShow" trigger="manual" ng-required="required" error-bubble error-msg="Required Field" autoclose="1">
+<span class='input-group-addon' tabindex="0" ng-blur="dpShow=false" ng-click="dateClick()">
+  <i class='icon-calendar'></i>
+</span>
+<input type="text" class="form-control" ng-model="inputTime" data-time-format="HH:mm" data-bs-show="tpShow" trigger="manual" placeholder="Time" data-arrow-behavior="picker" data-minute-step="1" bs-timepicker ng-required="required" error-bubble error-msg="Date is required" autoclose="1">
+<span class='input-group-addon' tabindex="0" ng-blur="tpShow=false" ng-click="timeClick()">
+  <i class='icon-clock-o'></i>
+</span>&nbsp;
+<span class='input-group-addon btn-now marL5 gray' ng-click='dateTimeNow()'>Now</span>

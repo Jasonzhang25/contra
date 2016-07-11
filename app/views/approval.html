@@ -1,0 +1,147 @@
+
+<script src="scripts/jquery-1.10.2.min.js"></script>
+<script src="scripts/modernizr.min.js"></script>
+<script src="scripts/jquery.nicescroll.js"></script>
+<script src="scripts/scripts.js"></script>
+
+<section >
+  <!-- left side start-->
+  <div class="left-side sticky-left-side">
+    <!--logo and iconic logo start-->
+    <div class="logo">
+      <a href="#/">
+        <img src="images/HPE_logo.png" alt=""></a>
+    </div>
+
+    <div class="logo-icon text-center">
+      <a href="#/">
+        <img src="images/logo_icon.png" alt=""></a>
+    </div>
+    <!--logo and iconic logo end-->
+
+    <div class="left-side-inner">
+      <!--sidebar nav start-->
+      <ul class="nav nav-pills nav-stacked custom-nav">
+        <li class="menu-list">
+          <a href="#/promo"> <i class="fa fa-home"></i>
+            <span>Promo Management</span>
+          </a>
+          <ul class="sub-menu-list">
+            <li>
+              <a href="#/promo">Promo List</a>
+            </li>
+            <li>
+              <a href="#/promo/new">Promo New</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-list nav-active">
+          <a href=""> <i class="fa fa-laptop"></i>
+            <span>Promo Approval</span>
+          </a>
+          <ul class="sub-menu-list">
+            <li class="active">
+              <a href="#/approval">Promo Approval</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="menu-list">
+          <a href=""> <i class="fa fa-cogs"></i>
+            <span>Approver Management</span>
+          </a>
+          <ul class="sub-menu-list">
+            <li>
+              <a href="#/approver">Approver Group</a>
+            </li>
+            <li>
+              <a href="#/approver/edit">Approver Edit</a>
+            </li>
+          </ul>
+        </li> 
+      </ul>
+      <!--sidebar nav end--> </div>
+  </div>
+  <!-- left side end-->
+
+  <!-- main content start-->
+  <div class="main-content" >
+    <!-- header section start-->
+    <div class="header-section">
+      <!--toggle button start-->
+      <a class="toggle-btn">
+        <i class="fa fa-bars"></i>
+      </a>
+      <!--toggle button end-->
+      <span>
+        <img src="images/droid.png" class="projecticon"></span>
+    </div>
+    <!-- header section end-->
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+
+      <div class="row search-bar">
+        <div class="col-sm-12">
+          <div class="input-group">
+            <span class="input-group-addon marL5"><i class="icon-search"></i></span>
+            <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Quick find for..." type="text" ng-model="gridOptions.quickFilterText">
+          </div>
+        </div> 
+      </div>
+
+      <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
+
+      <div class="butttonBackground padding10 text-right">
+        <div class="row">
+          <div class="col-sm-8 col-md-8  col-lgf-8 addtolist">
+            <button type="button" class="btn btn-primary" data-toggle="modal" 
+              data-target="#myModal">View</button>               
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 模态框（Modal） -->
+      <div class="modal container-fluid ng-scope top am-fade" id="myModal" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" 
+                     data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Approve Promo Plan</h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <form role="form">
+                  <p>999999 Network Promotion from FY16 Q2</p>
+                  <label for="name">Comments:</label>
+                  <textarea class="form-control" rows="3"></textarea>
+                </form>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" 
+                     data-dismiss="modal">Reject</button>
+              <button type="button" class="btn btn-primary">Approve</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> </div>
+        <!-- /.modal --> 
+      </div>
+
+
+      <!--body wrapper end-->
+
+      <!--footer section start-->
+      <!--
+        <footer>© Copyright 2016 Hewlett Packard Enterprise Development LP</footer>
+    -->
+    <!--footer section end--> </div>
+</div>
+<!-- main content end-->
+
+</section>

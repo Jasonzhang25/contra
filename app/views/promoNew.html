@@ -1,0 +1,547 @@
+
+<script src="scripts/jquery-1.10.2.min.js"></script>
+<script src="scripts/modernizr.min.js"></script>
+<script src="scripts/jquery.nicescroll.js"></script>
+<script src="scripts/scripts.js"></script>
+
+<section>
+  <!-- left side start-->
+  <div class="left-side sticky-left-side">
+    <!--logo and iconic logo start-->
+    <div class="logo">
+      <a href="#/">
+        <img src="images/HPE_logo.png" alt=""></a>
+    </div>
+
+    <div class="logo-icon text-center">
+      <a href="#/">
+        <img src="images/logo_icon.png" alt=""></a>
+    </div>
+    <!--logo and iconic logo end-->
+
+    <div class="left-side-inner">
+      <!--sidebar nav start-->
+      <ul class="nav nav-pills nav-stacked custom-nav">
+        <li>
+          <a href="#/promo"> <i class="fa fa-th"></i>
+            <span>1-Budgeting & Planning</span>
+          </a>
+        </li>
+
+        <li>
+          <a href=""> <i class="fa fa-clock-o"></i>
+            <span>2-Contra Performance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href=""> <i class="fa fa-balance-scale"></i>
+            <span>3-Competitive Pricing</span>
+          </a>
+        </li>
+
+        <li class="menu-list nav-active">
+          <a href=""> <i class="fa fa-bar-chart"></i>
+            <span>4-ROI Analysis</span>
+          </a>
+          <ul class="sub-menu-list">
+            <li >
+              <a href="#/promo">Promo List</a>
+            </li>
+            <li class="active">
+              <a href="#/promo/new">Promo New</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href=""> <i class="fa fa-signal"></i>
+            <span>5-Execute Campaign</span>
+          </a>
+        </li>
+
+        <li>
+          <a href=""> <i class="fa fa-dashboard"></i>
+            <span>6-Weekly Tracking</span>
+          </a>
+        </li>                       
+
+        <li class="menu-list">
+          <a href=""> <i class="fa fa-briefcase"></i>
+            <span>Promo Approval</span>
+          </a>
+          <ul class="sub-menu-list">
+            <li>
+              <a href="#/approval">Promo Approval</a>
+            </li>
+          </ul>
+        </li>                
+
+        <li class="menu-list">
+          <a href="">
+            <i class="fa fa-cogs"></i>
+            <span>Approver Management</span>
+          </a>
+          <ul class="sub-menu-list">
+            <li>
+              <a href="#/approver">Approver Group</a>
+            </li>
+            <li>
+              <a href="#/approver/edit">Approver Edit</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!--sidebar nav end--> </div>
+  </div>
+  <!-- left side end-->
+
+  <!-- main content start-->
+  <div class="main-content" >
+    <!-- header section start-->
+    <div class="header-section">
+      <!--toggle button start-->
+      <a class="toggle-btn">
+        <i class="fa fa-bars"></i>
+      </a>
+      <span>
+        <img src="images/droid.png" class="projecticon"></span>
+
+      <!--toggle button end-->
+      <div class="menu-right">
+        <i class="fa fa-user"></i>
+        <span>Jason Zhang(Administrator)</span>
+
+      </div>
+    </div>
+    <!-- header section end-->
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+      <div class="section">
+        <div class="filter-seperator">
+          <div class="row form-inline">
+            <div  class="col-xs-12 col-sm-10 ctr-filter">
+              <div ng-if="filterBtn == true" id="btnFilter2" 
+                    class="btn filter-float btn-filter clearEffects btn-filter-color" 
+                    ng-click="clickFn('filter')">
+                Filter
+                <i class="marR10 icon-chevron-down icon-blue btn-filter-color"></i>
+              </div>
+              <div ng-if="filterBtn == false" id="btnFilter2" 
+                    class="btn filter-float btn-filter btn-filter-color withEffects" 
+                    ng-click="clickFn('filter-close')">
+                Filter
+                <i class="marR10 icon-chevron-up icon-blue"></i>
+              </div>
+            </div>
+          </div>
+
+          <div id="filterId" ng-show="filterPanel">
+            <div class="form-group">
+              <form role="form">
+                <div class="row">
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label class="nowrap">Promo Plan Title:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text" name="fromDate" class="form-control"></div>
+                  </div>
+
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label>Region:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="dropdown input-group">
+                      <button type="button" id="dropdownMenu1" 
+                          data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                        <span class="btntext zselect">Choose...</span>
+                        <span  class="icon-chevron-down pull-right icon-blue"></span>
+                      </button>
+                       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">EMEA</a>
+                          </li>
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">APJ</a>
+                          </li>
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">
+                                AMS
+                             </a>
+                          </li>
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">
+                             India
+                             </a>
+                          </li>
+                       </ul>
+                    </div>                  
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label class="nowrap">Promo Duration:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text"  class="form-control"  placeholder="6M"></div>
+                  </div>
+
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label>Subregion:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Sub Region" style="width:100%"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label class="nowrap">Promo Start Month:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text" name="fromDate" class="form-control ng-pristine ng-untouched ng-valid ng-valid-date" ng-model="fromDate" data-max-date="05/20/2016" placeholder="From" ui-date="dateOptions">
+                      <span class="input-group-addon" tabindex="0" ng-click="dpd1.show = !dpd1.show">
+                        <i class="fa fa-calendar"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label>Country:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="dropdown input-group">
+                        <button type="button" id="dropdownMenu1" 
+                            data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                          <span class="btntext zselect">Choose...</span>
+                          <span  class="icon-chevron-down pull-right icon-blue"></span>
+                        </button>
+                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation">
+                               <a role="menuitem" tabindex="-1" href="#">Americ</a>
+                            </li>
+                            <li role="presentation">
+                               <a role="menuitem" tabindex="-1" href="#">China</a>
+                            </li>
+                            <li role="presentation">
+                               <a role="menuitem" tabindex="-1" href="#">
+                                  Japan
+                               </a>
+                            </li>
+                            <li role="presentation">
+                               <a role="menuitem" tabindex="-1" href="#">
+                               India
+                               </a>
+                            </li>
+                         </ul>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label class="nowrap">Previous Plan:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="dropdown input-group">
+                      <button type="button" id="dropdownMenu2" 
+                          data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                        <span class="btntext zselect">Choose...</span>
+                        <span  class="icon-chevron-down pull-right icon-blue"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                        <li role="presentation">
+                           <a role="menuitem" tabindex="-1" href="#">Plan1</a>
+                        </li>
+                        <li role="presentation">
+                           <a role="menuitem" tabindex="-1" href="#">Plan2</a>
+                        </li>
+                        <li role="presentation">
+                           <a role="menuitem" tabindex="-1" href="#">
+                              Plan3
+                           </a>
+                        </li>
+                        <li role="presentation">
+                           <a role="menuitem" tabindex="-1" href="#">
+                           Plan4
+                           </a>
+                        </li>
+                      </ul>
+                    </div>
+                      
+                  </div>
+
+                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                    <label>Product ID:</label>
+                  </div>
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="eg.693687-B21"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6 col-md-6  col-lgf-2 col-h">
+                    <button type="button" class="btn btn-primary">Search</button>
+                  </div>
+
+                  <div class="col-sm-6 col-md-6  col-lgf-2 col-h">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" 
+                            data-target="#myModal">Advance Search</button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="row search-bar">
+          <div class="col-sm-12">
+            <div class="input-group">
+              <span class="input-group-addon marL5">
+                <i class="icon-search"></i>
+              </span>
+              <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Quick find for..." type="text" ng-model="gridOptions.quickFilterText"></div>
+          </div>
+        </div>
+
+        <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
+
+        <div class="butttonBackground padding10 text-right">
+          <div class="row">
+            <div class="col-sm-8 col-md-8  col-lgf-8 addtolist">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>
+              <button type="button" class="btn btn-primary disabled" data-toggle="modal" data-target="#myModalDelete">Disable</button>
+            </div>
+
+            <div class="col-sm-4 col-md-4  col-lgf-4">
+              <button type="button" class="btn btn-primary">Save Later</button>
+              <a class="btn btn-primary" href="#/financial" role="button">Financial Revie</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--add tab here-->
+      <section class="bg-white section">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <label class="panel-title">Qty vs. Net Price</label>
+          </div>
+
+          <div class="row mtop10 padding-left-right-10">
+            <div class="col-md-6">
+              <button type="button" class="btn btn-primary btn-lg btn-block">Monthly</button>
+            </div>
+            <div class="col-md-6">
+              <button type="button" class="btn btn-default btn-lg btn-block">Quarterly</button>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <nvd3 options='options' data='data'></nvd3>
+          </div>
+
+        </section>
+
+        <section class="bg-white section">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <label class="panel-title">Net Rev vs. Gross Margin %</label>
+            </div>
+            <div class="panel-body">
+              <nvd3 options='options' data='data'></nvd3>
+            </div>
+          </div>
+        </section>
+
+        <!-- 模态框（Modal） -->
+        <div class="modal container-fluid ng-scope top am-fade" id="myModal" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-sheet">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" 
+                     data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">SKU Advance Search</h4>
+              </div>
+
+              <div class="modal-body">
+                <div class="form-group">
+                  <form role="form">
+                    <div class="row">
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label class="nowrap">Previous Plan:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text" name="fromDate" class="form-control"></div>
+                      </div>
+
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label>Business Model:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="EMEA"></div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label class="nowrap">GBU:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text"  class="form-control"  placeholder="6M"></div>
+                      </div>
+
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label>Program Name:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Sub Region"></div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label class="nowrap">Product Category:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text"  class="form-control"  placeholder="5M"></div>
+                      </div>
+
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label>Program Type:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Country"></div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label class="nowrap">PL:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text"  class="form-control"  placeholder="Select"></div>
+                      </div>
+
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label>Promo Classification:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="eg.693687-B21"></div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label class="nowrap">Deal ID:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text"  class="form-control"  placeholder="Select"></div>
+                      </div>
+
+                      <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                        <label>Product Number:</label>
+                      </div>
+                      <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="eg.693687-B21"></div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-6 col-md-6  col-lgf-6 col-h">
+                        <button type="button" class="btn btn-primary">Search</button>
+                      </div>
+
+                      <div class="col-sm-6 col-md-6  col-lgf-6 col-h">
+                        <button type="button" class="btn btn-primary">Reset</button>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-5 col-md-5 col-lg-5">
+                    <div class="wrapper padding-left-right-10">
+                      <div id="grid1" ui-grid="{ data: myData1 }" class="grid mtop10" ui-grid-auto-resize></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2 ">
+                    <div class="row vertical-center">
+                      <div class="col-lg-12">
+                        <button type="button" class="btn btn-primary ">Add to list</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5 col-md-5 col-lg-5">
+                    <div class="wrapper padding-left-right-10">
+                      <div id="grid1" ui-grid="{ data: myData1 }" class="grid mtop10" ui-grid-auto-resize></div>
+                      <button type="button" class="btn btn-primary mtop10" data-toggle="modal" data-target="#myModalDelete">Delete</button>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" 
+                 data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> </div>
+          <!-- /.modal --> </div>
+
+        <!-- 模态框（Modal）test -->
+        <div class="modal fade" id="myModalDelete" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header-warning">
+                <button type="button" class="close" data-dismiss="modal" 
+                     aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Delete</h4>
+              </div>
+              <div class="modal-body">Do you really want to delete for selected 4 promo plans?</div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" 
+                     data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">OK</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> </div>
+          <!-- /.modal-dialog --> </div>
+        <!-- /.modal -->
+
+        <!--body wrapper end-->
+
+        <!--footer section start-->
+        <!--
+        <footer>© Copyright 2016 Hewlett Packard Enterprise Development LP</footer>
+      -->
+      <!--footer section end--> </div>
+  </div>
+</div>
+<!-- main content end-->
+
+</section>
