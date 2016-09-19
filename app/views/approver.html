@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="styles/style.css"/>
+
 <script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/jquery-1.10.2.min.js"></script>
 <script src="scripts/modernizr.min.js"></script>
@@ -22,6 +24,24 @@
     <div class="left-side-inner">
       <!--sidebar nav start-->
       <ul class="nav nav-pills nav-stacked custom-nav">
+        <li>
+          <div> <i class="fa fa-th"></i>
+            <span class="menu-disable">1-Budgeting & Planning</span>
+          </div>
+        </li>
+
+        <li>
+          <a href=""> <i class="fa fa-clock-o"></i>
+            <span>2-Contra Performance</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <i class="fa fa-balance-scale"></i>
+            <span>3-Competitive Pricing</span>
+          </a>
+        </li>
         <li class="menu-list">
           <a href="#/promo"> <i class="fa fa-home"></i>
             <span>Promo Management</span>
@@ -83,76 +103,76 @@
 
     <!--body wrapper start-->
     <div class="wrapper">
-      <div class="section">
-        <div class="filter-seperator">
-          <div class="row form-inline">
-            <div  class="col-xs-12 col-sm-10 ctr-filter">
-              <div ng-if="filterBtn == true" id="btnFilter2" 
-                    class="btn filter-float btn-filter clearEffects btn-filter-color" 
-                    ng-click="clickFn('filter')">
-                Filter
-                <i class="marR10 icon-chevron-down icon-blue btn-filter-color"></i>
-              </div>
-              <div ng-if="filterBtn == false" id="btnFilter2" 
-                    class="btn filter-float btn-filter btn-filter-color withEffects" 
-                    ng-click="clickFn('filter-close')">
-                Filter
-                <i class="marR10 icon-chevron-up icon-blue"></i>
-              </div>
+ 
+      <div class="filter-seperator ">
+        <div class="row form-inline">
+          <div  class="col-xs-12 col-sm-12 col-md-12 ctr-filter">
+            <div ng-if="filterBtn == true" id="btnFilter2" 
+                  class="btn filter-float btn-filter clearEffects btn-filter-color" 
+                  ng-click="clickFn('filter')">
+              Filter
+              <i class="marR10 icon-chevron-down icon-blue btn-filter-color"></i>
+            </div>
+            <div ng-if="filterBtn == false" id="btnFilter2" 
+                  class="btn filter-float btn-filter btn-filter-color withEffects" 
+                  ng-click="clickFn('filter-close')">
+              Filter
+              <i class="marR10 icon-chevron-up icon-blue"></i>
             </div>
           </div>
+        </div>
 
-          <div id="filterId" ng-show="filterPanel">
-            <div class="form-group">
-              <form role="form">
-                <div class="row">
-                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                    <label>GBU:</label>
-                  </div>
-                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="-GBU-" style="width:100%"></div>
-                  </div>
-
-                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                    <label class="nowrap">Region:</label>
-                  </div>
-                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
-                    <div class="input-group">
-                      <input type="text"  class="form-control"  placeholder="-Region-"></div>
-                  </div>
+        <div id="filterId" ng-show="filterPanel">
+          <div class="form-group">
+            <form role="form">
+              <div class="row">
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label>GBU:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="GBU" style="width:100%"></div>
                 </div>
 
-                <div class="row">
-                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                    <label>Approver Group Name:</label>
-                  </div>
-                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="-Group Name-" style="width:100%"></div>
-                  </div>
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label class="nowrap">Region:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text"  class="form-control"  placeholder="Region"></div>
+                </div>
+              </div>
 
-                  <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                    <label class="nowrap">Approver Group Type:</label>
-                  </div>
-                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
-                    <div class="input-group">
-                      <input type="text"  class="form-control"  placeholder="-Group Type-"></div>
-                  </div>
+              <div class="row">
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label>Approver Group Name:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Group Name" style="width:100%"></div>
                 </div>
 
-                <div class="row">
-                  <div class="col-sm-6 col-md-6  col-lgf-2 col-h">
-                    <button type="button" class="btn btn-primary">Add</button>
-                  </div>
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label class="nowrap">Approver Group Type:</label>
                 </div>
-              </form>
-            </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text"  class="form-control"  placeholder="Group Type"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6 col-md-6  col-lgf-2 col-h">
+                  <button type="button" class="btn btn-primary">Add</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
 
-      <div class="section">
+
+      <div class="top-padding10">
         <div class="row search-bar">
           <div class="col-sm-12">
             <div class="input-group">
@@ -165,7 +185,7 @@
 
         <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
 
-        <div class="butttonBackground padding10 text-right">
+        <div class="tb-padding10 text-right">
           <div class="row">
             <div class="col-sm-12 col-md-12  col-lgf-12 addtolist">
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>

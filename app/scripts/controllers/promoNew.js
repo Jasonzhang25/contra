@@ -9,6 +9,16 @@
  */
 
 angular.module('contraApp')
+
+.config(function($datepickerProvider) {
+  angular.extend($datepickerProvider.defaults, {
+    dateFormat: 'dd/MM/yyyy',
+    startWeek: 1
+  });
+})
+
+
+
 .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.spinnerTemplate = '<div id="blocker"><div class="loading">Loading...</div><div class="cssload-container"><div class="cssload-speeding-wheel"></div></div></div>';
 
@@ -17,6 +27,37 @@ angular.module('contraApp')
 
 .controller('promoNewCtrl', function($scope) {
 
+    $scope.isPromoNewActive = true;
+
+    $scope.dateOptions = {
+    changeYear: true,
+    changeMonth: true,
+    yearRange: '2010:-0', 
+    autoSize: true,
+    hideIfNoPrevNext: true
+    };
+
+  $scope.selectedDate = new Date();
+  $scope.selectedDateAsNumber = Date.UTC(1986, 1, 22);
+  // $scope.fromDate = new Date();
+  // $scope.untilDate = new Date();
+  $scope.getType = function(key) {
+    return Object.prototype.toString.call($scope[key]);
+  };
+
+    $scope.clearDates = function() {
+    $scope.selectedDate = null;
+    };
+
+    $scope.dateClick = function() {
+                    scope.dpShow = !scope.dpShow;
+                    check();
+                };
+
+    function check() {
+                        element.next('span').remove();
+                    };
+                    
     $scope.myData = [{reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
                      {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
                      {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},

@@ -19,11 +19,17 @@ angular
     'ui.grid',
     'ui.grid.autoResize',
     'nvd3',
-    'ui.date',
     'ui.bootstrap',
-    'angular-loading-bar'
+    'angular-loading-bar',
+    'ui.grid.grouping',
+    'phoneList',
+    'phoneDetail',
+    'core',
+    'mgcrea.ngStrap'
   ])
-  .config(function ($routeProvider) {
+  .config(['$locationProvider' ,'$routeProvider',
+
+    function ($locationProvider, $routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -68,8 +74,47 @@ angular
       .when('/loading', {
         templateUrl: 'views/loading.html',
         controller: 'loadingCtrl'
+      })
+      .when('/promonew1', {
+        templateUrl: 'views/promoNew1.html',
+        controller: 'promoNew1Ctrl'
+      })
+      .when('/promonew2', {
+        templateUrl: 'views/promoNew2.html',
+        controller: 'promoNew2Ctrl'
+      })  
+      .when('/promonew3', {
+        templateUrl: 'views/promoNew3.html',
+        controller: 'promoNew3Ctrl'
+      })
+      .when('/promonew4', {
+        templateUrl: 'views/promoNew4.html',
+        controller: 'promoNew4Ctrl'
+      })
+      .when('/canvas', {
+        templateUrl: 'views/canvas.html',
+        controller: 'canvasCtrl'
       })       
+      .when('/maps', {
+        templateUrl: 'views/maps.html',
+        controller: 'mapsCtrl'
+      })
+      .when('/phones', {
+        template: '<phone-list></phone-list>'
+      }).
+      when('/phones/:phoneId', {
+        template: '<phone-detail></phone-detail>'
+      })
+      .when('/readonly1', {
+        templateUrl: 'views/readonly1.html',
+        controller: 'readonly1Ctrl'
+      })
+      .when('/comment', {
+        templateUrl: 'views/comment.html',
+        controller: 'commentCtrl'
+      })                                                    
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }
+  ]);

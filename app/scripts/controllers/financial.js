@@ -2,7 +2,6 @@
 
 angular.module('contraApp')
 .controller('financialCtrl', function($scope) {
-
         $scope.options = {
             chart: {
                 type: 'cumulativeLineChart',

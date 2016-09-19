@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="styles/step_descriptor.css"/>
+<link rel="stylesheet" href="styles/process-bar.css"/>
+<link rel="stylesheet" href="styles/style.css"/>
 
-<script src="scripts/jquery-1.10.2.min.js"></script>
 <script src="scripts/modernizr.min.js"></script>
 <script src="scripts/jquery.nicescroll.js"></script>
 <script src="scripts/scripts.js"></script>
@@ -63,7 +65,8 @@
         </li>
       </ul>
       <!--sidebar nav end--> </div>
-    </div>
+  </div>
+
   <!-- left side end-->
 
   <!-- main content start-->
@@ -81,91 +84,270 @@
       <div class="menu-right">
         <i class="fa fa-user"></i>
         <span>Jason Zhang(Administrator)</span>
-
       </div>
     </div>
     <!-- header section end-->
 
     <!--body wrapper start-->
     <div class="wrapper">
-      <section class="bg-white padding-top-bottom-10">
-        <div class="padding-left-right-10">
-          <a role="button" class="btn btn-primary" href="#/promo/new">Back</a>
-          <a class="btn btn-primary" href="#/financial" role="button">Submit</a>
-        </div>     
+      <div class="pageTitle">
+        <i class="fa fa-th"></i>
+        <span>Financial Review</span>
+      </div>
 
-        <div class="row padding-left-right-10 mtop10">
-          <div class="col-sm-12 col-md-12 col-lgf-12">
-            <div class="row ">
-              <div class="col-sm-2 col-md-2  col-lgf-2"><a role="button" class="btn btn-primary btn-block">FY2016Q3</a></div>
-              <div class="col-sm-2 col-md-2  col-lgf-2"><a role="button" class="btn btn-primary btn-block">FY2016Q4</a></div>
-              <div class="col-sm-2 col-md-2  col-lgf-2"><a role="button" class="btn btn-default btn-block">FY2017Q1</a></div>
-              <div class="col-sm-2 col-md-2  col-lgf-2"><a role="button" class="btn btn-default btn-block">FY2017Q2</a></div>
+      <div class="row left-margin-15 right-margin-15">
+        <div class="col-sm-8 col-md-8 col-lgf-8">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Business Case</h3>
+            </div>
+            <div class="panel-body">
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active">
+                  <a href="javascript:void(0);#Tab1" data-toggle="tab">Baseline ROI Analysis</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);#Tab2" data-toggle="tab">YoY Increamental ROI Analysis</a>
+                </li>
+              </ul>
+
+              <div id="myTabContent" class="tab-content top-margin">
+                <div class="tab-pane fade in active" id="Tab1">
+                  <table class="table table-striped table-condensed table-bordered">
+                      <tr>
+                        <th rowspan="5" class="table-vcenter">Business Case Details</th>
+                        <td></td>
+                        <td>Forecast</td>
+                        <td>Base</td>
+                        <td>Incremental</td>
+                      </tr>
+                      <tr>
+                        <td>Volume</td>
+                        <td ng-bind="BusinessCase.VolumeForecast" class="ng-binding">4033.21</td>
+                        <td ng-bind="BusinessCase.VolumeBase" class="ng-binding">5742.26</td>
+                        <td ng-bind="BusinessCase.VolumeIncremental" class="ng-binding">-1709.05</td>
+                      </tr>
+                      <tr>
+
+                        <td>Net Revenue</td>
+                        <td ng-bind="BusinessCase.NetRevForecast|currency:'$':0" class="ng-binding">$736,575</td>
+                        <td ng-bind="BusinessCase.NetRevBase|currency:'$':0" class="ng-binding">$695,639</td>
+                        <td ng-bind="BusinessCase.NetRevIncremental|currency:'$':0" class="ng-binding">$40,937</td>
+                      </tr>
+                      <tr>
+
+                        <td>Gross Margin</td>
+                        <td class="ng-binding">$667,218(91.0%)</td>
+                        <td class="ng-binding">$595,884 (86.0%)</td>
+                        <td class="ng-binding">$71,334</td>
+                      </tr>
+                      <tr>
+
+                        <td>Total NTP Spend</td>
+                        <td colspan="3" class="table-hcenter ng-binding" ng-bind="BusinessCase.TotalNTPSpeed|currency:'$':0">$305,601</td>
+                      </tr>
+                      <tr>
+                        <th>ROI Analysis</th>
+                        <td colspan="4" class="table-hcenter ng-binding" ng-bind="BusinessCase.ROIAnalysis|Percentage">-362.0%</td>
+                      </tr>
+                      <tr>
+                        <th>Volume Feasibility</th>
+                        <td colspan="2" class="table-hcenter ng-binding" ng-bind="BusinessCase.FeasibilityAnalysisBase|Percentage">-30.0%</td>
+                        <td colspan="2" class="table-hcenter ng-binding" ng-bind="BusinessCase.FeasibilityAnalysisHistorical|Percentage">50.0%</td>
+                      </tr>
+                      <tr>
+                        <th>Event Duration</th>
+                        <td colspan="4" class="table-hcenter ng-binding">1 Month(s)</td>
+                      </tr>
+                  </table>
+                </div>
+
+                <div class="tab-pane fade" id="Tab2">
+                  <table class="table table-striped table-condensed table-bordered">
+                    <tr>
+                      <th rowspan="5" class="table-vcenter">Business Case Details</th>
+                      <td></td>
+                      <td>Forecast</td>
+                      <td>Base</td>
+                      <td>Incremental</td>
+                    </tr>
+                    <tr>
+                      <td>Volume</td>
+                      <td ng-bind="BusinessCase.VolumeForecast" class="ng-binding">4033.21</td>
+                      <td ng-bind="BusinessCase.VolumeBase" class="ng-binding">5742.26</td>
+                      <td ng-bind="BusinessCase.VolumeIncremental" class="ng-binding">-1709.05</td>
+                    </tr>
+                    <tr>
+                      <td>Net Revenue</td>
+                      <td ng-bind="BusinessCase.NetRevForecast|currency:'$':0" class="ng-binding">$736,575</td>
+                      <td ng-bind="BusinessCase.NetRevBase|currency:'$':0" class="ng-binding">$695,639</td>
+                      <td ng-bind="BusinessCase.NetRevIncremental|currency:'$':0" class="ng-binding">$40,937</td>
+                    </tr>
+                    <tr>
+                      <td>Gross Margin</td>
+                      <td class="ng-binding">$667,218(91.0%)</td>
+                      <td class="ng-binding">$595,884 (86.0%)</td>
+                      <td class="ng-binding">$71,334</td>
+                    </tr>
+                    <tr>
+                      <td>Total NTP Spend</td>
+                      <td colspan="3" class="table-hcenter ng-binding" ng-bind="BusinessCase.TotalNTPSpeed|currency:'$':0">$305,601</td>
+                    </tr>
+                    <tr>
+                      <th>YoY Volume Feasibility</th>
+                      <td colspan="4" class="table-hcenter ng-binding">-8%</td>
+                    </tr>
+                    <tr>
+                      <th>Event Duration</th>
+                      <td colspan="4" class="table-hcenter ng-binding">1 Month(s)</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
-              
-          <div class="col-sm-6 col-md-6 col-lgf-6 padding-left-right-10 mtop10">
-              <div class="chart-header ">
-                <label>Overall Forecast for May&Jun&Jul</label>
-              </div> 
-             <table class="table table-striped table-condensed table-bordered">
-                <thead>
-                   <tr>
-                      <th>Net Rev ($)</th>
-                      <th>Gross Margin %</th>
-                      <th>Gross Margin ($)</th>
-                   </tr>
-                </thead>
-                <tbody>
-                   <tr>
-                      <td>$172,991,171</td>
-                      <td>45%</td>
-                      <td>$77,127,466</td>
-                   </tr>
-                </tbody>
-             </table>
-            <p>The overall forecast is specific to a category manager’s territory and therefore forms a part of the total regional BU promotions business. Individual country & regional forecasts will be aggregated to represent the overall BU promotions business forecast.</p>                
-          </div>
-
-          <div class="col-sm-6 col-md-6 col-lgf-6 mtop10">
-            <div class="chart-header">
-              <label>Promo Overview</label>
-            </div>          
-            <nvd3 options='options' data='data'></nvd3>
-          </div>          
         </div>
-      </section>
 
-      <section class="section bg-white mtop10">
-        <div class="row">
-            <div class="col-sm-12 col-md-12  col-lgf-12 mtop10">
-              <div class="col-sm-3 col-md-3  col-lgf-3"><a role="button" class="btn btn-primary btn-block">Promo Type</a></div>
-              <div class="col-sm-3 col-md-3  col-lgf-3"><a role="button" class="btn btn-default btn-block">Reason Code</a></div>
-              <div class="col-sm-3 col-md-3  col-lgf-3"><a role="button" class="btn btn-default btn-block">Business Segment</a></div>
-              <div class="col-sm-3 col-md-3  col-lgf-3"><a role="button" class="btn btn-default btn-block">Product Category</a></div>   
+        <div class="col-sm-4 col-md-4 col-lgf-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                Event Level Guardrail Check
+              </h3>
             </div>
-        </div>            
-        <div class="row mtop10 padding-left-right-10">
-        
-            <div class="col-sm-6 col-md-6 col-lgf-6">
-                <div class="chart-header">
-                  <label>Net Rev ($)</label>
-                </div>         
-                <nvd3 options='options' data='data'></nvd3>
-            </div>
-
-
-          <div class="col-sm-6 col-md-6 col-lgf-6">
-              <div class="chart-header">
-                <label>Gross Margin ($, %)</label>
-              </div>          
+            <div class="panel-body">
               <nvd3 options='options' data='data'></nvd3>
-            </div>          
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
-    <!--body wrapper end-->
-    </div>
-  </div>
-<!-- main content end-->
+      <div class="panel panel-default">
+        <div class="panel-heading"> 
+          <h3 class="panel-title"> 
+            Event Level Guardrail Check 
+          </h3> 
+        </div>
+        <div class="panel-body"> 
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="javascript:void(0);#promo-type" data-toggle="tab">Promo Type</a></li>
+            <li><a href="javascript:void(0);#reason-code" data-toggle="tab">Reason Code</a></li>
+            <li><a href="javascript:void(0);#busines-ssegment" data-toggle="tab">Business Segment</a></li>
+            <li><a href="javascript:void(0);#product-category"  data-toggle="tab">Product Category</a></li>
+          </ul>
+
+          <div id="myTabContent" class="tab-content top-margin">       
+            <div class="tab-pane fade in active" id="promo-type">
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Net Rev ($) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>                
+              </div>
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Gross Margin ($, %) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade in" id="reason-code">
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Net Rev ($) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>                
+              </div>
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Gross Margin ($, %) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>
+              </div>              
+            </div>
+            <div class="tab-pane fade in" id="busines-ssegment">
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Net Rev ($) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>                
+              </div>
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Gross Margin ($, %) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>
+              </div>            
+            </div>
+            <div class="tab-pane fade in" id="product-category">
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Net Rev ($) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>                
+              </div>
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Gross Margin ($, %) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>
+              </div>            
+            </div>                              
+          </div>          
+        </div> 
+      </div>
+  
+
+ 
+
+    </div><!--body wrapper end-->
+  </div><!-- main content end-->
 </section>

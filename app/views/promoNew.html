@@ -1,8 +1,11 @@
+<link rel="stylesheet" href="styles/step_descriptor.css"/>
+<link rel="stylesheet" href="styles/style.css"/>
 
-<script src="scripts/jquery-1.10.2.min.js"></script>
+
 <script src="scripts/modernizr.min.js"></script>
 <script src="scripts/jquery.nicescroll.js"></script>
 <script src="scripts/scripts.js"></script>
+<script src="scripts/cbpFWTabs.js"></script>
 
 <section>
   <!-- left side start-->
@@ -19,81 +22,8 @@
     </div>
     <!--logo and iconic logo end-->
 
-    <div class="left-side-inner">
-      <!--sidebar nav start-->
-      <ul class="nav nav-pills nav-stacked custom-nav">
-        <li>
-          <a href="#/promo"> <i class="fa fa-th"></i>
-            <span>1-Budgeting & Planning</span>
-          </a>
-        </li>
-
-        <li>
-          <a href=""> <i class="fa fa-clock-o"></i>
-            <span>2-Contra Performance</span>
-          </a>
-        </li>
-
-        <li>
-          <a href=""> <i class="fa fa-balance-scale"></i>
-            <span>3-Competitive Pricing</span>
-          </a>
-        </li>
-
-        <li class="menu-list nav-active">
-          <a href=""> <i class="fa fa-bar-chart"></i>
-            <span>4-ROI Analysis</span>
-          </a>
-          <ul class="sub-menu-list">
-            <li >
-              <a href="#/promo">Promo List</a>
-            </li>
-            <li class="active">
-              <a href="#/promo/new">Promo New</a>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <a href=""> <i class="fa fa-signal"></i>
-            <span>5-Execute Campaign</span>
-          </a>
-        </li>
-
-        <li>
-          <a href=""> <i class="fa fa-dashboard"></i>
-            <span>6-Weekly Tracking</span>
-          </a>
-        </li>                       
-
-        <li class="menu-list">
-          <a href=""> <i class="fa fa-briefcase"></i>
-            <span>Promo Approval</span>
-          </a>
-          <ul class="sub-menu-list">
-            <li>
-              <a href="#/approval">Promo Approval</a>
-            </li>
-          </ul>
-        </li>                
-
-        <li class="menu-list">
-          <a href="">
-            <i class="fa fa-cogs"></i>
-            <span>Approver Management</span>
-          </a>
-          <ul class="sub-menu-list">
-            <li>
-              <a href="#/approver">Approver Group</a>
-            </li>
-            <li>
-              <a href="#/approver/edit">Approver Edit</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <!--sidebar nav end--> </div>
-  </div>
+    <runoob-directive></runoob-directive>
+    </div>
   <!-- left side end-->
 
   <!-- main content start-->
@@ -104,8 +34,8 @@
       <a class="toggle-btn">
         <i class="fa fa-bars"></i>
       </a>
-      <span>
-        <img src="images/droid.png" class="projecticon"></span>
+      <div class="pull-left">
+        <img src="images/droid.png" class="projecticon"></div>
 
       <!--toggle button end-->
       <div class="menu-right">
@@ -118,7 +48,16 @@
 
     <!--body wrapper start-->
     <div class="wrapper">
-      <div class="section">
+      <div class="step"> 
+        <ul>
+          <li class="step-descriptor step-descriptor-active"><span class="step-descriptor-title">1. Planning Setup</span></li>
+          <li class="step-descriptor step-descriptor-active"><span class="step-descriptor-title">2. Forecast Modeling</span></li>
+          <li class="step-descriptor"><span class="step-descriptor-title">3. Financial Review</span></li>
+          <li class="step-descriptor"><span class="step-descriptor-title">4. Planning Completion</span></li>
+        </ul>
+      </div>
+
+      <div class="top-padding10">
         <div class="filter-seperator">
           <div class="row form-inline">
             <div  class="col-xs-12 col-sm-10 ctr-filter">
@@ -136,6 +75,7 @@
               </div>
             </div>
           </div>
+
 
           <div id="filterId" ng-show="filterPanel">
             <div class="form-group">
@@ -204,13 +144,15 @@
                     <label class="nowrap">Promo Start Month:</label>
                   </div>
                   <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
-                    <div class="input-group">
-                      <input type="text" name="fromDate" class="form-control ng-pristine ng-untouched ng-valid ng-valid-date" ng-model="fromDate" data-max-date="05/20/2016" placeholder="From" ui-date="dateOptions">
-                      <span class="input-group-addon" tabindex="0" ng-click="dpd1.show = !dpd1.show">
-                        <i class="fa fa-calendar"></i>
-                      </span>
-                    </div>
+
+            <div class="input-group" >
+                <input type="text" class="form-control" ng-model="$parent.plannedStartFrmDt" data-max-date="{{plannedStartToDt}}" placeholder="From" bs-datepicker 
+                data-bs-show="dpd1.show" autoclose="1">
+                <span class='input-group-addon' tabindex="0"  ng-blur="dpd1.show=false" ng-focus="dpd1.show=true">
+                <i class="fa fa-calendar"></i></span>
+            </div>                    
                   </div>
+
 
                   <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
                     <label>Country:</label>
@@ -277,6 +219,7 @@
                       
                   </div>
 
+
                   <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
                     <label>Product ID:</label>
                   </div>
@@ -285,7 +228,7 @@
                       <input type="text" class="form-control" placeholder="eg.693687-B21"></div>
                   </div>
                 </div>
-
+                    
                 <div class="row">
                   <div class="col-sm-6 col-md-6  col-lgf-2 col-h">
                     <button type="button" class="btn btn-primary">Search</button>
@@ -303,12 +246,12 @@
         </div>
       </div>
 
-      <div class="section">
+      <div class="top-padding10">
         <div class="row search-bar">
           <div class="col-sm-12">
             <div class="input-group">
               <span class="input-group-addon marL5">
-                <i class="icon-search"></i>
+                <i class="fa fa-search" aria-hidden="true"></i>
               </span>
               <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Quick find for..." type="text" ng-model="gridOptions.quickFilterText"></div>
           </div>
@@ -316,7 +259,7 @@
 
         <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
 
-        <div class="butttonBackground padding10 text-right">
+        <div class="text-right tb-padding10">
           <div class="row">
             <div class="col-sm-8 col-md-8  col-lgf-8 addtolist">
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>
@@ -335,15 +278,15 @@
       <section class="bg-white section">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <label class="panel-title">Qty vs. Net Price</label>
+            <h3 class="panel-title">Qty vs. Net Price</h3>
           </div>
 
           <div class="row mtop10 padding-left-right-10">
             <div class="col-md-6">
-              <button type="button" class="btn btn-primary btn-lg btn-block">Monthly</button>
+              <button type="button" class="btn btn-primary btn-block">Monthly</button>
             </div>
             <div class="col-md-6">
-              <button type="button" class="btn btn-default btn-lg btn-block">Quarterly</button>
+              <button type="button" class="btn btn-default btn-block">Quarterly</button>
             </div>
           </div>
 
@@ -356,7 +299,7 @@
         <section class="bg-white section">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <label class="panel-title">Net Rev vs. Gross Margin %</label>
+              <h3 class="panel-title">Net Rev vs. Gross Margin %</h3>
             </div>
             <div class="panel-body">
               <nvd3 options='options' data='data'></nvd3>
@@ -376,6 +319,9 @@
               </div>
 
               <div class="modal-body">
+
+                <div class="panel panel-default">
+                   <div class="panel-body">
                 <div class="form-group">
                   <form role="form">
                     <div class="row">
@@ -480,11 +426,18 @@
                     </div>
                   </form>
                 </div>
+                   </div>
+                </div>
 
-                <div class="row">
+
+
+
+
+
+                <div class="row bottom-padding10">
                   <div class="col-sm-5 col-md-5 col-lg-5">
-                    <div class="wrapper padding-left-right-10">
-                      <div id="grid1" ui-grid="{ data: myData1 }" class="grid mtop10" ui-grid-auto-resize></div>
+                    <div class="">
+                      <div id="grid1" ui-grid="{ data: myData1 }" class="grid " ui-grid-auto-resize></div>
                     </div>
                   </div>
                   <div class="col-sm-2 col-md-2 col-lg-2 ">
@@ -495,14 +448,77 @@
                     </div>
                   </div>
                   <div class="col-sm-5 col-md-5 col-lg-5">
-                    <div class="wrapper padding-left-right-10">
-                      <div id="grid1" ui-grid="{ data: myData1 }" class="grid mtop10" ui-grid-auto-resize></div>
-                      <button type="button" class="btn btn-primary mtop10" data-toggle="modal" data-target="#myModalDelete">Delete</button>
+                    <div class="">
+                      <div id="grid1" ui-grid="{ data: myData1 }" class="grid" ui-grid-auto-resize></div>
                     </div>
                   </div>
                 </div>  
-              </div>
+              
 
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Batch Setting</h3>
+        </div>
+        <div class="panel-body">
+          <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+              <label>Reason Code:</label>
+          </div>
+          <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+            <div class="input-group">
+              <div class="dropdown input-group">
+                <button type="button" id="dropdownMenu1" 
+                    data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                  <span class="btntext zselect">Choose...</span>
+                  <span  class="icon-chevron-down pull-right icon-blue"></span>
+                </button>
+                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                       <a role="menuitem" tabindex="-1" href="#">Reason Code 1</a>
+                    </li>
+                    <li role="presentation">
+                       <a role="menuitem" tabindex="-1" href="#">Reason Code 2</a>
+                    </li>
+                    <li role="presentation">
+                       <a role="menuitem" tabindex="-1" href="#">
+                          Reason Code 3
+                       </a>
+                    </li>
+                 </ul>
+              </div>               
+            </div>
+          </div>
+
+          <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+              <label>Promo Type:</label>
+          </div>
+          <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+            <div class="input-group">
+              <div class="dropdown input-group">
+                <button type="button" id="dropdownMenu1" 
+                    data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                  <span class="btntext zselect">Choose...</span>
+                  <span  class="icon-chevron-down pull-right icon-blue"></span>
+                </button>
+                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                       <a role="menuitem" tabindex="-1" href="#">Promo Type 1</a>
+                    </li>
+                    <li role="presentation">
+                       <a role="menuitem" tabindex="-1" href="#">Promo Type 2</a>
+                    </li>
+                    <li role="presentation">
+                       <a role="menuitem" tabindex="-1" href="#">
+                          Promo Type 3
+                       </a>
+                    </li>
+                 </ul>
+              </div>               
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" 
                  data-dismiss="modal">Cancel</button>

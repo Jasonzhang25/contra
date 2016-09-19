@@ -9,19 +9,18 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />  
     <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
     <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.min.css" />
-    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />    
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-
     <link rel="stylesheet" href="styles/theme-fresh.css"/>
     <link rel="stylesheet" href="styles/main.css"/>
-    <link rel="stylesheet" href="styles/style-responsive.css"/>
-    <link rel="stylesheet" href="styles/icon.css"/>
     <link rel="stylesheet" href="styles/toolbar.css"/>
+    <link rel="stylesheet" href="styles/font.hpe.css"/>    
+    <!--<link rel="stylesheet" href="styles/tab.css"/>-->
     <!-- endbuild -->
 </head>
 
@@ -39,7 +38,8 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+ 
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -51,11 +51,16 @@
     <script src="bower_components/angular-nvd3/dist/angular-nvd3.min.js"></script>
     <script src="bower_components/d3/d3.js"></script>
     <script src="bower_components/nvd3/build/nv.d3.js"></script>
-    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+<!--    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/angular-ui-date/dist/date.js"></script>
+-->    
     <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>    
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+
+    <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+           
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -70,14 +75,41 @@
     <script src="scripts/controllers/approval.js"></script>
     <script src="scripts/controllers/promoList.js"></script>
     <script src="scripts/controllers/promoNew.js"></script>
+    <script src="scripts/controllers/promoNew1.js"></script>
+    <script src="scripts/controllers/promoNew2.js"></script>
+    <script src="scripts/controllers/promoNew3.js"></script>  
+    <script src="scripts/controllers/promoNew4.js"></script>    
+    <script src="scripts/controllers/readonly1.js"></script>       
     <script src="scripts/controllers/gpmo.js"></script>
+    <script src="scripts/controllers/maps.js"></script>
+    <script src="scripts/controllers/comment.js"></script>
     <script src="scripts/controllers/approver.js"></script>
     <script src="scripts/controllers/approverEdit.js"></script>
     <script src="scripts/controllers/financial.js"></script>
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/loading.js"></script>   
+    <script src="scripts/controllers/test-directive1.js"></script> 
+    <script src="scripts/controllers/test-directive2.js"></script>
+    <script src="scripts/controllers/canvastest.js"></script>      
+    <script src="scripts/controllers/canvas.js"></script>  
 
+ 
+
+    <script src="sharedcomponents/detailedittoolbar/detail-edit-toolbar.js"></script>   
+    <script src="sharedcomponents/toolbar/panel-toolbar.js"></script>
+    <script src="sharedcomponents/datetimepicker/date-time-picker.js"></script>      
 <!-- endbuild -->
+
+
+    <script src="core/core.module.js"></script>
+    <script src="core/checkmark/checkmark.filter.js"></script>
+    <script src="core/phone/phone.module.js"></script>
+    <script src="core/phone/phone.service.js"></script>
+
+    <script src="phone-list/phone-list.module.js"></script>
+    <script src="phone-list/phone-list.component.js"></script>
+    <script src="phone-detail/phone-detail.module.js"></script>      
+    <script src="phone-detail/phone-detail.component.js"></script>    
 
 </body>
 </html>
