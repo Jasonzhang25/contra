@@ -6,6 +6,7 @@ Date: 2016/05/01
 
 @import url('bootstrap-reset.css');
 @import url('font-awesome.min.css');
+@import url('icon.css');
 @import url('style-responsive.css');
 
 
@@ -56,9 +57,6 @@ h1, h2, h3, h4, h5 {
 font-size: 16px;
 }
 
-
-
-
 hr {
     border-color: #eee;
     height: 1px;
@@ -70,10 +68,6 @@ p {
     margin: 0;
     padding: 0;
 }
-
-
-
-
 
 
 .pageTitle {
@@ -93,6 +87,12 @@ p {
 
 .subPageTitle span {
     padding: 0 10px;
+}
+
+.tab-title {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Metric Light";
 }
 
 ul li {
@@ -316,6 +316,7 @@ output {
     line-height: 1.52857143;
     color: #3a3f51
 }
+
 
 .form-control:focus {
     border-color: #2AD2C9;
@@ -807,16 +808,17 @@ fieldset[disabled] .btn-link:hover {
 .nav .open>a:focus,
 .nav .open>a:hover {
     background-color: transparent;
-    border-color: #5d9cec;
+    border-color: #00b388;
 }
 .nav .nav-divider {
     margin: 9.5px 0;
 }
 .nav-tabs>li>a {
     line-height: 1.52857143;
+    color: #656565;
 }
 .nav-tabs>li>a:hover {
-    border-color: #fff;
+    border-color: #fff; 
 }
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:focus,
@@ -1134,6 +1136,10 @@ background-color: #f80;
 color: #fff; 
 } 
 
+.input-group {
+    margin-bottom: 5px;
+}
+
 /*********************Table ************************/
 .table-select {
     color: #00b388;  
@@ -1245,7 +1251,7 @@ color: #fff;
 }
 
 .success {
-    color: #01A982;
+    color: #00b388;
 }
 .warning {
     color: #ffd042;
@@ -1318,6 +1324,9 @@ color: #fff;
 .tb-padding10 {
     padding: 10px 0;
 }
+.top-padding5 {
+    padding-top: 5px
+}
 .top-padding10 {
     padding-top: 10px
 }
@@ -1340,19 +1349,21 @@ color: #fff;
 .padding20 {
     padding: 20px;
   }
-.tb-margin {
+.tb-margin10 {
     margin: 10px 0;
 }
-.top-margin {
+.top-margin10 {
     margin-top: 10px;
 }
-
 .lr-margin10 {
     margin-left: 10px;
     margin-right: 10px;
 }
 .left-margin10 {
     margin-left: 10px;
+}
+.left-margin15 {
+    margin-left: 15px;
 }
 .right-margin20 {
     margin-right: 20px;
@@ -1393,6 +1404,7 @@ color: #fff;
     cursor: default;
     border: 0;
     border-bottom: 3px solid #00b388;
+    color: #00b388;
 }
 
 /*panel title*/
@@ -1419,15 +1431,22 @@ color: #fff;
 
 .process-guadrail-approved {
     background-color: #00b388;
-    color: #fff;
+    color: #fff;  
 }
 .process-guadrail-Current {
     background-color: #ffd042;
     color: #fff;
+    font-weight: bold;   
 }
 .process-guadrail-default {
     background-color: #999999;
-    color: #fff;
+    color: #fff; 
+}
+
+/* For group name  */
+/***************************************************/
+.pointer {
+    cursor: pointer;  
 }
 
 /***************************************************/
@@ -1473,5 +1492,69 @@ color: #fff;
 .comment-content {
     padding-left: 10px;
     margin: 15px 0;
+}
+
+
+/* For checkboxes, cascade checkboxes */
+/***************************************************/
+.checkboxes label {
+    padding-left: 0;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+.ag-body-viewport input[type="checkbox"] {
+    display: block;
+}
+input[type="radio"] + span:before,
+input[type="checkbox"] + span:before,
+.multiSelectItem.active:before {
+    position: relative;
+    margin-right: 10px;
+    top: 1px;
+    left: 0px;
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+input[type="radio"] + span:before,
+input[type="checkbox"] + span:before {
+    content: "\e73b";
+    /* unchecked */
+
+    color: #ccc;
+}
+.ag-body-viewport input[type="checkbox"] + span:before {
+    /*content: "\e73b";*/
+    content: none;
+    /* unchecked */
+
+    color: #ccc;
+}
+input[type="radio"]:checked + span:before,
+input[type="checkbox"]:checked + span:before {
+    content: "\e73a";
+    /* check */
+
+    color: #00B388;
+}
+.ag-body-viewport input[type="checkbox"]:checked + span:before {
+    /*content: "\e73a";*/
+    content: none;
+    /* check */
+
+    color: #00B388;
+}
+.multiSelectItem.active:before {
+    content: "\f00c";
+    /* check */
+
+    color: #00B388;
 }
 
