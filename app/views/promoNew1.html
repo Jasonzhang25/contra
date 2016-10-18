@@ -1,0 +1,332 @@
+<link rel="stylesheet" href="styles/step_descriptor.css"/>
+<link rel="stylesheet" href="styles/style.css"/>
+
+<script src="scripts/jquery-1.10.2.min.js"></script>
+<script src="scripts/modernizr.min.js"></script>
+<script src="scripts/jquery.nicescroll.js"></script>
+
+<!--common scripts for all pages-->
+<script src="scripts/scripts.js"></script>
+
+<section>
+  <div class="left-side sticky-left-side">
+    <!--logo and iconic logo start-->
+    <div class="logo">
+      <a href="#/">
+        <img src="images/HPE_logo.png" alt=""></a>
+    </div>
+
+    <div class="logo-icon text-center">
+      <a href="#/">
+        <img src="images/logo_icon.png" alt=""></a>
+    </div>
+    <!--logo and iconic logo end-->
+
+    <runoob-directive></runoob-directive>
+    </div>
+
+  <div class="main-content" >
+    <!-- header section start-->
+    <div class="header-section">
+      <!--toggle button start-->
+      <a class="toggle-btn">
+        <i class="fa fa-bars"></i>
+      </a>
+      <span>
+        <img src="images/droid.png" class="projecticon"></span>
+
+      <!--toggle button end-->
+      <div class="menu-right">
+        <i class="fa fa-user"></i>
+        <span>Jason Zhang(Administrator)</span>
+      </div>
+    </div>
+    <!-- header section end-->
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+      <div class="step">
+        <ul>
+          <li class="step-descriptor step-descriptor-active">
+            <span class="step-descriptor-title">1. Planning Setup</span>
+          </li>
+          <li class="step-descriptor">
+            <span class="step-descriptor-title">2. Forecast Modeling</span>
+          </li>
+          <li class="step-descriptor">
+            <span class="step-descriptor-title">3. Financial Review</span>
+          </li>
+          <li class="step-descriptor">
+            <span class="step-descriptor-title">4. Planning Completion</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Search & Copy Previous Events</h3>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <form role="form">
+              <div class="row">
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label class="nowrap">Previous Plan:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text" name="fromDate" class="form-control"></div>
+                </div>
+
+                <div class="col-sm-6 col-md-6  col-lgf-2 col-h">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" 
+                          data-target="#myModal">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!--**********************-->
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="form-group">
+            <form role="form">
+              <div class="row">
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label class="nowrap">Promo Plan Title:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text" name="fromDate" class="form-control"></div>
+                </div>
+
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                <label>Region:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="dropdown input-group">
+                    <button type="button" id="dropdownMenu1" 
+                      data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                      <span class="btntext zselect">Choose...</span>
+                      <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">EMEA</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">APJ</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">AMS</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">India</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label class="nowrap">Promo Duration:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text"  class="form-control"  placeholder="6M"></div>
+                </div>
+
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label>Subregion:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Sub Region"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label class="nowrap">Promo Start Month:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text" name="fromDate" class="form-control ng-pristine ng-untouched ng-valid ng-valid-date" ng-model="fromDate" data-max-date="05/20/2016" placeholder="From" ui-date="dateOptions">
+                    <span class="input-group-addon" tabindex="0" ng-click="dpd1.show = !dpd1.show">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label>Country:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="dropdown input-group">
+                    <button type="button" id="dropdownMenu1" 
+                        data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                      <span class="btntext zselect">Choose...</span>
+                      <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Americ</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">China</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Japan</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">India</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label class="nowrap">Previous Plan:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="dropdown input-group">
+                    <button type="button" id="dropdownMenu2" 
+                      data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                      <span class="btntext zselect">Choose...</span>
+                      <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Plan1</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Plan2</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Plan3</a>
+                      </li>
+                      <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Plan4</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label>Product ID:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="eg.693687-B21"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label class="nowrap">Event Start Date:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text" name="untilDate" class="form-control ng-pristine ng-valid ng-valid-date ng-valid-min ng-valid-max ng-touched" ng-model="untilDate" data-min-date="06/19/2016" placeholder="Start" bs-datepicker="" data-bs-show="dpd2.show" autoclose="1" ui-date="dateOptions">
+                    <span class="input-group-addon" tabindex="0" ng-click="dpd2.show=!dpd2.show">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                  <label>Event End Date:</label>
+                </div>
+                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="input-group">
+                    <input type="text" name="untilDate" class="form-control ng-pristine ng-valid ng-valid-date ng-valid-min ng-valid-max ng-touched" ng-model="untilDate" data-min-date="06/19/2016" placeholder="Until" bs-datepicker="" data-bs-show="dpd2.show" autoclose="1" ui-date="dateOptions">
+                    <span class="input-group-addon" tabindex="0" ng-click="dpd2.show=!dpd2.show">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--**********************-->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Additional Investments</h3>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <form role="form">
+              <div class="row">
+                <div class="col-sm-6 col-md-2  col-lgf-2">
+                  <label>MDF:</label>
+                </div>
+                <div class="col-sm-6 col-md-4  col-lgf-2">
+                  <label>$101,000.00</label>
+                  <span class="lr-padding10">($USD)</span>
+                </div>
+                <div class="col-sm-6 col-md-6  col-lgf-2">
+                  <label>Description:</label>
+                  <span class="lr-padding10">Digtal demand generation spend</span>
+                </div>
+                <div class="col-sm-6 col-md-2  col-lgf-2">
+                  <label>Cashback:</label>
+                </div>
+                <div class="col-sm-6 col-md-4  col-lgf-2">
+                  <label>$101,000.00</label>
+                  <span class="lr-padding10">($USD)</span>
+                </div>
+                <div class="col-sm-6 col-md-6  col-lgf-2">
+                  <label>Description:</label>
+                  <span class="lr-padding10">Digtal demand generation spend</span>
+                </div>
+                <div class="col-sm-6 col-md-2  col-lgf-2">
+                  <label>Engine:</label>
+                </div>
+                <div class="col-sm-6 col-md-4  col-lgf-2">
+                  <label>$101,000.00</label>
+                  <span class="lr-padding10">($USD)</span>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lgf-2">
+                  <label>Description:</label>
+                  <span class="lr-padding10">Digtal demand generation spend</span>
+                </div>
+
+                <div class="col-sm-6 col-md-2  col-lgf-2">
+                  <label>Other:</label>
+                </div>
+                <div class="col-sm-6 col-md-4  col-lgf-2">
+                  <label>$101,000.00</label>
+                  <span class="lr-padding10">($USD)</span>
+                </div>
+                <div class="col-sm-6 col-md-6  col-lgf-2">
+                  <label>Description:</label>
+                  <span class="lr-padding10">Digtal demand generation spend</span>
+                </div>
+                <div class="col-sm-6 col-md-2  col-lgf-2">
+                  <label>Total:</label>
+                </div>
+                <div class="col-sm-6 col-md-4  col-lgf-2">
+                  <label>$101,000.00</label>
+                  <span class="lr-padding10">($USD)</span>
+                </div>
+                <div class="col-sm-6 col-md-6  col-lgf-2">
+                  <label>Description:</label>
+                  <span class="lr-padding10">Digtal demand generation spend</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>

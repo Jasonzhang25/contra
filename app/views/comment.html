@@ -1,0 +1,931 @@
+<link rel="stylesheet" href="styles/step_descriptor.css"/>
+<link rel="stylesheet" href="styles/process-bar.css"/>
+<link rel="stylesheet" href="styles/style.css"/>
+
+<script src="scripts/modernizr.min.js"></script>
+<script src="scripts/jquery.nicescroll.js"></script>
+<script src="scripts/scripts.js"></script>
+
+<section>
+  <!-- left side start-->
+  <div class="left-side sticky-left-side">
+    <!--logo and iconic logo start-->
+    <div class="logo">
+      <a href="#/">
+        <img src="images/HPE_logo.png" alt=""></a>
+    </div>
+
+    <div class="logo-icon text-center">
+      <a href="#/">
+        <img src="images/logo_icon.png" alt=""></a>
+    </div>
+    <!--logo and iconic logo end-->
+
+    <runoob-directive></runoob-directive>
+  </div>
+  <!-- left side end-->
+
+  <!-- main content start-->
+  <div class="main-content" >
+    <!-- header section start-->
+    <div class="header-section">
+      <!--toggle button start-->
+      <a class="toggle-btn">
+        <i class="fa fa-bars"></i>
+      </a>
+      <span>
+        <img src="images/droid.png" class="projecticon">
+      </span>
+
+      <!--toggle button end-->
+      <div class="menu-right">
+        <i class="fa fa-user"></i>
+        <span>Jason Zhang(Administrator)</span>
+      </div>
+    </div>
+    <!-- header section end-->
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+      <div class="pageTitle">
+        <i class="fa fa-th"></i><span>ROI Analysis</span>
+      </div>
+
+      <div> 
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="active tab-title"><a href="javascript:void(0);#Tab1" data-toggle="tab">Event Design</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab2" data-toggle="tab">Forecast Modeling</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab3" data-toggle="tab">Finacial Review</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab4"  data-toggle="tab">Submit for Approval</a></li>
+        </ul>
+      </div>
+      
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="Tab1">
+          <section>
+            <div class="subPageTitle">
+              <i class="fa fa-list"></i><span>Approval Detail Status</span>
+            </div>
+
+            <div>
+              <label>Event Level Guardrail</label>
+              <span class="status-title-divide">
+                <span>Duration</span> 
+                <i class="fa fa-circle fa-lg table-icon-green lr-padding10" aria-hidden="true"></i>
+              </span>
+
+              <span class="status-title-divide">
+                <span>ROI</span> 
+                <i class="fa fa-circle fa-lg table-icon-warning lr-padding10" aria-hidden="true"></i>
+              </span>
+
+              <span class="pull-right ">
+              <span>Approved: </span> <i class="fa fa-check-circle-o table-icon-green iconPaddingLeft5 right-margin30" aria-hidden="true"></i>
+                <span>Pending: </span> <i class="fa fa-question-circle-o table-icon-approving iconPaddingLeft5 right-margin30" aria-hidden="true"></i>
+                <span>Rejected: </span> <i class="fa fa-ban table-icon-warning iconPaddingLeft5" aria-hidden="true"></i>
+              </span>
+
+              <hr>
+            </div>
+
+
+            <table class="table table-condensed table-bordered">
+              <tbody>
+                <tr>
+                  <td class="text-center process-guadrail-approved">Level1</td>
+                  <td colspan=2 class="text-center process-guadrail-Current">Level2</td>
+                  <td colspan=2 class="text-center process-guadrail-default">Level3</td>
+                  <td class="text-center process-guadrail-default">Level4</td>
+                </tr>
+                <!--
+                <tr>
+                  <td colspan="6">
+                    <div class="checkout-wrap">
+                      <ul class="checkout-bar">
+                        <li class="visited first">
+                          <a href="#">Group1</a>
+                        </li>
+                        <li class="previous visited">Group2</li>
+                        <li class="active">Group3</li>
+                        <li class="next">Group4</li>
+                        <li class="">Group5</li>
+                        <li class="">Group6</li>  
+                      </ul>
+                    </div> 
+                  </td>             
+                </tr>
+                -->
+                <tr class="text-center">
+                  <td class="process-guadrail-approved">
+                    <span>Group1 <i class="fa fa-angle-double-right" aria-hidden="true"></i></span> 
+                  </td>
+                  <td class="process-guadrail-approved">
+                    <label>Group2 <i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+                  </td>
+                  <td class="process-guadrail-Current">
+                    <label>Group3 <i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+                    </td>
+                  <td>
+                    <label>Group4 <i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+                  </td>
+                  <td>
+                    <label>Group5 <i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+                  </td>
+                  <td>
+                    <label>Group6</label>
+                  </td>
+                </tr>
+                
+                <tr class="text-center">
+                  <td class="">
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o table-icon-green fa-2x" aria-hidden="true"></i>
+                    </div>                
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-ban table-icon-warning fa-2x" aria-hidden="true"></i>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-12  col-lgf-12">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Cascade Modal</button>
+            </div>
+          </div>
+
+          <section>
+            <div>
+              <label>SKU Detail Approval</label>
+              <hr> 
+            </div>
+            
+            <div>
+              <button id="expandAll" type="button" class="btn btn-success" ng-click="expandAll()">Expand All</button>
+              <button id="toggleFirstRow" type="button" class="btn btn-success" ng-click="toggleRow(0)">Toggle First Row</button>
+              <button id="toggleSecondRow" type="button" class="btn btn-success" ng-click="toggleRow(1)">Toggle Second Row</button>
+              <button id="changeGrouping" type="button" class="btn btn-success" ng-click="changeGrouping()">Change Grouping</button>
+              <button id="getAggregates" type="button" class="btn btn-success" ng-click="getAggregates()">Get Aggregates</button>
+              <div id="grid1" ui-grid="gridOptions" ui-grid-grouping class="grid"></div>
+            </div>            
+          </section>
+          <section>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i><span class="left-margin10">Comment</span>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>  
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>  
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>  
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>                                                                  
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="tab-pane fade" id="Tab2">
+          <section>
+            <div class="subPageTitle">
+              <i class="fa fa-list"></i><span>Do Approval for PoR</span>
+            </div>
+
+            <div>
+              <label>Event Level Guardrail</label>
+              <span class="status-title-divide">
+                <span>Duration</span> 
+                <i class="fa fa-circle fa-lg table-icon-green lr-padding10" aria-hidden="true"></i>
+              </span>
+
+              <span class="status-title-divide">
+                <span>ROI</span> 
+                <i class="fa fa-circle fa-lg table-icon-warning lr-padding10" aria-hidden="true"></i>
+              </span>
+
+              <span class="pull-right ">
+              <span>Approved: </span> <i class="fa fa-check-circle-o table-icon-green iconPaddingLeft5 right-margin30" aria-hidden="true"></i>
+                <span>Pending: </span> <i class="fa fa-question-circle-o table-icon-approving iconPaddingLeft5 right-margin30" aria-hidden="true"></i>
+                <span>Rejected: </span> <i class="fa fa-ban table-icon-warning iconPaddingLeft5" aria-hidden="true"></i>
+              </span>
+
+              <hr>
+            </div>          
+
+            <div>
+              <table class="table table-condensed table-bordered">
+
+                <tbody>
+                <tr>
+                  <th class="text-center process-guadrail-approved">Level1</th>
+                  <th colspan=2 class="text-center process-guadrail-approved">Leve2</th>
+                  <th colspan=2 class="text-center process-guadrail-Current">Leve3</th>
+                  <th class="text-center">Leve4</th>
+                </tr>
+
+                <tr class="text-center">
+                  <td class="process-guadrail-approved">
+                    <span>Group1 <i class="fa fa-angle-double-right" aria-hidden="true"></i></span> 
+                  </td>
+                  <td class="process-guadrail-approved">
+                    <label>Group2 <i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+                  </td>
+                  <td class="process-guadrail-approved">
+                    <label>Group3 <i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+                    </td>
+                  <td class="process-guadrail-Current">
+                    <label>Group4 <i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+                  </td>
+                  <td>
+                    <label>Group5 <i class="fa fa-angle-double-right" aria-hidden="true"></i></label>
+                  </td>
+                  <td>
+                    <label>Group6</label>
+                  </td>
+                </tr>
+            <!--
+                        <tr>
+                          <td colspan="6">
+                            <div class="checkout-wrap">
+                              <ul class="checkout-bar">
+                                <li class="visited first">
+                                  <a href="#">Group1</a>
+                                </li>
+                                <li class="visited">Group2</li>
+                                <li class="visited">Group3</li>
+                                <li class="active">Group4</li>
+                                <li class="">Group5</li>
+                                <li class="">Group6</li>  
+                              </ul>
+                            </div> 
+                          </td>
+                        </tr>
+            -->
+                <tr class="text-center">
+                  <td class="">
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-check-circle-o table-icon-green fa-2x" aria-hidden="true"></i>
+                    </div>                
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-ban table-icon-warning fa-2x" aria-hidden="true"></i>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                  <td>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>
+                    <div class="tb-padding10">
+                      wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                    </div>                
+                  </td>
+                </tr>
+                </tbody>
+              </table>  
+            </div>
+          </section>
+
+
+          <section>
+            <div>
+              <label>SKU Detail Approval</label>
+              <hr> 
+            </div>
+            
+            <div>
+              <button id="expandAll" type="button" class="btn btn-success" ng-click="expandAll()">Expand All</button>
+              <button id="toggleFirstRow" type="button" class="btn btn-success" ng-click="toggleRow(0)">Toggle First Row</button>
+              <button id="toggleSecondRow" type="button" class="btn btn-success" ng-click="toggleRow(1)">Toggle Second Row</button>
+              <button id="changeGrouping" type="button" class="btn btn-success" ng-click="changeGrouping()">Change Grouping</button>
+              <button id="getAggregates" type="button" class="btn btn-success" ng-click="getAggregates()">Get Aggregates</button>
+              <div id="grid1" ui-grid="gridOptions" ui-grid-grouping class="grid"></div>
+            </div>
+          </section>
+          <section class="top-padding10 bottom-padding30">
+            <div class="row">
+              <div class="col-md-12"><label>Group Approve Comments</label></div>
+              <div class="col-md-8">
+                <div><textarea class="form-control" rows="3"></textarea></div>
+              </div>
+              <div class="col-md-4">
+                <div class="col-md-6"><button class="btn btn-primary btn-block">Mark all as Reject</button></div>
+                <div class="col-md-6"><button class="btn btn-primary btn-block">Mark all as Approve</button></div>
+                <div class="col-md-12 top-padding10"><button class="btn btn-primary btn-block">Submit</button></div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i><span class="left-margin10">Comment</span>
+                </h3>
+              </div>
+              <div class="panel-body">
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>  
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it. Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>  
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>  
+                <section class="comment">
+                  <div class="comment-title">
+                    wen.zhang3@hpe.com
+                    <span class="panel-title-divide">Submit for Approval</span>
+                    <span class="panel-title-divide">2016-08-08 08:08:08</span>
+                    <span class="panel-title-divide">XXXXXX-001</span> 
+                  </div>
+                  <div class="comment-content">
+                    Most likely the icon you are looking is already available inside Grommet iconography. This is how you import it.
+                  </div>
+                </section>                                                                  
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="tab-pane fade" id="Tab3">
+          <div class="subPageTitle">
+            <i class="fa fa-list"></i><span>Finacial Review</span>
+          </div>         
+          <section>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Event Plan Title:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>GBU:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div>            
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Event Start Date:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Region:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Event End Date:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div> 
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Subregion:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div> 
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Event:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div> 
+
+              <div class="col-md-6" ng-class="status">
+                <div class="col-md-4"><label>Country:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div> 
+            </div>
+          </section>
+
+          <section>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Additional Investments</h3>
+              </div>
+              <div class="panel-body">
+                <div class="form-group">
+                  <form role="form">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>MDF:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6  col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>Cashback:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6  col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>Engine:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>Other:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6  col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>Total:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6  col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>                                           
+          </section>             
+        </div>
+
+        <div class="tab-pane fade" id="Tab4">
+          <div class="subPageTitle">
+            <i class="fa fa-list"></i><span>Submit for Approval</span>
+          </div>          
+          <section>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Event Plan Title:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>GBU:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div>            
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Event Start Date:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Region:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Event End Date:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div> 
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Subregion:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div> 
+
+              <div class="col-md-6">
+                <div class="col-md-4"><label>Event:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div> 
+
+              <div class="col-md-6" ng-class="status">
+                <div class="col-md-4"><label>Country:</label></div>
+                <div class="col-md-8"><div class="readonly">Lorem ipsum dolor sit amet, consectetur</div></div>
+              </div> 
+            </div>
+          </section>
+
+          <section>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Additional Investments</h3>
+              </div>
+              <div class="panel-body">
+                <div class="form-group">
+                  <form role="form">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>MDF:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6  col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>Cashback:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6  col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>Engine:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6 col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>Other:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6  col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+                      <div class="col-sm-6 col-md-2  col-lgf-2">
+                        <label>Total:</label>
+                      </div>
+                      <div class="col-sm-6 col-md-4  col-lgf-2">
+                        <label>$101,000.00</label>
+                        <span class="lr-padding10">($USD)</span>
+                      </div>
+                      <div class="col-sm-6 col-md-6  col-lgf-2">
+                        <label>Description:</label>
+                        <span class="lr-padding10">Digtal demand generation spend</span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>                                           
+          </section>             
+        </div>
+      </div>
+
+
+      <!-- 模态框（Modal） -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-sheet">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" 
+                     data-dismiss="modal" aria-hidden="true">
+                        &times;
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                     Merge or Distribute PoRs
+                  </h4>
+               </div>
+               <div class="modal-body">
+
+                <p>Confirm below PoRs and do merge:</p>
+
+                <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
+                 
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Distribute to countries
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>
+
+                        <div class="col-md-2">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>CHN</span>
+                          </label>
+                        </div>                       
+                      </div>                     
+                    </div>                    
+                  </div>
+
+                  <div class="text-center">
+                    <button  class="btn btn-primary btn-hp btn-sm">Cancel</button>
+                    <button  class="btn btn-primary btn-hp btn-sm">Distribute</button>
+                  </div>
+                </div>                 
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                  </button>
+                </div>
+            </div><!-- /.modal-content -->
+      </div><!-- /.modal -->
+      </div>
+
+    </div>
+  </div>
+<!-- main content end-->
+
+</section>

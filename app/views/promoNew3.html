@@ -1,0 +1,396 @@
+<link rel="stylesheet" href="styles/step_descriptor.css"/>
+<link rel="stylesheet" href="styles/style.css"/>
+<script src="scripts/modernizr.min.js"></script>
+<script src="scripts/jquery.nicescroll.js"></script>
+<script src="scripts/scripts.js"></script>
+
+
+
+<section>
+  <div class="left-side sticky-left-side">
+    <!--logo and iconic logo start-->
+    <div class="logo">
+      <a href="#/">
+        <img src="images/HPE_logo.png" alt=""></a>
+    </div>
+
+    <div class="logo-icon text-center">
+      <a href="#/">
+        <img src="images/logo_icon.png" alt=""></a>
+    </div>
+    <!--logo and iconic logo end-->
+
+    <runoob-directive></runoob-directive>
+  </div>  
+
+  <div class="main-content" >
+    <!-- header section start-->
+    <div class="header-section">
+      <!--toggle button start-->
+      <a class="toggle-btn">
+        <i class="fa fa-bars"></i>
+      </a>
+      <span>
+        <img src="images/droid.png" class="projecticon">
+      </span>
+
+      <!--toggle button end-->
+      <div class="menu-right">
+        <i class="fa fa-user"></i>
+        <span>Jason Zhang(Administrator)</span>
+      </div>
+    </div>
+    <!-- header section end-->
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+      <div class="step">
+        <ul>
+          <li class="step-descriptor step-descriptor-active">
+            <span class="step-descriptor-title">1. Planning Setup</span>
+          </li>
+          <li class="step-descriptor step-descriptor-active">
+            <span class="step-descriptor-title">2. Forecast Modeling</span>
+          </li>
+          <li class="step-descriptor step-descriptor-active">
+            <span class="step-descriptor-title">3. Financial Review</span>
+          </li>
+          <li class="step-descriptor">
+            <span class="step-descriptor-title">4. Planning Completion</span>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12  col-lgf-12 addtolist">
+          <button type="button" class="btn btn-primary disabled" data-toggle="modal" data-target="#myModal">
+            Add Product
+          </button>
+        </div>
+      </div>
+
+
+
+      <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
+
+      <div class="text-right tb-padding10">
+        <div class="row">
+          <div class="col-sm-8 col-md-8  col-lgf-8 addtolist">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>
+            <button type="button" class="btn btn-primary disabled" data-toggle="modal" data-target="#myModalDelete">Disable</button>
+          </div>
+
+          <div class="col-sm-4 col-md-4  col-lgf-4">
+            <button type="button" class="btn btn-primary">Save Later</button>
+            <a class="btn btn-primary" href="#/financial" role="button">Financial Revie</a>
+          </div>
+        </div>
+      </div>
+<!--
+      <div>
+      Status Icon(normal):
+        <i class="fa fa-circle fa-lg table-icon-green" aria-hidden="true"></i>
+        <i class="fa fa-circle fa-lg table-icon-approving" aria-hidden="true"></i>
+        <i class="fa fa-circle fa-lg table-icon-warning" aria-hidden="true"></i>
+      </div>
+      <div>
+      Status Icon(2X):
+        <i class="fa fa-circle fa-lg table-icon-green fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-circle fa-lg table-icon-approving fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-circle fa-lg table-icon-warning fa-2x" aria-hidden="true"></i>
+      </div>      
+      <div>
+      Status Icon(normal):
+        <i class="fa fa-check-circle-o table-icon-green" aria-hidden="true"></i>
+        <i class="fa fa-question-circle-o table-icon-approving" aria-hidden="true"></i>
+        <i class="fa fa-ban table-icon-warning" aria-hidden="true"></i> 
+      </div> 
+      <div>     
+      Status Icon(2X):
+        <i class="fa fa-check-circle-o table-icon-green fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-ban table-icon-warning fa-2x" aria-hidden="true"></i> 
+      </div>
+
+      <div>     
+        <label>Messages</label>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+              <i class="fa fa-info-circle fa-2x" aria-hidden="true" ></i> <span class="lr-padding10"><label class="lr-padding5">Information:</label>This is a testing message.</span>
+            </div>
+        </div>        
+          
+        <div class="panel panel-default">
+            <div class="panel-body">
+              <i class="fa fa-exclamation-triangle warning fa-2x" aria-hidden="true" ></i> <span class="lr-padding10"><label class="lr-padding5">Warning:</label>This is a testing message.</span>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+              <i class="fa fa-check-circle-o success fa-2x" aria-hidden="true"></i> <span class="lr-padding10"><label class="lr-padding5">Success:</label>This is a testing message.</span>
+            </div>
+        </div>           
+      </div>
+-->
+
+<!--20160926 change tab version-->
+      <div class="panel panel-default">
+        <div class="panel-heading"> 
+          <h3 class="panel-title"> 
+            Event Level Guardrail Check 
+          </h3> 
+        </div>
+        <div class="panel-body"> 
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active tab-title"><a href="javascript:void(0);#Dashboard" data-toggle="tab">Country Level Pricing Dashboard</a></li>
+            <li class="tab-title"><a href="javascript:void(0);#Price" data-toggle="tab">Qty vs. Net Price</a></li>
+            <li class="tab-title"><a href="javascript:void(0);#Margin" data-toggle="tab">Net Rev vs. Gross Margin %</a></li>
+          </ul>
+
+
+          <div id="myTabContent" class="tab-content top-margin">       
+            <div class="tab-pane fade in active" id="Dashboard">
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Net Rev ($) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>                
+              </div>
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Gross Margin ($, %) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade in" id="Price">
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Net Rev ($) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>                
+              </div>
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Gross Margin ($, %) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>
+              </div>              
+            </div>
+            <div class="tab-pane fade in" id="Margin">
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Net Rev ($) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>                
+              </div>
+              <div class="col-md-6">
+                <div class="panel panel-default"> 
+                  <div class="panel-heading"> 
+                    <h3 class="panel-title"> 
+                      Gross Margin ($, %) 
+                    </h3> 
+                  </div> 
+                  <div class="panel-body"> 
+                    <nvd3 options='options' data='data'></nvd3> 
+                  </div> 
+                </div>
+              </div>            
+            </div>                           
+          </div>          
+        </div> 
+      </div>
+  
+<!-- tabs-->
+      <div class="panel-group" id="accordionGroup">
+         <div class="panel panel-default">
+            <div class="panel-heading">
+               <h3 class="panel-title">
+                  <div data-toggle="collapse" data-parent="#accordionGroup" 
+                     href="javascript:void(0);#collapseGroup">
+                     SKU J4858C Chart 
+                     <span class="panel-title-divide">Production description</span> 
+                     <span class="panel-title-divide">Adjust net price</span> 
+                  </div>
+               </h3>
+            </div>
+            <div id="collapseGroup" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <div class="padBottom10">
+                  <button id="expandall" type="button" class="btn btn-default" ng-click="ExpandAll()"><i class="fa fa-plus-square-o"></i> Expand All</button>
+                  <button id="collapseall" type="button" class="btn btn-default" ng-click="CollapseAll()"><i class="fa fa-minus-square-o"></i> Collapse All</button>
+                </div>
+
+                <div class="panel-group" id="accordion">
+                   <div class="panel panel-default">
+                      <div class="panel-heading">
+                         <h4 class="panel-title">
+                            <div data-toggle="collapse" data-parent="#accordion" href="javascript:void(0);#collapseOne">
+                               Country Level Pricing Dashboard
+                               <paneltool class="pull-right"><i class="fa fa-plus"></i></paneltool>
+                            </div>
+                         </h4>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                          <div class="row">
+                            <div class="col-sm-12 col-md-9 col-lgf-9">
+                              <div class="panel panel-default">
+                                <div class="panel-heading">
+                                  <h3 class="panel-title">
+                                    Country Level Pricing Dashboard
+                                  </h3>
+                                </div>
+                                <div class="panel-body">
+                                  <nvd3 options='options' data='data'></nvd3>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-sm-12 col-md-3 col-lgf-3">
+                              <p>Currency toggle for ASP & BD Net price</p>
+                              <div class="row left-margin-15">
+                                <div class="col-md-4">                      
+                                  <button type="button" class="btn btn-primary">USD</button>
+                                </div>
+                                <div class="col-md-4">
+                                  <button type="button" class="btn btn-default">EUR</button>
+                                </div>
+                                <div class="col-sm-4 col-md-4  col-lgf-4">
+                                  <div class="input-group">
+                                    <button type="button" 
+                                      id="dropdownMenu1" 
+                                      data-toggle="dropdown" 
+                                      class="btn btn-default ctm-content">
+                                      <span class="btntext zselect">Other</span>
+                                      <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">CHF</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">CZK</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">DKK</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">CHF</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">CZK</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">DKK</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">CHF</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">CZK</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">DKK</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">CHF</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">CHF</a>
+                                      </li>
+                                      <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#">CHF</a>
+                                      </li>                                                                                                                                       
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </div>
+
+                   <div class="panel panel-default">
+                      <div class="panel-heading">
+                         <h4 class="panel-title">
+                            <div data-toggle="collapse" data-parent="#accordion" href="javascript:void(0);#collapseTwo">
+                              Qty vs. Net Price
+                              <paneltool class="pull-right"><i class="fa fa-plus"></i></paneltool>
+                            </div>
+                         </h4>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse">
+                         <div class="panel-body">
+                            <div class="row mtop10 padding-left-right-10">
+                              <div class="col-md-6">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">Monthly</button>
+                              </div>
+                              <div class="col-md-6">
+                                <button type="button" class="btn btn-default btn-lg btn-block">Quarterly</button>
+                              </div>
+                            </div>
+
+                            <nvd3 options='options' data='data'></nvd3>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="panel panel-default">
+                      <div class="panel-heading">
+                         <h4 class="panel-title">
+                            <div data-toggle="collapse" data-parent="#accordion" href="javascript:void(0);#collapseThree">
+                            Net Rev vs. Gross Margin %
+                            <paneltool class="pull-right"><i class="fa fa-minus"></i></paneltool>
+                            </div>
+                         </h4>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse">
+                         <div class="panel-body">
+                            <nvd3 options='options' data='data'></nvd3>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+              </div>
+            </div>
+         </div>
+      </div>
+
+    </div>  <!--end wrapper-->
+  </div><!--end main content-->
+</section>

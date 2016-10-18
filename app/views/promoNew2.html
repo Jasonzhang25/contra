@@ -1,0 +1,422 @@
+<link rel="stylesheet" href="styles/step_descriptor.css"/>
+<link rel="stylesheet" href="styles/style.css"/>
+<script src="scripts/modernizr.min.js"></script>
+<script src="scripts/jquery.nicescroll.js"></script>
+<script src="scripts/scripts.js"></script>
+
+<section>
+  <div class="left-side sticky-left-side">
+    <!--logo and iconic logo start-->
+    <div class="logo">
+      <a href="#/">
+        <img src="images/HPE_logo.png" alt=""></a>
+    </div>
+
+    <div class="logo-icon text-center">
+      <a href="#/">
+        <img src="images/logo_icon.png" alt=""></a>
+    </div>
+    <!--logo and iconic logo end-->
+
+    <runoob-directive></runoob-directive>
+  </div>
+
+  <div class="main-content" >
+    <!-- header section start-->
+    <div class="header-section">
+      <!--toggle button start-->
+      <a class="toggle-btn">
+        <i class="fa fa-bars"></i>
+      </a>
+      <span>
+        <img src="images/droid.png" class="projecticon"></span>
+
+      <!--toggle button end-->
+      <div class="menu-right">
+        <i class="fa fa-user"></i>
+        <span>Jason Zhang(Administrator)</span>
+      </div>
+    </div>
+    <!-- header section end-->
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+      <div class="step">
+        <ul>
+          <li class="step-descriptor step-descriptor-active">
+            <span class="step-descriptor-title">1. Planning Setup</span>
+          </li>
+          <li class="step-descriptor step-descriptor-active">
+            <span class="step-descriptor-title">2. Forecast Modeling</span>
+          </li>
+          <li class="step-descriptor">
+            <span class="step-descriptor-title">3. Financial Review</span>
+          </li>
+          <li class="step-descriptor">
+            <span class="step-descriptor-title">4. Planning Completion</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-6  col-lgf-12 addtolist">
+
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Add Product
+          </button>
+        </div>
+      </div>
+
+      <div class="row search-bar top-padding10">
+        <div class="col-sm-12 col-md-6">
+          <div class="input-group">
+            <span class="input-group-addon marL5">
+              <i class="fa fa-cogs"></i>
+            </span>
+            <div class="dropdown input-group">
+              <button type="button" id="dropdownMenu2" 
+                  data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                <span class="btntext zselect">Customized View</span>
+                <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="avascript:void(0);#myModal2" data-toggle="modal">Customized View</a>
+                </li>
+              </ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6  col-lgf-6">
+
+          <div class="input-group">
+            <span class="input-group-addon marL5">
+              <i class="fa fa-table"></i>
+
+            </span>
+
+            <div class="dropdown input-group">
+              <button type="button" id="dropdownMenu2" 
+                  data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                <span class="btntext zselect">View By</span>
+                <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="avascript:void(0);#myModal2" data-toggle="modal">Customized View</a>
+                </li>
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="#">View Model 1</a>
+                </li>
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="#">View Model 2</a>
+                </li>
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="#">View Model 3</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
+
+      <div class="text-right tb-padding10">
+        <div class="row">
+          <div class="col-sm-8 col-md-8  col-lgf-8 addtolist">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>
+            <button type="button" class="btn btn-primary disabled" data-toggle="modal" data-target="#myModalDelete">Disable</button>
+          </div>
+
+          <div class="col-sm-4 col-md-4  col-lgf-4">
+            <button type="button" class="btn btn-primary">Save Later</button>
+            <a class="btn btn-primary" href="#/financial" role="button">Financial Revie</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 模态框1（Modal） -->
+      <div class="modal container-fluid ng-scope top am-fade" id="myModal" tabindex="-1" role="dialog" 
+       aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-sheet">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" 
+                   data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">SKU Advance Search</h4>
+            </div>
+
+            <div class="modal-body">
+              <div class="form-group">
+                <form role="form">
+                  <div class="row">
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">Previous Plan:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text" name="fromDate" class="form-control"></div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label>Business Model:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="EMEA"></div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">GBU:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text"  class="form-control"  placeholder="6M"></div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label>Program Name:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Sub Region"></div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">Product Category:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text"  class="form-control"  placeholder="5M"></div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label>Program Type:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Country"></div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">PL:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text"  class="form-control"  placeholder="Select"></div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label>Promo Classification:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="eg.693687-B21"></div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">Deal ID:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text"  class="form-control"  placeholder="Select"></div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label>Product Number:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="eg.693687-B21"></div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6  col-lgf-6 col-h">
+                      <button type="button" class="btn btn-primary">Search</button>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6  col-lgf-6 col-h">
+                      <button type="button" class="btn btn-primary">Reset</button>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-5 col-md-5 col-lg-5">
+                  <div class="wrapper padding-left-right-10">
+                    <div id="grid1" ui-grid="{ data: myData1 }" class="grid" ui-grid-auto-resize></div>
+                  </div>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2 ">
+                  <div class="row vertical-center">
+                    <div class="col-sm-12 col-md-12 col-lg-12 ">
+                      <button type="button" class="btn btn-primary ">&gt;&gt;</button>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 ptop10">
+                      <button type="button" class="btn btn-primary ">&lt;&lt;</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5">
+                  <div class="wrapper padding-left-right-10">
+                    <div id="grid1" ui-grid="{ data: myData1 }" class="grid" ui-grid-auto-resize></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" 
+               data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> </div>
+        <!-- /.modal --> </div>
+
+      <!-- 模态框2（Modal） -->
+      <div class="modal container-fluid ng-scope top am-fade" id="myModal2" tabindex="-1" role="dialog" 
+       aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-sheet">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" 
+                   data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Grid View Configuration</h4>
+            </div>
+
+            <div class="modal-body">
+              <div class="form-group">
+                <form role="form">
+                  <div class="row">
+                    <div class="col-sm-4 col-md-2">
+                      <label class="nowrap">
+                        View Name:
+                      </label>
+                    </div>
+
+                    <div class="col-sm-8 col-md-3">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="New view name">
+                      </div>
+                    </div>
+
+                    <div class="col-sm-4 col-md-1">
+                      <p>&nbsp</p>
+                    </div>
+
+                    <div class="col-sm-4 col-md-2">
+                      <label class="nowrap">
+                        View List:
+                      </label>
+                    </div>
+
+                    <div class="col-sm-8 col-md-3">
+                      <div class="dropdown input-group">
+                        <button type="button" id="dropdownMenu2" 
+                          data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                          <span class="btntext zselect">Choose...</span>
+                          <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Plan1</a>
+                          </li>
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Plan2</a>
+                          </li>
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Plan3</a>
+                          </li>
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Plan4</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-4 col-md-1">
+                      <p>&nbsp</p>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                      <div class="input-group">
+                        <button type="button" class="btn btn-primary">Save View</button>
+                      </div>  
+                    </div>
+
+
+                  </div>
+                </form>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-6 col-md-5 col-lg-5">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Available Columns</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="grid1" ui-grid="{ data: myData2 }" class="grid" ui-grid-auto-resize></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-1 col-lg-1">
+                <div class="row vertical-center-view">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <button type="button" class="btn btn-primary ">&gt;&gt;</button>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <button type="button" class="btn btn-primary ">&lt;&lt;</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-5 col-lg-5">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Selected Columns</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div id="grid1" ui-grid="{ data: myData2 }" class="grid" ui-grid-auto-resize></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-1 col-lg-1">
+               <div class="vertical-up-down">
+                  <a href="#"><i class="fa fa-sort-asc table-icon-green fa-4x" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-sort-desc table-icon-gray fa-4x top-margin-20" aria-hidden="true"></i></a> 
+                </div>
+              </div>              
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" 
+                 data-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> </div>
+        <!-- /.modal --> </div>
+    </div>
+  </div>
+  <!--end wrapper-->
+</div>
+<!--end main content-->
+</section>
