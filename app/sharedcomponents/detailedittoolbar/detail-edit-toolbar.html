@@ -1,0 +1,38 @@
+<div class="form-inline">
+  <div class="filter-seperator-edit">
+    <span class="ctr-filter">
+      <button  class="btn btn-filter btn-filter-edit" ng-click="edit()">
+       <i class="icon-pencil"></i>
+      </button>
+      <button  type="button" class="btn btn-filter btn-filter-edit" ng-click="save()">
+       <i class="btn-filter-left icon-save"></i>Save
+      </button>
+      <button  type="button" class="btn btn-filter btn-filter-edit" ng-click="save(true)">
+       <i class="btn-filter-left icon-save"></i>Save & Exit
+      </button>
+      <button  type="button" class="btn btn-filter btn-filter-edit" ng-click="reset()">
+       <i class="btn-filter-left icon-undo"></i>Reset
+      </button>
+      <button  type="button" class="btn btn-filter btn-filter-edit" ng-click="exit()">
+       <i class="btn-filter-left icon-cancel-circle"></i>Exit
+      </button>
+      <button  container=".ctr-filter"
+      class="btn btn-filter btn-filter-edit"
+      bs-dropdown
+      data-html="true"
+      data-toggle="dropdown"
+      data-template="sharedcomponents/toolbar/section-dropdown-template.html">
+      Select Section
+      <i class="marR6 icon-chevron-down icon-blue"></i>
+      </button>
+      <button  class="btn btn-filter btn-filter-edit" data-toggle="dropdown" data-animation="am-fade-and-slide-bottom" bs-dropdown data-template="sharedcomponents/toolbar/toolbar-dropdown-template.html">
+      More
+      <i class="marR10 icon-chevron-down icon-blue "></i>
+      </button>
+      <button  type="button" class="btn btn-filter hide-small btn-filter-color" ng-click="toggleToolPanel()">View By
+       <i ng-if="!viewbyIconCtrl" class="marR10 icon-chevron-down icon-blue btn-filter-color"></i>
+       <i ng-if="viewbyIconCtrl" class="marR10 icon-chevron-up icon-blue btn-filter-color"></i>
+      </button>
+    </span>
+  </div>
+</div>

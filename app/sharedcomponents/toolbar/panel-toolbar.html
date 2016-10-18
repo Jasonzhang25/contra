@@ -1,0 +1,32 @@
+<div class="filter-seperator-edit">
+  <div class="row form-inline">
+    <div  class="col-xs-12 ctr-filter">
+      <span ng-if="::isDetail">
+        <button ng-if="updateAccess" class="btn btn-filter btn-filter-color" ng-click="edit()">
+          <i class="icon-pencil"></i>
+        </button>
+      </span>
+      <button type="button" class="btn btn-filter btn-filter-color" ng-click="exit()">
+          <i class="btn-filter-left icon-cancel-circle"></i>Exit
+        </button>
+      <button container=".ctr-filter" 
+        class="btn btn-filter btn-filter-color" 
+        bs-dropdown 
+        data-html="true"
+        data-toggle="dropdown"
+        data-template="sharedcomponents/toolbar/section-dropdown-template.html">
+        Select Section
+        <i class="marR6 icon-chevron-down icon-blue"></i>
+      </button>
+      <button ng-if="showToolbar" class="btn btn-filter btn-filter-color" data-toggle="dropdown" data-animation="am-fade-and-slide-bottom" bs-dropdown data-template="sharedcomponents/toolbar/toolbar-dropdown-template.html">
+        More
+        <i class="marR10 icon-chevron-down icon-blue "></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div ng-show="emailPanel" class="emailPanel">
+  <div id="mask2"></div>
+  <email></email>
+</div>

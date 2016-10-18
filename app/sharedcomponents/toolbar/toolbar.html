@@ -1,0 +1,57 @@
+<div class="filter-seperator">
+	<div class="row form-inline">
+		<div  class="col-xs-12 col-sm-10 ctr-filter">
+			<div id="btnFilter2" 
+			class="btn filter-float btn-filter btn-filter-color" ng-class="{'clearEffects' : filterBtn == true, 'withEffects' : filterBtn == false}"
+			ng-click="clickFn('filter', filterBtn)">Filter
+			<i class="marR10 icon-blue" ng-class="{'icon-chevron-down btn-filter-color' : filterBtn == true, 'icon-chevron-up' : filterBtn == false}"></i>
+			</div>
+
+			<div ng-show="showToolbar == true && exportAccess == true" class="btn filter-float btn-filter btn-filter-color" data-toggle="dropdown" 
+			data-animation="am-fade-and-slide-bottom" bs-dropdown data-template="dropdownbody" ng-click="clickFn('export')">Export
+			<i ng-show="exportIconCtrl == false" class="marR10 icon-chevron-down icon-blue btn-filter-color"></i>
+			<i ng-show="exportIconCtrl == true" class="marR10 icon-chevron-up icon-blue btn-filter-color"></i>
+			</div>
+
+			<div ng-show="emailAccess == true"
+			class="btn filter-float btn-filter btn-filter-color" ng-class="{'clearEffects' : emailBtn == true, 'withEffects' : emailBtn == false}"
+			ng-click="clickFn('email', emailBtn)">Email
+			<i class="marR10 icon-blue" ng-class="{'icon-chevron-down btn-filter-color' : emailBtn == true, 'icon-chevron-up' : emailBtn == false}"></i>
+			</div>
+
+		    <div ng-show="showViewBy" type="div" class="btn filter-float btn-filter btn-filter-color" 
+		    ng-click="toggleToolPanel()">View By
+		    <i ng-show="!viewbyIconCtrl" class="marR10 icon-chevron-down icon-blue btn-filter-color"></i>
+		    <i ng-show="viewbyIconCtrl" class="marR10 icon-chevron-up icon-blue btn-filter-color"></i>
+		    </div>
+		</div>
+		<div ng-show="showLayout" class="col-xs-12 col-sm-2 ctr-filter">
+			<button id="layout-options" type="div" class="btn btn-default btn-filter pull-right hide-small btn-filter-color" 
+			data-animation="am-fade-and-slide-bottom" data-container="body" 
+			ng-model="selectedLayout" data-html="1" bs-options="ly.value as ly.label for ly in layouts" 
+			data-placement="auto bottom-left" bs-select><span class="caret"></span>
+			</button>
+		</div>
+	</div>
+</div>
+	    
+<!-- TODO will move this html to one template file -->
+<script type="text/ng-template" id="dropdownbody">
+	<ul  class="dropdown-menu">
+	    <li ng-show="exportAccess">
+	        <a role="menuitem" tabindex="-1" ng-click="openItem($event, 2)">
+	            <i class="marR10 icon-file-pdf-o icon-blue"></i>PDF
+	        </a>
+	    </li>
+	    <li ng-show="exportAccess" ng-hide="chartPagesExcel">
+	        <a role="menuitem" tabindex="-1" ng-click="openItem($event, 3)">
+	            <i class="marR10 icon-file-excel-o icon-blue"></i>Excel
+	        </a>
+	    </li>
+	    <li ng-show="exportAccess" ng-hide="chartPagesWord">
+	        <a role="menuitem" tabindex="-1" ng-click="openItem($event, 4)">
+	            <i class="marR10 icon-file-word-o icon-blue"></i>Word
+	        </a>
+	    </li>
+	</ul>
+</script>

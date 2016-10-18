@@ -1,0 +1,21 @@
+<ul class="dropdown-menu col-md-4">
+    <div class="top-ctrl col-md-12">
+      <button class="btn col-md-6 btn-filter" ng-click="expandAll()">
+        Expand All
+        <i class="marR6 icon-expand2"></i>
+      </button>
+      <button class="btn col-md-6 btn-filter noB" ng-click="collapseAll()">
+        Collapse All
+        <i class="marR6 icon-contract"></i>
+      </button>
+    </div>
+    <div class="seperator col-md-12"></div>
+    <div class="mid-ctrl col-md-12 pad0">
+      <ul class="col-md-6">
+        <li class="marB5 col-md-12" ng-click="selectPanel($index)" ng-repeat="panel in ::panels" ng-if="$even">{{::panel.title}}</li>
+      </ul>
+      <ul class="col-md-6">
+        <li class="marB5 col-md-12" ng-click="selectPanel($index)" ng-repeat="panel in ::panels" ng-if="$odd">{{::panel.title}}</li>
+      </ul>
+    </div>
+</ul>

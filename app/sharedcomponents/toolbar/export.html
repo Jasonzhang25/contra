@@ -1,0 +1,19 @@
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" draggable-popup>
+    <div class="modal-content">
+      <div class="modal-header" ng-show="title">
+        <button type="button" class="close" aria-label="Close" ng-click="$hide()">&times;</button><h4 class="modal-title" ng-bind-html="title"></h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+		  <label for="usr">File Name:</label>
+		  <input type="text" ng-model="$parent.excelfileName" class="form-control" id="usr">
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-hp btn-primary" ng-click="exportExcelExecute();$hide()">Export</button>
+        <button type="button" class="btn btn-default" ng-click="$hide()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
