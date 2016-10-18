@@ -10,13 +10,6 @@
 
 angular.module('contraApp')
 
-.config(function($datepickerProvider) {
-  angular.extend($datepickerProvider.defaults, {
-    dateFormat: 'dd/MM/yyyy',
-    startWeek: 1
-  });
-})
-
 
 
 .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {

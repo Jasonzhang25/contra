@@ -1,10 +1,11 @@
-<link rel="stylesheet" href="styles/style.css"/>
+<link rel="stylesheet" href="styles/style.css"/><!--left menu css -->
 
-<script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/jquery-1.10.2.min.js"></script>
 <script src="scripts/modernizr.min.js"></script>
 <script src="scripts/jquery.nicescroll.js"></script>
 <script src="scripts/scripts.js"></script>
+
+
 
 <section >
   <!-- left side start-->
@@ -163,7 +164,7 @@
 
               <div class="row">
                 <div class="col-sm-6 col-md-6  col-lgf-2 col-h">
-                  <button type="button" class="btn btn-primary">Add</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myAddGroup">Add</button>
                 </div>
               </div>
             </form>
@@ -188,7 +189,7 @@
         <div class="tb-padding10 text-right">
           <div class="row">
             <div class="col-sm-12 col-md-12  col-lgf-12 addtolist">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>
+              <button type="button" class="btn btn-primary">Delete</button>
             </div>
           </div>
         </div>
@@ -196,11 +197,224 @@
     </div>
     <!--body wrapper end-->
 
-    <!--footer section start-->
-    <!--
-        <footer>© Copyright 2016 Hewlett Packard Enterprise Development LP</footer>
-  -->
-  <!--footer section end-->
-</div>
+
+
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myAddGroup" tabindex="-1" role="dialog" 
+   aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-sheet">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Add New Group</h4>
+          </div>
+          <div class="modal-body">
+
+            <div class="row">                        
+              <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                <label class="nowrap">Region:</label>
+              </div>
+              <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                <div class="input-group">
+                  <button type="button" id="dropdownMenu1" 
+              data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                    <span class="btntext zselect">Choose Region...</span>                          
+                    <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">item one</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">item two</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">item three</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                <label class="nowrap">Country:</label>
+              </div>
+              <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                <div class="input-group">
+                  <button type="button" id="dropdownMenu1" 
+              data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                    <span class="btntext zselect">Choose Country...</span>                          
+                    <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">item one</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">item two</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">item three</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                <label class="nowrap">Subregion:</label>
+              </div>
+              <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                <div class="input-group">
+                  <button type="button" id="dropdownMenu1" 
+              data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                    <span class="btntext zselect">Choose Subregion...</span>                          
+                    <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">item one</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">item two</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">item three</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-body">
+                  <div class="row">                        
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">Guardrail Level Name:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Guardrail Level Name..." >
+                      </div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">Guardeail Level Number:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <button type="button" id="dropdownMenu1" 
+                    data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                          <span class="btntext zselect">Choose Region...</span>                          
+                          <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">item one</a>
+                          </li>
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">item two</a>
+                          </li>
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">item three</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">Group Name:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Group Name..." >
+                      </div>
+                    </div>
+                    
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">Approval Group Sequence:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                      <div class="input-group">
+                        <button type="button" id="dropdownMenu1" 
+                    data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                          <span class="btntext zselect">Choose Region...</span>                          
+                          <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">item one</a>
+                          </li>
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">item two</a>
+                          </li>
+                          <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">item three</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
+                      <label class="nowrap">Approval Require Type:</label>
+                    </div>
+                    <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                    <div class="input-group">
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <input type="radio" checked  ng-value="true" name="leveragedOrDedicated">
+                          <span>All</span>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="radio"  ng-value="false" name="leveragedOrDedicated">
+                          <span>Any</span>
+                        </div> 
+                    </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3  col-lgf-2 col-h">
+                        <div class="row">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>Active</span>
+                          </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3  col-lgf-2 col-h">
+                        <div class="row">
+                          <label class="col-md-12">
+                            <input type="checkbox">
+                            <span>Auto Approve</span>
+                          </label>
+                        </div>
+                    </div>
+                                                                              
+                  </div>
+              </div>
+            </div>
+            <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
+
+            <div class="text-center tb-margin10">
+              <button  class="btn btn-primary btn-hp btn-sm">Add</button>
+              <button  class="btn btn-primary btn-hp btn-sm">Delete</button>              
+              <button  class="btn btn-primary btn-hp btn-sm">Save</button>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" 
+               data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal --> 
+      </div>
+    </div>  
+      <!--body wrapper end-->
+ 
+    </div>
+  <!-- main content end-->
 <!-- main content end-->
 </section>

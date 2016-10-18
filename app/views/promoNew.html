@@ -97,7 +97,7 @@
                       <button type="button" id="dropdownMenu1" 
                           data-toggle="dropdown" class="btn btn-default form-control ctm-content">
                         <span class="btntext zselect">Choose...</span>
-                        <span  class="icon-chevron-down pull-right icon-blue"></span>
+                        <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
                       </button>
                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                           <li role="presentation">
@@ -145,12 +145,12 @@
                   </div>
                   <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
 
-            <div class="input-group" >
-                <input type="text" class="form-control" ng-model="$parent.plannedStartFrmDt" data-max-date="{{plannedStartToDt}}" placeholder="From" bs-datepicker 
-                data-bs-show="dpd1.show" autoclose="1">
-                <span class='input-group-addon' tabindex="0"  ng-blur="dpd1.show=false" ng-focus="dpd1.show=true">
-                <i class="fa fa-calendar"></i></span>
-            </div>                    
+                    <div class="input-group" >
+                        <input type="text" class="form-control" ng-model="$parent.plannedStartFrmDt" data-max-date="{{plannedStartToDt}}" placeholder="From" bs-datepicker 
+                        data-bs-show="dpd1.show" ng-focus="dpd1.show=true" autoclose="1">
+                        <span class='input-group-addon' tabindex="0" ng-click="dpd1.show=!dpd1.show">
+                        <i class="fa fa-calendar"></i></span>
+                    </div>                    
                   </div>
 
 
@@ -162,7 +162,7 @@
                         <button type="button" id="dropdownMenu1" 
                             data-toggle="dropdown" class="btn btn-default form-control ctm-content">
                           <span class="btntext zselect">Choose...</span>
-                          <span  class="icon-chevron-down pull-right icon-blue"></span>
+                          <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
                         </button>
                          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                             <li role="presentation">
@@ -195,7 +195,7 @@
                       <button type="button" id="dropdownMenu2" 
                           data-toggle="dropdown" class="btn btn-default form-control ctm-content">
                         <span class="btntext zselect">Choose...</span>
-                        <span  class="icon-chevron-down pull-right icon-blue"></span>
+                        <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>                        
                       </button>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
                         <li role="presentation">
@@ -469,7 +469,7 @@
                 <button type="button" id="dropdownMenu1" 
                     data-toggle="dropdown" class="btn btn-default form-control ctm-content">
                   <span class="btntext zselect">Choose...</span>
-                  <span  class="icon-chevron-down pull-right icon-blue"></span>
+                  <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
                 </button>
                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                     <li role="presentation">
@@ -497,7 +497,7 @@
                 <button type="button" id="dropdownMenu1" 
                     data-toggle="dropdown" class="btn btn-default form-control ctm-content">
                   <span class="btntext zselect">Choose...</span>
-                  <span  class="icon-chevron-down pull-right icon-blue"></span>
+                  <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
                 </button>
                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                     <li role="presentation">
