@@ -1,7 +1,5 @@
 <link rel="stylesheet" href="styles/style.css"/>
 
-
-<script src="scripts/jquery-1.10.2.min.js"></script>
 <script src="scripts/modernizr.min.js"></script>
 <script src="scripts/jquery.nicescroll.js"></script>
 
@@ -53,9 +51,6 @@
 
     <!--body wrapper start-->
     <div class="wrapper">
-      <div class="pageTitle">
-        <i class="fa fa-th"></i><span>ROI Analysis</span>
-      </div>
 
       <div> 
         <ul id="myTab" class="nav nav-tabs">
@@ -67,11 +62,7 @@
       </div>
 
       <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade in active" id="Tab1">
-          <div class="subPageTitle">
-            <i class="fa fa-list"></i><span>Event Design</span>
-          </div>        
-
+        <div class="tab-pane fade in active" id="Tab1">      
           <div class="filter-seperator">
             <div class="row form-inline">
               <div  class="col-xs-12 col-sm-10 ctr-filter">
@@ -93,7 +84,7 @@
             <div id="filterId" ng-show="filterPanel">
               <div class="form-group">
                 <form role="form">
-                  <div class="row">                        
+                  <div class="row">
                     <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
                       <label class="nowrap">PoR ID:</label>
                     </div>
@@ -126,7 +117,9 @@
                         </ul>
                       </div>
                     </div>
+                  </div>
 
+                  <div class="row">
                     <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
                       <label class="nowrap">PoR Title:</label>
                     </div>
@@ -158,7 +151,9 @@
                         </ul>
                       </div>
                     </div>
-
+                  </div>
+                  
+                  <div class="row">  
                     <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
                       <label class="nowrap">PoR Status:</label>
                     </div>
@@ -207,7 +202,8 @@
                         </ul>
                       </div>
                     </div>
-
+                  </div>
+                  <div class="row">  
                     <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
                       <label class="nowrap">Planning Period:</label>
                     </div>
@@ -241,7 +237,8 @@
 
                       </div>
                     </div>
-
+                  </div>
+                  <div class="row">  
                     <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
                       <label class="nowrap">Planning Period:</label>
                     </div>
@@ -272,180 +269,74 @@
                             <a role="menuitem" tabindex="-1" href="#">item three</a>
                           </li>
                         </ul>
-
                       </div> 
                     </div>
-                    <div class="col-sm-12 col-md-6  col-lgf-2 col-h">
+                  </div>
+                  <div class="row text-center top-padding5">
                       <button type="button" class="btn btn-primary">Search</button>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6  col-lgf-2 col-h">
                       <button type="button" class="btn btn-primary">Reset</button>
-                    </div>
                   </div>
                 </form>
               </div>
             </div>
           </div>
 
-          <div class="top-padding5">
-            <div class="row">
-              <div class="ol-sm-12 col-md-6 col-lgf-6">
-                <div class="input-group">
+
+          <div class="row tb-padding5">
+            <div class="ol-sm-12 col-md-6 col-lgf-6">
+              <div class="input-group">
+                <span class="input-group-addon marL5">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+                <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Quick search by keyword..." type="text" ng-model="gridOptions.quickFilterText">
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lgf-6">
+              <div class="input-group">
+                <div class="dropdown input-group">
                   <span class="input-group-addon marL5">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <i class="fa fa-table" aria-hidden="true"></i>
                   </span>
-                  <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Quick search by keyword..." type="text" ng-model="gridOptions.quickFilterText">
+                  <button type="button" id="dropdownMenu2" 
+                      data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                    <span class="btntext zselect">Custom View</span>
+                    <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="avascript:void(0);#myModal2" data-toggle="modal">Customized View</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">View Model 1</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">View Model 2</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">View Model 3</a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lgf-6">
-                <div class="input-group">
-                  <div class="dropdown input-group">
-                    <span class="input-group-addon marL5">
-                      <i class="fa fa-table" aria-hidden="true"></i>
-                    </span>
-                    <button type="button" id="dropdownMenu2" 
-                        data-toggle="dropdown" class="btn btn-default form-control ctm-content">
-                      <span class="btntext zselect">View By</span>
-                      <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="avascript:void(0);#myModal2" data-toggle="modal">Customized View</a>
-                      </li>
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">View Model 1</a>
-                      </li>
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">View Model 2</a>
-                      </li>
-                      <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="#">View Model 3</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                  <div class="input-group">
-                    <div class="dropdown input-group">
-                      <button type="button" id="dropdownMenu1" 
-                        data-toggle="dropdown" class="btn btn-default form-control ctm-content">
-                        <span class="btntext zselect">Reason Code...</span>
-                        <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Reason Code 1</a>
-                        </li>
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Reason Code 2</a>
-                        </li>
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Reason Code 3</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>              
-                </div>
-                <div class="col-md-6">
-                  <div class="input-group">
-                    <div class="dropdown input-group">
-                      <button type="button" id="dropdownMenu1" 
-                        data-toggle="dropdown" class="btn btn-default form-control ctm-content">
-                        <span class="btntext zselect">Promo Type...</span>
-                        <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Promo Type 1</a>
-                        </li>
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Promo Type 2</a>
-                        </li>
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Promo Type 3</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>                
-                </div>
             </div>
           </div>
-<!--
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Batch Setting</h3>
-            </div>
-            <div class="panel-body">
-            <div class="row">
-                <div class="col-md-4"><label>Batch Setting:</label></div>
-                <div class="col-md-4 right-margin-15">
-                  <div class="input-group">
-                    <div class="dropdown input-group">
-                      <button type="button" id="dropdownMenu1" 
-                        data-toggle="dropdown" class="btn btn-default form-control ctm-content">
-                        <span class="btntext zselect">Reason Code...</span>
-                        <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Reason Code 1</a>
-                        </li>
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Reason Code 2</a>
-                        </li>
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Reason Code 3</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>              
-                </div>
-                <div class="col-md-4 right-margin-15">
-                  <div class="input-group">
-                    <div class="dropdown input-group">
-                      <button type="button" id="dropdownMenu1" 
-                        data-toggle="dropdown" class="btn btn-default form-control ctm-content">
-                        <span class="btntext zselect">Promo Type...</span>
-                        <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Promo Type 1</a>
-                        </li>
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Promo Type 2</a>
-                        </li>
-                        <li role="presentation">
-                          <a role="menuitem" tabindex="-1" href="#">Promo Type 3</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>                
-                </div>
-              </div>
-              </div>
-          </div>
--->
+
+
           <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
 
-          <div class="text-right tb-padding10">
-            <div class="row">
-              <div class="col-sm-8 col-md-8  col-lgf-8 addtolist">
-                <button type="button" class="btn btn-primary" >Delete</button>
-                <button type="button" class="btn btn-primary disabled">Disable</button>
-                <button type="button" class="btn btn-primary" data-toggle="modal" 
-                data-target="#myModal">View Approve Status</button>
-              </div>
 
-              <div class="col-sm-4 col-md-4  col-lgf-4">
-                <button type="button" class="btn btn-primary">Save Later</button>
-                <a class="btn btn-primary" href="#/financial" role="button">Financial Review</a>
-              </div>
+          <div class="row text-center tb-padding10">
+            <div class="col-sm-12 col-md-12  col-lgf-12">
+              <button type="button" class="btn btn-primary" >Delete</button>
+              <button type="button" class="btn btn-primary disabled">Disable</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" 
+              data-target="#myModal">View Approve Status</button>
+              <button type="button" class="btn btn-primary">Save Later</button>
+              <a class="btn btn-primary" href="#/financial" role="button">Financial Review</a>
             </div>
           </div>
-        </div>
+
+
 
         <div class="tab-pane fade" id="Tab2">
           <div class="subPageTitle">

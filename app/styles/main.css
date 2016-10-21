@@ -1136,10 +1136,11 @@ background-color: #f80;
 color: #fff; 
 } 
 
+/* disable 2016/10/19
 .input-group {
     margin-bottom: 5px;
 }
-
+*/
 /*********************Table ************************/
 .table-select {
     color: #00b388;  
@@ -1315,12 +1316,18 @@ color: #fff;
   }
 
 /* define padding and margin*/
+.left-padding5 {
+    padding-left: 5px;
+}
 .lr-padding5 {
     padding: 0 5px;
   }
 .lr-padding10 {
     padding: 0 10px;
   }
+.tb-padding5 {
+    padding: 5px 0;
+}  
 .tb-padding10 {
     padding: 10px 0;
 }

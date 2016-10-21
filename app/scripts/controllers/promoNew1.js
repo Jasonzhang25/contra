@@ -16,8 +16,9 @@ angular.module('contraApp')
   }])
 
 .controller('promoNew1Ctrl', function($scope) {
-    $scope.isPromoNew1Active = true;
 
+    $scope.isPromoNew1Active = true;
+    
     $scope.dateOptions = {
     changeYear: true,
     changeMonth: true,

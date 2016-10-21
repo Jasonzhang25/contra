@@ -23,6 +23,7 @@ angular.module('contraApp')
     $scope.isPromoNewActive = true;
 
     $scope.dateOptions = {
+    dateFormat: 'MM/dd/yyyy',
     changeYear: true,
     changeMonth: true,
     yearRange: '2010:-0', 

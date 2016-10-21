@@ -58,49 +58,47 @@
         </ul>
       </div>
 
-      <div class="row">
-        <div class="col-sm-12 col-md-6  col-lgf-12 addtolist">
-
+      <div class="row text-center">
+        <div class="col-sm-12 col-md-12  col-lgf-12">
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
             Add Product
           </button>
+          <button type="button" class="btn btn-primary">
+            Import SKUs from csv
+          </button>
+          <button type="button" class="btn btn-primary">
+            Prev
+          </button> 
+          <button type="button" class="btn btn-primary">
+            Next
+          </button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>                                  
         </div>
       </div>
 
-      <div class="row search-bar top-padding10">
-        <div class="col-sm-12 col-md-6">
-          <div class="input-group">
-            <span class="input-group-addon marL5">
-              <i class="fa fa-cogs"></i>
-            </span>
-            <div class="dropdown input-group">
-              <button type="button" id="dropdownMenu2" 
-                  data-toggle="dropdown" class="btn btn-default form-control ctm-content">
-                <span class="btntext zselect">Customized View</span>
-                <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
-                
-              </button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="avascript:void(0);#myModal2" data-toggle="modal">Customized View</a>
-                </li>
-              </ul>
-            </div>
-            </div>
-        </div>
 
+      <div class="row search-bar top-padding10 tb-padding5">
+        <div class="col-sm-6 col-md-6">
+          <div class="input-group">
+            <div class="input-group">
+              <span class="input-group-addon marL5">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+              <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Quick search by keyword..." type="text" ng-model="gridOptions.quickFilterText">
+            </div>
+          </div>
+        </div>
         <div class="col-sm-12 col-md-6  col-lgf-6">
 
           <div class="input-group">
-            <span class="input-group-addon marL5">
+            <span class="input-group-addon">
               <i class="fa fa-table"></i>
-
             </span>
 
             <div class="dropdown input-group">
               <button type="button" id="dropdownMenu2" 
                   data-toggle="dropdown" class="btn btn-default form-control ctm-content">
-                <span class="btntext zselect">View By</span>
+                <span class="btntext zselect">Summary View</span>
                 <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
               </button>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
@@ -123,20 +121,6 @@
       </div>
 
       <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
-
-      <div class="text-right tb-padding10">
-        <div class="row">
-          <div class="col-sm-8 col-md-8  col-lgf-8 addtolist">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>
-            <button type="button" class="btn btn-primary disabled" data-toggle="modal" data-target="#myModalDelete">Disable</button>
-          </div>
-
-          <div class="col-sm-4 col-md-4  col-lgf-4">
-            <button type="button" class="btn btn-primary">Save Later</button>
-            <a class="btn btn-primary" href="#/financial" role="button">Financial Revie</a>
-          </div>
-        </div>
-      </div>
 
       <!-- 模态框1（Modal） -->
       <div class="modal container-fluid ng-scope top am-fade" id="myModal" tabindex="-1" role="dialog" 
