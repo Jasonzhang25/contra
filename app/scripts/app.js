@@ -25,7 +25,8 @@ angular
     'phoneList',
     'phoneDetail',
     'core',
-    'mgcrea.ngStrap'
+    'mgcrea.ngStrap',
+    'ui.grid.expandable'
   ])
   .config(['$locationProvider' ,'$routeProvider',
 
@@ -35,11 +36,11 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/promo', {
+      .when('/promolist', {
         templateUrl: 'views/promoList.html',
         controller: 'promoListCtrl'
       })
-      .when('/promo/new', {
+      .when('/promonew', {
         templateUrl: 'views/promoNew.html',
         controller: 'promoNewCtrl'
       })      
@@ -51,7 +52,7 @@ angular
         templateUrl: 'views/approver.html',
         controller: 'approverCtrl'
       })
-      .when('/approver/edit', {                                                        
+      .when('/approveredit', {                                                        
         templateUrl: 'views/approverEdit.html',
         controller: 'approverEditCtrl'
       })
@@ -105,14 +106,18 @@ angular
       when('/phones/:phoneId', {
         template: '<phone-detail></phone-detail>'
       })
-      .when('/readonly1', {
-        templateUrl: 'views/readonly1.html',
-        controller: 'readonly1Ctrl'
+      .when('/viewmode', {
+        templateUrl: 'views/viewmode.html',
+        controller: 'viewModeCtrl'
       })
       .when('/comment', {
         templateUrl: 'views/comment.html',
         controller: 'commentCtrl'
-      })                                                    
+      })
+      .when('/expand', {
+        templateUrl: 'views/expandablegrid.html',
+        controller: 'expandableGridCtrl'
+      })                                                          
       .otherwise({
         redirectTo: '/'
       });

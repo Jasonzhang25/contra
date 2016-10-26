@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="styles/step_descriptor.css"/>
-<link rel="stylesheet" href="styles/style.css"/>
+<link rel="stylesheet" href="styles/left-menu.css"/>
 
 <script src="scripts/modernizr.min.js"></script>
 <script src="scripts/jquery.nicescroll.js"></script>
 <script src="scripts/scripts.js"></script>
 
 <section>
-  <div class="left-side sticky-left-side">
+  <div class="left-side sticky-left-side left-menu-body">
     <!--logo and iconic logo start-->
     <div class="logo">
       <a href="#/">
@@ -43,9 +43,13 @@
 
     <!--body wrapper start-->
     <div class="wrapper">
-      <div class="pageTitle">
-        <i class="fa fa-th"></i>
-        <span>Financial Review</span>
+      <div> 
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="tab-title"><a href="javascript:void(0);#Tab1" data-toggle="tab">Event Design</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab2" data-toggle="tab">Forecast Modeling</a></li>
+          <li class="active tab-title"><a href="javascript:void(0);#Tab3" data-toggle="tab">Finacial Review</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab4"  data-toggle="tab">Submit for Approval</a></li>
+        </ul>
       </div>
 
       <div class="row left-margin-15 right-margin-15">

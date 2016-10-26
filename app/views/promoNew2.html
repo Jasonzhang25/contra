@@ -1,11 +1,10 @@
-<link rel="stylesheet" href="styles/step_descriptor.css"/>
-<link rel="stylesheet" href="styles/style.css"/>
+<link rel="stylesheet" href="styles/left-menu.css"/>
 <script src="scripts/modernizr.min.js"></script>
 <script src="scripts/jquery.nicescroll.js"></script>
 <script src="scripts/scripts.js"></script>
 
 <section>
-  <div class="left-side sticky-left-side">
+  <div class="left-side sticky-left-side left-menu-body">
     <!--logo and iconic logo start-->
     <div class="logo">
       <a href="#/">
@@ -41,86 +40,184 @@
 
     <!--body wrapper start-->
     <div class="wrapper">
-      <div class="step">
-        <ul>
-          <li class="step-descriptor step-descriptor-active">
-            <span class="step-descriptor-title">1. Planning Setup</span>
-          </li>
-          <li class="step-descriptor step-descriptor-active">
-            <span class="step-descriptor-title">2. Forecast Modeling</span>
-          </li>
-          <li class="step-descriptor">
-            <span class="step-descriptor-title">3. Financial Review</span>
-          </li>
-          <li class="step-descriptor">
-            <span class="step-descriptor-title">4. Planning Completion</span>
-          </li>
+      <div> 
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="tab-title"><a href="javascript:void(0);#Tab1" data-toggle="tab">Event Design</a></li>
+          <li class="active tab-title"><a href="javascript:void(0);#Tab2" data-toggle="tab">Forecast Modeling</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab3" data-toggle="tab">Finacial Review</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab4"  data-toggle="tab">Submit for Approval</a></li>
         </ul>
       </div>
 
-      <div class="row text-center">
-        <div class="col-sm-12 col-md-12  col-lgf-12">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-            Add Product
-          </button>
-          <button type="button" class="btn btn-primary">
-            Import SKUs from csv
-          </button>
-          <button type="button" class="btn btn-primary">
-            Prev
-          </button> 
-          <button type="button" class="btn btn-primary">
-            Next
-          </button>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>                                  
-        </div>
-      </div>
-
-
-      <div class="row search-bar top-padding10 tb-padding5">
-        <div class="col-sm-6 col-md-6">
-          <div class="input-group">
-            <div class="input-group">
-              <span class="input-group-addon marL5">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </span>
-              <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Quick search by keyword..." type="text" ng-model="gridOptions.quickFilterText">
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6  col-lgf-6">
-
-          <div class="input-group">
-            <span class="input-group-addon">
-              <i class="fa fa-table"></i>
-            </span>
-
-            <div class="dropdown input-group">
-              <button type="button" id="dropdownMenu2" 
-                  data-toggle="dropdown" class="btn btn-default form-control ctm-content">
-                <span class="btntext zselect">Summary View</span>
-                <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+      <div id="myTabContent" class="tab-content top-margin10">
+        <div class="tab-pane fade in active" id="Tab1">
+          <div class="row">
+            <div class="col-sm-12 col-md-12  col-lgf-12">
+              <button type="button" class="btn btn-primary right-margin10" data-toggle="modal" data-target="#myModal">
+                Add Product
               </button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="avascript:void(0);#myModal2" data-toggle="modal">Customized View</a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#">View Model 1</a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#">View Model 2</a>
-                </li>
-                <li role="presentation">
-                  <a role="menuitem" tabindex="-1" href="#">View Model 3</a>
-                </li>
-              </ul>
+              <button type="button" class="btn btn-primary right-margin10">
+                Import SKUs from csv
+              </button>
+              <button type="button" class="btn btn-primary right-margin10">
+                <i class="fa fa-angle-double-left right-margin5" aria-hidden="true"></i> Prev
+              </button> 
+              <button type="button" class="btn btn-primary right-margin10">
+                Next <i class="fa fa-angle-double-right left-margin5 " aria-hidden="true"></i>
+              </button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>                                  
+            </div>
+          </div>       
+
+          <div class="row search-bar top-padding10 tb-padding5">
+            <div class="col-sm-6 col-md-6">
+              <div class="input-group">
+                <div class="input-group">
+                  <span class="input-group-addon marL5">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </span>
+                  <input class="form-control ng-pristine ng-valid ng-touched" placeholder="Quick search by keyword..." type="text" ng-model="gridOptions.quickFilterText">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6  col-lgf-6">
+
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="fa fa-table"></i>
+                </span>
+
+                <div class="dropdown input-group">
+                  <button type="button" id="dropdownMenu2" 
+                      data-toggle="dropdown" class="btn btn-default form-control ctm-content">
+                    <span class="btntext zselect">Summary View</span>
+                    <span class="fa fa-chevron-down pull-right icon-blue" aria-hidden="true"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="avascript:void(0);#myModal2" data-toggle="modal">Customized View</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">View Model 1</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">View Model 2</a>
+                    </li>
+                    <li role="presentation">
+                      <a role="menuitem" tabindex="-1" href="#">View Model 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+          
+          <div id="grid1" ui-grid="gridOptions" class="grid" ui-grid-auto-resize></div>
 
-      <div id="grid1" ui-grid="{ data: myData }" class="grid" ui-grid-auto-resize></div>
+    <!--20160926 change tab version-->
+          <div class="panel panel-default">
+            <div class="panel-heading"> 
+              <h3 class="panel-title"> 
+                Event Level Guardrail Check 
+              </h3> 
+            </div>
+            <div class="panel-body"> 
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active tab-title"><a href="javascript:void(0);#Dashboard" data-toggle="tab">Country Level Pricing Dashboard</a></li>
+                <li class="tab-title"><a href="javascript:void(0);#Price" data-toggle="tab">Qty vs. Net Price</a></li>
+                <li class="tab-title"><a href="javascript:void(0);#Margin" data-toggle="tab">Net Rev vs. Gross Margin %</a></li>
+              </ul>
+
+              <div id="myTabContent" class="tab-content top-margin">       
+                <div class="tab-pane fade in active" id="Dashboard">
+                  <div class="col-md-6">
+                    <div class="panel panel-default"> 
+                      <div class="panel-heading"> 
+                        <h3 class="panel-title"> 
+                          Net Rev ($) 
+                        </h3> 
+                      </div> 
+                      <div class="panel-body"> 
+                        <nvd3 options='options' data='data'></nvd3> 
+                      </div> 
+                    </div>                
+                  </div>
+                  <div class="col-md-6">
+                    <div class="panel panel-default"> 
+                      <div class="panel-heading"> 
+                        <h3 class="panel-title"> 
+                          Gross Margin ($, %) 
+                        </h3> 
+                      </div> 
+                      <div class="panel-body"> 
+                        <nvd3 options='options' data='data'></nvd3> 
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade in" id="Price">
+                  <div class="col-md-6">
+                    <div class="panel panel-default"> 
+                      <div class="panel-heading"> 
+                        <h3 class="panel-title"> 
+                          Net Rev ($) 
+                        </h3> 
+                      </div> 
+                      <div class="panel-body"> 
+                        <nvd3 options='options' data='data'></nvd3> 
+                      </div> 
+                    </div>                
+                  </div>
+                  <div class="col-md-6">
+                    <div class="panel panel-default"> 
+                      <div class="panel-heading"> 
+                        <h3 class="panel-title"> 
+                          Gross Margin ($, %) 
+                        </h3> 
+                      </div> 
+                      <div class="panel-body"> 
+                        <nvd3 options='options' data='data'></nvd3> 
+                      </div> 
+                    </div>
+                  </div>              
+                </div>
+                <div class="tab-pane fade in" id="Margin">
+                  <div class="col-md-6">
+                    <div class="panel panel-default"> 
+                      <div class="panel-heading"> 
+                        <h3 class="panel-title"> 
+                          Net Rev ($) 
+                        </h3> 
+                      </div> 
+                      <div class="panel-body"> 
+                        <nvd3 options='options' data='data'></nvd3> 
+                      </div> 
+                    </div>                
+                  </div>
+                  <div class="col-md-6">
+                    <div class="panel panel-default"> 
+                      <div class="panel-heading"> 
+                        <h3 class="panel-title"> 
+                          Gross Margin ($, %) 
+                        </h3> 
+                      </div> 
+                      <div class="panel-body"> 
+                        <nvd3 options='options' data='data'></nvd3> 
+                      </div> 
+                    </div>
+                  </div>            
+                </div>                           
+              </div>          
+            </div> 
+          </div>          
+        </div>
+      </div>  
+
+
+
+
+
+
 
       <!-- 模态框1（Modal） -->
       <div class="modal container-fluid ng-scope top am-fade" id="myModal" tabindex="-1" role="dialog" 

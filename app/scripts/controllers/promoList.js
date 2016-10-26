@@ -19,23 +19,16 @@ cfpLoadingBarProvider.loadingBarTemplate = '<div id="loading-bar"><div class="ba
 
 
     $scope.isPromoListActive = true;
-    $scope.myData = [{reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},                                                                                                                              
-                     {reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"}
+    $scope.myData = [{promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"},
+                    {promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"},
+                    {promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"},
+                    {promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"},
+                    {promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"},
+                    {promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"},
+                    {promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"},
+                    {promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"},
+                    {promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"},
+                    {promo_id : "10017", promo_title: "Jason Testing", gbu: "HP Networking", fyq: "2017Q1", status: "Draft", last_modified:"10/21/2016 8:31 AM", approvol_status: "Approved", owner: "Jason Zhang"}
                     ];
 
     $scope.gridOptions = { 
@@ -43,17 +36,14 @@ cfpLoadingBarProvider.loadingBarTemplate = '<div id="loading-bar"><div class="ba
         enableCellSelection: true,
         enableRowSelection: true,
         enableCellEditOnFocus: true,
-        columnDefs: [{field: 'reason_code', displayName: 'Reason Code', enableCellEdit: true}, 
-                     {field:'promo_type', displayName:'Promo Type', enableCellEdit: true},
-                     {field:'business_segement', displayName:'Business Segement', enableCellEdit: true},
-                     {field:'product_number', displayName:'Product Number', enableCellEdit: true},
-                     {field:'description', displayName:'Description', enableCellEdit: true},
-                     {field:'pl', displayName:'PL', enableCellEdit: true, width: 500},
-                     {field:'country', displayName:'Country', enableCellEdit: true},
-                     {field:'region', displayName:'Region', enableCellEdit: true},
-                     {field:'avg_list_price', displayName:'Avg List Price', enableCellEdit: true},
-                     {field:'std_discount', displayName:'STD List Price', enableCellEdit: true},
-                     {field:'ndp', displayName:'NDP', enableCellEdit: true}
+        columnDefs: [{field: 'promo_id', displayName: 'Prod. Id', minWidth:80}, 
+                     {field:'promo_title', displayName:'POR Title', minWidth:120},
+                     {field:'gbu', displayName:'BU', minWidth:120},
+                     {field:'fyq', displayName:'FYQ', minWidth:100},
+                     {field:'status', displayName:'Status', minWidth:100},
+                     {field:'last_modified', displayName:'Last Modified', minWidth:120},
+                     {field:'approvol_status', displayName:'Approval Status', minWidth:120},
+                     {field:'owner', displayName:'Owner', minWidth:140}
                     ]
     };
 
@@ -99,7 +89,7 @@ cfpLoadingBarProvider.loadingBarTemplate = '<div id="loading-bar"><div class="ba
 
                     ];
 
-    $scope.gridOptions = { 
+    $scope.gridOptions1 = { 
         data: 'myData1',
         enableCellSelection: true,
         enableRowSelection: true,
@@ -133,7 +123,7 @@ cfpLoadingBarProvider.loadingBarTemplate = '<div id="loading-bar"><div class="ba
 
                     ];
 
-    $scope.gridOptions = { 
+    $scope.gridOptions2 = { 
         data: 'approverData',
         enableCellSelection: true,
         enableRowSelection: true,
@@ -143,10 +133,6 @@ cfpLoadingBarProvider.loadingBarTemplate = '<div id="loading-bar"><div class="ba
                     ]
     };
     
-  $scope.model = {
-    name: 'Tabs'
-  };
-
 });
 
 

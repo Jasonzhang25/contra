@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="styles/step_descriptor.css"/>
-<link rel="stylesheet" href="styles/style.css"/>
+<link rel="stylesheet" href="styles/left-menu.css"/>
 
 <script src="scripts/jquery-1.10.2.min.js"></script>
 <script src="scripts/modernizr.min.js"></script>
@@ -9,7 +9,7 @@
 <script src="scripts/scripts.js"></script>
 
 <section>
-  <div class="left-side sticky-left-side">
+  <div class="left-side sticky-left-side left-menu-body">
     <!--logo and iconic logo start-->
     <div class="logo">
       <a href="#/">
@@ -45,20 +45,12 @@
 
     <!--body wrapper start-->
     <div class="wrapper">
-      <div class="step">
-        <ul>
-          <li class="step-descriptor step-descriptor-active">
-            <span class="step-descriptor-title">1. Planning Setup</span>
-          </li>
-          <li class="step-descriptor">
-            <span class="step-descriptor-title">2. Forecast Modeling</span>
-          </li>
-          <li class="step-descriptor">
-            <span class="step-descriptor-title">3. Financial Review</span>
-          </li>
-          <li class="step-descriptor">
-            <span class="step-descriptor-title">4. Planning Completion</span>
-          </li>
+      <div> 
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="active tab-title"><a href="javascript:void(0);#Tab1" data-toggle="tab">Event Design</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab2" data-toggle="tab">Forecast Modeling</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab3" data-toggle="tab">Finacial Review</a></li>
+          <li class="tab-title"><a href="javascript:void(0);#Tab4"  data-toggle="tab">Submit for Approval</a></li>
         </ul>
       </div>
 

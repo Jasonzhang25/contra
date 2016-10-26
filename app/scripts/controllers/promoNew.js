@@ -22,14 +22,6 @@ angular.module('contraApp')
 
     $scope.isPromoNewActive = true;
 
-    $scope.dateOptions = {
-    dateFormat: 'MM/dd/yyyy',
-    changeYear: true,
-    changeMonth: true,
-    yearRange: '2010:-0', 
-    autoSize: true,
-    hideIfNoPrevNext: true
-    };
 
   $scope.selectedDate = new Date();
   $scope.selectedDateAsNumber = Date.UTC(1986, 1, 22);

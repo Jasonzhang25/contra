@@ -868,6 +868,11 @@ padding-left: 15px;
     font-weight: 200;
     line-height: 15px;
 }
+.modal-header-warning .modal-title{
+    color: #fff;
+    font-weight: 200;
+    line-height: 15px;
+}
 .modal-header span{
     color: #fff;
     font-weight: 200;
@@ -1366,11 +1371,20 @@ color: #fff;
     margin-left: 10px;
     margin-right: 10px;
 }
+.left-margin5 {
+    margin-left: 5px;
+}
 .left-margin10 {
     margin-left: 10px;
 }
 .left-margin15 {
     margin-left: 15px;
+}
+.right-margin5 {
+    margin-right: 5px;
+}
+.right-margin10 {
+    margin-right: 10px;
 }
 .right-margin20 {
     margin-right: 20px;
@@ -1378,8 +1392,17 @@ color: #fff;
 .right-margin30 {
     margin-right: 30px;
 }
+.top-margin5 {
+    margin-top: 5px;
+}
+.top-margin10 {
+    margin-top: 10px;
+}
 .top-margin-20 {
     margin-top: -20px;
+}
+.bottom-margin-5 {
+    margin-bottom: 5px;
 }
 .bottom-margin-30 {
     margin-bottom: 30px;
@@ -1490,7 +1513,7 @@ color: #fff;
 }
 .comment-title {
     /*background-color: #f5f5f5;*/
-    background-color: #907e94;
+    background-color: #01a982;
     padding: 0 10px;
     /*font-weight: bold;*/
     color: #fff;
