@@ -87,7 +87,7 @@
             <form role="form">
               <div class="row">
                 <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                  <label class="nowrap">Promo Plan Title:</label>
+                  <label class="nowrap">Event Plan Title:</label>
                 </div>
                 <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                   <div class="input-group">
@@ -95,7 +95,7 @@
                 </div>
 
                 <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                <label>Region:</label>
+                <label>BU:</label>
                 </div>
                 <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                   <div class="dropdown input-group">
@@ -124,15 +124,19 @@
 
               <div class="row">
                 <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                  <label class="nowrap">Promo Duration:</label>
+                  <label class="nowrap">Event Start Month:</label>
                 </div>
                 <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                   <div class="input-group">
-                    <input type="text"  class="form-control"  placeholder="6M"></div>
+                    <input type="text" name="startlDate" class="form-control ng-pristine ng-valid ng-valid-date ng-valid-min ng-valid-max ng-touched" ng-model="startDate" data-min-date="06/19/2016" placeholder="Start" bs-datepicker="" data-bs-show="dpd1.show" autoclose="1" ui-date="dateOptions">
+                    <span class="input-group-addon" tabindex="0" ng-click="dpd1.show=!dpd1.show">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                  </div>
                 </div>
 
                 <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                  <label>Subregion:</label>
+                  <label>Region:</label>
                 </div>
                 <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                   <div class="input-group">
@@ -142,19 +146,19 @@
 
               <div class="row">
                 <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                  <label class="nowrap">Promo Start Month:</label>
+                  <label class="nowrap">Event End Month:</label>
                 </div>
                 <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                   <div class="input-group">
-                    <input type="text" name="fromDate" class="form-control ng-pristine ng-untouched ng-valid ng-valid-date" ng-model="fromDate" data-max-date="05/20/2016" placeholder="From" ui-date="dateOptions">
-                    <span class="input-group-addon" tabindex="0" ng-click="dpd1.show = !dpd1.show">
+                    <input type="text" name="untilDate" class="form-control ng-pristine ng-valid ng-valid-date ng-valid-min ng-valid-max ng-touched" ng-model="untilDate" data-min-date="06/19/2016" placeholder="Until" bs-datepicker="" data-bs-show="dpd2.show" autoclose="1" ui-date="dateOptions">
+                    <span class="input-group-addon" tabindex="0" ng-click="dpd2.show=!dpd2.show">
                       <i class="fa fa-calendar"></i>
                     </span>
                   </div>
                 </div>
 
                 <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                  <label>Country:</label>
+                  <label>Subregion:</label>
                 </div>
                 <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                   <div class="dropdown input-group">
@@ -183,7 +187,7 @@
 
               <div class="row">
                 <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                  <label class="nowrap">Previous Plan:</label>
+                  <label class="nowrap">Event:</label>
                 </div>
                 <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                   <div class="dropdown input-group">
@@ -210,7 +214,7 @@
                 </div>
 
                 <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                  <label>Product ID:</label>
+                  <label>Country:</label>
                 </div>
                 <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                   <div class="input-group">
@@ -218,41 +222,16 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                  <label class="nowrap">Event Start Date:</label>
-                </div>
-                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
-                  <div class="input-group">
-                    <input type="text" name="untilDate" class="form-control ng-pristine ng-valid ng-valid-date ng-valid-min ng-valid-max ng-touched" ng-model="untilDate" data-min-date="06/19/2016" placeholder="Start" bs-datepicker="" data-bs-show="dpd2.show" autoclose="1" ui-date="dateOptions">
-                    <span class="input-group-addon" tabindex="0" ng-click="dpd2.show=!dpd2.show">
-                      <i class="fa fa-calendar"></i>
-                    </span>
-                  </div>
-                </div>
-
-                <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                  <label>Event End Date:</label>
-                </div>
-                <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
-                  <div class="input-group">
-                    <input type="text" name="untilDate" class="form-control ng-pristine ng-valid ng-valid-date ng-valid-min ng-valid-max ng-touched" ng-model="untilDate" data-min-date="06/19/2016" placeholder="Until" bs-datepicker="" data-bs-show="dpd2.show" autoclose="1" ui-date="dateOptions">
-                    <span class="input-group-addon" tabindex="0" ng-click="dpd2.show=!dpd2.show">
-                      <i class="fa fa-calendar"></i>
-                    </span>
-                  </div>
-                </div>
-
               </form>
             </div>
           </div>
         </div>
-      </div>
+
 
       <!--**********************-->
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Additional Investments</h3>
+          <h3 class="panel-title">Additional Investments</h3>         
         </div>
         <div class="panel-body">
           <div class="form-group">
@@ -319,6 +298,13 @@
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-primary">
+            Next<i class="fa fa-angle-double-right left-margin5 " aria-hidden="true"></i>
+          </button>
+        </div>
     </div>
-  </div>  
+  </div>      
 </section>

@@ -56,7 +56,7 @@
               <button type="button" class="btn btn-primary right-margin10" data-toggle="modal" data-target="#myModal">
                 Add Product
               </button>
-              <button type="button" class="btn btn-primary right-margin10">
+              <button type="button" class="btn btn-primary right-margin10" data-toggle="modal" data-target="#myModal3">
                 Import SKUs from csv
               </button>
               <button type="button" class="btn btn-primary right-margin10">
@@ -117,8 +117,12 @@
     <!--20160926 change tab version-->
           <div class="panel panel-default">
             <div class="panel-heading"> 
-              <h3 class="panel-title"> 
-                Event Level Guardrail Check 
+              <h3 class="panel-title ng-binding">
+                  SKU: J8177C
+                  <span class="panel-title-divide ng-binding">
+                    HPE X121 1G SFP RJ45 T Transceiver          
+                    </span>
+                  <span class="panel-title-divide ng-binding">$108</span>
               </h3> 
             </div>
             <div class="panel-body"> 
@@ -253,7 +257,7 @@
 
                   <div class="row">
                     <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                      <label class="nowrap">GBU:</label>
+                      <label class="nowrap">BU:</label>
                     </div>
                     <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                       <div class="input-group">
@@ -297,7 +301,7 @@
                     </div>
 
                     <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                      <label>Promo Classification:</label>
+                      <label>No-Touch Classification:</label>
                     </div>
                     <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                       <div class="input-group">
@@ -315,7 +319,7 @@
                     </div>
 
                     <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
-                      <label>Product Number:</label>
+                      <label>Product ID:</label>
                     </div>
                     <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
                       <div class="input-group">
@@ -324,11 +328,8 @@
                   </div>
 
                   <div class="row">
-                    <div class="col-sm-6 col-md-6  col-lgf-6 col-h">
-                      <button type="button" class="btn btn-primary">Search</button>
-                    </div>
-
-                    <div class="col-sm-6 col-md-6  col-lgf-6 col-h">
+                    <div class="col-sm-12 col-md-12  col-lgf-12 col-h">
+                      <button type="button" class="btn btn-primary right-margin10">Search</button>
                       <button type="button" class="btn btn-primary">Reset</button>
                     </div>
 
@@ -495,7 +496,117 @@
           </div>
           <!-- /.modal-content --> </div>
         <!-- /.modal --> </div>
-    </div>
+      </div>
+
+      <!-- 模态框3 for upload（Modal） -->
+      <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" 
+         aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-sheet">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" 
+                     data-dismiss="modal" aria-hidden="true">
+                        &times;
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                     Add attachment for SKU J4858C
+                  </h4>
+               </div>
+               <div class="modal-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Please download a template from <a href=""><strong>here</strong></a>.
+                  </p>
+                <div class="form-group">
+                  <form role="form">
+                    <div class="row">
+                      <div class="col-md-1">
+                        <label>Source File:</label>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="input-group">
+                          <span class="input-group-btn">
+                            <span class="btn btn-primary btn-file">Choose File…</span>
+                          </span>
+                          <input class="form-control ng-pristine ng-valid ng-touched"  placeholder="Upto 4mb file size allowed"></div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <button type="button" class="btn btn-primary">Upload</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="table-responsive top-padding10">
+                  <table class="zoom table table-striped table-bordered">
+                    <thead>
+                      <tr class="table-head-color">
+                        <th width="20%">Row #</th>
+                        <th width="60%">File Name</th>
+                        <th width="20%">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      <tr>
+                        <td> <u><a href="">
+                              <span ng-click=""> <font color="black">1003</font>
+                              </span>
+                            </a></u> 
+                        </td>
+                        <td>test</td>
+                        <td>
+                          <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td> <u><a href="">
+                              <span ng-click=""> <font color="black">1001</font>
+                              </span>
+                            </a></u> 
+                        </td>
+                        <td>test</td>
+                        <td>
+                          <a href="" ng-click="setWarningFlag()"><i class="fa fa-trash-o" aria-hidden="true"></i></a> 
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td> <u><a href="">
+                              <span ng-click=""> <font color="black">1002</font>
+                              </span>
+                            </a></u> 
+                        </td>
+                        <td>test</td>
+                        <td>
+                          <a href="" ng-click="setWarningFlag()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                      </tr>                                            
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="bottom-padding30" ng-show="warningFlag">
+                  <span class="warning"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
+                  Do you want to delete attachment named "TMMi.pptx" ?
+                  <div>
+                    <button type="button" class="btn btn-default" ng-click="setWarningFlagFlase()">Cancel</button>
+                    <button type="button" class="btn btn-primary">Confirmed</button>
+                  </div>        
+                </div>
+
+
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" 
+                     data-dismiss="modal">Closed
+                  </button>
+               </div>
+
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal -->
+      </div>
+
   </div>
   <!--end wrapper-->
 </div>

@@ -1,10 +1,62 @@
-test expandable
 
+<link rel="stylesheet" href="styles/left-menu.css"/>
+<link rel="stylesheet" href="styles/step_descriptor.css"/>
+<script src="scripts/modernizr.min.js"></script>
+<script src="scripts/jquery.nicescroll.js"></script>
+<script src="scripts/scripts.js"></script>
+<script src="scripts/cbpFWTabs.js"></script>
 
-
-
-    Expandable rows works with checkboxes from selection and left pins
-    <div ng-controller="expandableGridCtrl">
-       <div ui-grid="gridOptions" ui-grid-pinning ui-grid-expandable ui-grid-selection class="grid"></div>
+<section>
+  <!-- left side start-->
+  <div class="left-side sticky-left-side left-menu-body">
+    <!--logo and iconic logo start-->
+    <div class="logo">
+      <a href="#/">
+        <img src="images/HPE_logo.png" alt=""></a>
     </div>
+
+    <div class="logo-icon text-center">
+      <a href="#/">
+        <img src="images/logo_icon.png" alt=""></a>
+    </div>
+    <!--logo and iconic logo end-->
+
+    <runoob-directive></runoob-directive>
+  </div>
+  <!-- left side end-->
+
+  <!-- main content start-->
+  <div class="main-content" >
+    <!-- header section start-->
+    <div class="header-section">
+      <!--toggle button start-->
+      <a class="toggle-btn"> 
+        <i class="fa fa-bars"></i>
+      </a>
+      <!--toggle button end-->
+      <span>
+        <img src="images/droid.png" class="projecticon">
+      </span>
+
+      <!--toggle button end-->
+      <div class="menu-right"> 
+        <i class="fa fa-user"></i>
+        <span>Jason Zhang(Administrator)</span>
+      </div>
+    </div>
+    <!-- header section end-->
+
+    <!--body wrapper start-->
+    <div class="wrapper">
+	    Expandable rows works with checkboxes from selection and left pins
+	    <div ng-controller="expandableGridCtrl">
+	       <div ui-grid="gridOptions" ui-grid-pinning ui-grid-expandable ui-grid-selection class="grid" ></div>
+	    </div>
+    </div>
+  </div>  
+</section>
+
+
+
+
 
