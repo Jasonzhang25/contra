@@ -13,7 +13,7 @@ angular.module('contraApp')
 
 .directive("runoobDirective", function() {
     return {
-        restrict : "AEC",
+        restrict : "AE",
         templateUrl: "sharedcomponents/detailedittoolbar/leftmenu.html",
         replace: true
     };

@@ -505,7 +505,7 @@ fieldset[disabled] .btn-default:hover {
 }
 .btn-primary {
     background-color: #00B388;
-    border-color: #00B388
+    border-color: #fff;
 }
 .btn-primary.active,
 .btn-primary.focus,
@@ -515,7 +515,7 @@ fieldset[disabled] .btn-default:hover {
 .btn-primary:active:hover,
 .open>.dropdown-toggle.btn-primary {
     background-color: #00B388;
-    border-color: #00B388
+    border-color: #fff;
 }
 .btn-primary.disabled,
 .btn-primary.disabled.active,
@@ -598,7 +598,7 @@ flatdoc .button {
 .btn-info:hover,
 .open>.dropdown-toggle.btn-info {
     background-color: #00B388;
-    border-color: #00B388
+    border-color: #00B388;
 }
 .btn-info.disabled,
 .btn-info.disabled.active,
@@ -619,7 +619,7 @@ fieldset[disabled] .btn-info:active,
 fieldset[disabled] .btn-info:focus,
 fieldset[disabled] .btn-info:hover {
     background-color: #23b7e5;
-    border-color: #1eb6e4
+    border-color: #1eb6e4;
 }
 .btn-info .badge {
     color: #23b7e5;
@@ -656,7 +656,7 @@ fieldset[disabled] .btn-warning:active,
 fieldset[disabled] .btn-warning:focus,
 fieldset[disabled] .btn-warning:hover {
     background-color: #ff902b;
-    border-color: #ff8d26
+    border-color: #ff8d26;
 }
 .btn-warning .badge {
     color: #ff902b;
@@ -664,7 +664,7 @@ fieldset[disabled] .btn-warning:hover {
 .btn-danger {
     color: #fff;
     background-color: #f05050;
-    border-color: #f04b4b
+    border-color: #fff
 }
 .btn-danger.active,
 .btn-danger.focus,
@@ -673,7 +673,7 @@ fieldset[disabled] .btn-warning:hover {
 .btn-danger:hover,
 .open>.dropdown-toggle.btn-danger {
     background-color: #ee3d3d;
-    border-color: #ec2626
+    border-color: #fff
 }
 .btn-danger.active,
 .btn-danger:active,
@@ -699,7 +699,7 @@ fieldset[disabled] .btn-danger:active,
 fieldset[disabled] .btn-danger:focus,
 fieldset[disabled] .btn-danger:hover {
     background-color: #f05050;
-    border-color: #f04b4b
+    border-color: #f04b4b;
 }
 .btn-danger .badge {
     color: #f05050;
@@ -1509,7 +1509,7 @@ color: #fff;
 /* For comment */
 /***************************************************/
 .comment {
-    margin: 10px 0 20px 0;
+    margin: 10px 0 10px 0;
 }
 .comment-title {
     /*background-color: #f5f5f5;*/
@@ -1522,6 +1522,7 @@ color: #fff;
 .comment-content {
     padding-left: 10px;
     margin: 15px 0;
+    line-height: normal;
 }
 
 
@@ -1587,4 +1588,3 @@ input[type="checkbox"]:checked + span:before {
 
     color: #00B388;
 }
-

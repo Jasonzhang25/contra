@@ -31,33 +31,18 @@ angular.module('contraApp')
     $('#collapseOne').collapse( 'hide');
   });
 
-//Resize Event needs to be triggered when tab changes.
-$(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function (e) {
-    var plotID, ev;
-    try{
-        plotID = $(e.target).attr("href").replace(/[#A-Za-z$-]/g,"")
-        d3.select("#chart"+ plotID +" svg").call(charts[(plotID-1)])
-    }catch(err){ //Fallback
-        ev = document.createEvent('Event');
-        ev.initEvent('resize', true, true);
-        window.dispatchEvent(ev);
-    }
-}); 
-
-
-/*
-function ExpandAll(){
-    $('#collapseTwo').toggle();
-    $('#collapseThree').toggle();
-    $('#collapseOne').toggle();
-}
-    
-function CollapseAll(){
-    $(function () { $('#collapseTwo').collapse('hide')});
-    $(function () { $('#collapseThree').collapse('hide')});
-    $(function () { $('#collapseOne').collapse('hide')});
-    }
-*/
+    //Resize Event needs to be triggered when tab changes.
+    $(document).on('shown.bs.tab', 'a[data-toggle="tab"]', function (e) {
+        var plotID, ev;
+        try{
+            plotID = $(e.target).attr("href").replace(/[#A-Za-z$-]/g,"")
+            d3.select("#chart"+ plotID +" svg").call(charts[(plotID-1)])
+        }catch(err){ //Fallback
+            ev = document.createEvent('Event');
+            ev.initEvent('resize', true, true);
+            window.dispatchEvent(ev);
+        }
+    }); 
 
 
     $scope.myData = [{reason_code : "Market", promo_type: "TPL NDP Local", business_segement: "3rd Party Sofeware x86", product_number: "701587-A21", description: "MS WS12 Ess ROK E/F/I/G/S SW", pl:"J3", country: "German", region: "EMEA", avg_list_price: "$411", std_discount: "20%", ndp: "NDP"},

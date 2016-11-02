@@ -256,17 +256,25 @@
 
       <div class="row top-margin10">
         <div class="col-sm-12 col-md-12  col-lgf-12">
-          <button type="button" class="btn btn-primary right-margin10" >View/Edit PoR</button>
-          <button type="button" class="btn btn-primary right-margin10" data-toggle="modal" 
+          <div class="btn-group right-margin10" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary">View/Edit PoR</button>
+            <button type="button" class="btn btn-danger" data-toggle="modal" 
         data-target="#myModalDelete">Delete</button>
-          <button type="button" class="btn btn-primary right-margin10" >Clone to New PoR</button>
-          <button type="button" class="btn btn-primary right-margin10" >Add to Merge List</button>         
-          <button type="button" class="btn btn-primary right-margin10" >Merge to New PoR</button>
-          <button type="button" class="btn btn-primary right-margin10" data-toggle="modal" 
+            <button type="button" class="btn btn-primary">Clone to New PoR</button>            
+          </div>
+
+          <div class="btn-group right-margin10" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary">Add to Merge List</button>
+            <button type="button" class="btn btn-primary">Merge to New PoR</button>
+          </div>
+
+          <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary" data-toggle="modal" 
         data-target="#myModal">Withdraw Rejected and Pending Status</button>
-          <button type="button" class="btn btn-primary right-margin10" data-toggle="modal" 
+            <button type="button" class="btn btn-primary" data-toggle="modal" 
         data-target="#myModalStatus">View Approval Status</button>
-        </div>
+          </div> 
+        </div>  
       </div>
 
       <div class="row top-margin5">

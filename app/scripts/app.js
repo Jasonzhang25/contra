@@ -26,7 +26,8 @@ angular
     'phoneDetail',
     'core',
     'mgcrea.ngStrap',
-    'ui.grid.expandable'
+    'ui.grid.expandable',
+    'ui.grid.pinning',
   ])
   .config(['$locationProvider' ,'$routeProvider',
 

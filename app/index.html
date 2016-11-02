@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />  
     <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
     <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.min.css" />
-    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />    
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/theme-fresh.css"/>
     <link rel="stylesheet" href="styles/main.css"/>
     <link rel="stylesheet" href="styles/toolbar.css"/>
-    <link rel="stylesheet" href="styles/font.hpe.css"/>     
+    <link rel="stylesheet" href="styles/font.hpe.css"/>        
 
     <!-- endbuild -->
 </head>
@@ -92,12 +92,11 @@
     <script src="scripts/controllers/test-directive2.js"></script>
     <script src="scripts/controllers/canvastest.js"></script>      
     <script src="scripts/controllers/canvas.js"></script>
-    <script src="scripts/controllers/expandablegrid.js"></script>    
-
+    <script src="scripts/controllers/expandablegrid.js"></script>
  
 
     <script src="sharedcomponents/detailedittoolbar/detail-edit-toolbar.js"></script>   
-    <script src="sharedcomponents/toolbar/panel-toolbar.js"></script>   
+    <script src="sharedcomponents/toolbar/panel-toolbar.js"></script>
 <!-- endbuild -->
 
 
@@ -111,5 +110,30 @@
     <script src="phone-detail/phone-detail.module.js"></script>      
     <script src="phone-detail/phone-detail.component.js"></script>    
 
+<script src="scripts/scrollUp.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $.scrollUp({
+      scrollName: 'scrollUp', // Element ID
+      topDistance: '300', // Distance from top before showing element (px)
+      topSpeed: 300, // Speed back to top (ms)
+      animation: 'fade', // Fade, slide, none
+      animationInSpeed: 200, // Animation in speed (ms)
+      animationOutSpeed: 200, // Animation out speed (ms)
+      scrollText: 'Scroll to top', // Text for element
+      activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+    });
+  });
+</script>
+
+<style type="text/css">
+  #scrollUp {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: #555;
+    color: #fff;
+  }
+</style>
 </body>
 </html>

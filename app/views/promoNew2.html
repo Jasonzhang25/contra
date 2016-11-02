@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="styles/left-menu.css"/>
+
 <script src="scripts/modernizr.min.js"></script>
 <script src="scripts/jquery.nicescroll.js"></script>
 <script src="scripts/scripts.js"></script>
+
 
 <section>
   <div class="left-side sticky-left-side left-menu-body">
@@ -20,7 +22,7 @@
     <runoob-directive></runoob-directive>
   </div>
 
-  <div class="main-content" >
+  <div class="main-content">
     <!-- header section start-->
     <div class="header-section">
       <!--toggle button start-->
@@ -49,26 +51,25 @@
         </ul>
       </div>
 
-      <div id="myTabContent" class="tab-content top-margin10">
-        <div class="tab-pane fade in active" id="Tab1">
-          <div class="row">
-            <div class="col-sm-12 col-md-12  col-lgf-12">
-              <button type="button" class="btn btn-primary right-margin10" data-toggle="modal" data-target="#myModal">
-                Add Product
-              </button>
-              <button type="button" class="btn btn-primary right-margin10" data-toggle="modal" data-target="#myModal3">
-                Import SKUs from csv
-              </button>
-              <button type="button" class="btn btn-primary right-margin10">
-                <i class="fa fa-angle-double-left right-margin5" aria-hidden="true"></i> Prev
-              </button> 
-              <button type="button" class="btn btn-primary right-margin10">
-                Next <i class="fa fa-angle-double-right left-margin5 " aria-hidden="true"></i>
-              </button>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalDelete">Delete</button>                                  
-            </div>
-          </div>       
+      <div class="row top-margin10">
+        <div class="col-sm-12 col-md-12  col-lgf-12">
+          <div class="btn-group right-margin10" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary">
+              <i class="fa fa-angle-double-left right-margin5" aria-hidden="true"></i> Prev
+            </button>
+            <button type="button" class="btn btn-primary">
+              Next <i class="fa fa-angle-double-right left-margin5 " aria-hidden="true"></i></button>        
+          </div>
+          <div class="btn-group right-margin10" role="group" aria-label="...">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Product</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">Import SKUs from csv</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </div> 
+        </div>  
+      </div>
 
+      <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="Tab1">
           <div class="row search-bar top-padding10 tb-padding5">
             <div class="col-sm-6 col-md-6">
               <div class="input-group">
@@ -114,7 +115,7 @@
           
           <div id="grid1" ui-grid="gridOptions" class="grid" ui-grid-auto-resize></div>
 
-    <!--20160926 change tab version-->
+          <!--20160926 change tab version-->
           <div class="panel panel-default">
             <div class="panel-heading"> 
               <h3 class="panel-title ng-binding">
@@ -213,15 +214,10 @@
                 </div>                           
               </div>          
             </div> 
-          </div>          
+          </div> 
+
         </div>
       </div>  
-
-
-
-
-
-
 
       <!-- 模态框1（Modal） -->
       <div class="modal container-fluid ng-scope top am-fade" id="myModal" tabindex="-1" role="dialog" 
@@ -340,6 +336,7 @@
               <div class="row">
                 <div class="col-sm-5 col-md-5 col-lg-5">
                   <div class="wrapper padding-left-right-10">
+                    <label>Product List:</label>
                     <div id="grid1" ui-grid="{ data: myData1 }" class="grid" ui-grid-auto-resize></div>
                   </div>
                 </div>
@@ -355,6 +352,7 @@
                 </div>
                 <div class="col-sm-5 col-md-5 col-lg-5">
                   <div class="wrapper padding-left-right-10">
+                    <label>Selected List:</label>
                     <div id="grid1" ui-grid="{ data: myData1 }" class="grid" ui-grid-auto-resize></div>
                   </div>
                 </div>
@@ -369,6 +367,7 @@
           </div>
           <!-- /.modal-content --> </div>
         <!-- /.modal --> </div>
+      </div>
 
       <!-- 模态框2（Modal） -->
       <div class="modal container-fluid ng-scope top am-fade" id="myModal2" tabindex="-1" role="dialog" 
@@ -606,9 +605,8 @@
             </div><!-- /.modal-content -->
           </div><!-- /.modal -->
       </div>
-
+    </div>
+    <!--end wrapper-->
   </div>
-  <!--end wrapper-->
-</div>
 <!--end main content-->
 </section>
