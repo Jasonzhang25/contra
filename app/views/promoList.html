@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="styles/left-menu.css"/>
-<link rel="stylesheet" href="styles/step_descriptor.css"/>
 <script src="scripts/modernizr.min.js"></script>
 <script src="scripts/jquery.nicescroll.js"></script>
 <script src="scripts/scripts.js"></script>
@@ -356,87 +355,114 @@
                     <span>Rejected: </span> <i class="fa fa-ban table-icon-warning iconPaddingLeft5" aria-hidden="true"></i>
                   </span>
                 </div>
-                <table class="table table-condensed table-bordered">
-                  <tbody>
-                    <tr>
-                      <td class="text-center process-guadrail-approved">Level1</td>
-                      <td colspan=2 class="text-center process-guadrail-Current">Level2</td>
-                      <td colspan=2 class="text-center process-guadrail-default">Level3</td>
-                      <td class="text-center process-guadrail-default">Level4</td>
-                    </tr>
-                    <tr class="text-center">
-                      <td class="process-guadrail-approved pointer">
-                        Group1 
-                      </td>
-                      <td class="process-guadrail-approved pointer">
-                        Group2 
-                      </td>
-                      <td class="process-guadrail-Current pointer">
-                        Group3 
-                        </td>
-                      <td class="process-guadrail-default pointer">
-                        Group4 
-                      </td>
-                      <td class="process-guadrail-default pointer">
-                        Group5 
-                      </td>
-                      <td class="process-guadrail-default pointer">
-                        Group6
-                      </td>
-                    </tr>
-                    
-                    <tr class="text-center">
-                      <td class="">
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
-                        </div>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
-                        </div>                
-                      </td>
-                      <td>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
-                        </div>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
-                        </div>                
-                      </td>
-                      <td>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-check-circle-o table-icon-green fa-2x" aria-hidden="true"></i>
-                        </div>                
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-ban table-icon-warning fa-2x" aria-hidden="true"></i>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
-                        </div>                
-                      </td>
-                      <td>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
-                        </div>                
-                      </td>
-                      <td>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="tb-padding10">
-                          wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
-                        </div>                
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+
+                <div class="top-margin10">
+                  <ul id="myTab2" class="nav nav-tabs">
+                    <li class="active tab-title"><a href="javascript:void(0);#Networking" data-toggle="tab">HP Networking</a></li>
+                    <li class="tab-title"><a href="javascript:void(0);#Server" data-toggle="tab">HP Server</a></li>
+                    <li class="tab-title"><a href="javascript:void(0);#Storage" data-toggle="tab">HP Storage</a></li>
+                    <li class="tab-title"><a href="javascript:void(0);#Switching"  data-toggle="tab">HP Switching</a></li>
+                  </ul>
+                </div>
+
+                <div id="myTab2Content" class="tab-content top-margin10">
+                  <div class="tab-pane fade in active" id="Networking">
+                    <table class="table table-condensed table-bordered">
+                      <tbody>
+                        <tr>
+                          <td class="text-center process-guadrail-approved">Level1</td>
+                          <td colspan=2 class="text-center process-guadrail-Current">Level2</td>
+                          <td colspan=2 class="text-center process-guadrail-default">Level3</td>
+                          <td class="text-center process-guadrail-default">Level4</td>
+                        </tr>
+                        <tr class="text-center">
+                          <td class="process-guadrail-approved pointer">
+                            Group1 
+                          </td>
+                          <td class="process-guadrail-approved pointer">
+                            Group2 
+                          </td>
+                          <td class="process-guadrail-Current pointer">
+                            Group3 
+                            </td>
+                          <td class="process-guadrail-default pointer">
+                            Group4 
+                          </td>
+                          <td class="process-guadrail-default pointer">
+                            Group5 
+                          </td>
+                          <td class="process-guadrail-default pointer">
+                            Group6
+                          </td>
+                        </tr>
+                        
+                        <tr class="text-center">
+                          <td class="">
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                            </div>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                            </div>                
+                          </td>
+                          <td>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                            </div>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-check-circle-o fa-2x table-icon-green" aria-hidden="true"></i>
+                            </div>                
+                          </td>
+                          <td>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-check-circle-o table-icon-green fa-2x" aria-hidden="true"></i>
+                            </div>                
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-ban table-icon-warning fa-2x" aria-hidden="true"></i>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                            </div>                
+                          </td>
+                          <td>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                            </div>                
+                          </td>
+                          <td>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                            </div>
+                            <div class="tb-padding10">
+                              wen.zhang3@hpe.com <i class="fa fa-question-circle-o table-icon-approving fa-2x" aria-hidden="true"></i>
+                            </div>                
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>           
+                  </div>
+
+                  <div class="tab-pane fade" id="Server">
+                    Server Tab Content, and add your code here.
+                  </div>
+                                  
+                  <div class="tab-pane fade" id="Storage">
+                    Storage Tab Content, and add your code here.
+                  </div>
+     
+                  <div class="tab-pane fade" id="Switching">
+                    Switching Tab Content, and add your code here.
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
