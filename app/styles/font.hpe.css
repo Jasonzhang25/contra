@@ -1,47 +1,62 @@
-7       @font-face { 
-8         font-family: "Metric"; 
-9         src: url("fonts/MetricHPE-Web-Regular.woff") format('woff'); 
-10       } 
-11  
-12       @font-face { 
-13         font-family: "Metric Bold"; 
-14         src: url("fonts/MetricHPE-Web-Bold.woff") format('woff'); 
-15         font-weight: 700; 
-16       } 
-17  
-18       @font-face { 
-19         font-family: "Metric Semibold"; 
-20         src: url("fonts/MetricHPE-Web-Semibold.woff") format('woff'); 
-21         font-weight: 600; 
-22       } 
-23  
-24       @font-face { 
-25         font-family: "Metric Light"; 
-26         src: url("fonts/MetricHPE-Web-Light.woff") format('woff'); 
-27         font-weight: 100; 
-28       } 
+@font-face { 
+	font-family: 'Metric'; 
+	src: url('fonts/MetricHPE-Web-Regular.eot'); 
+	src: url('fonts/MetricHPE-Web-Regular.eot?#iefix') format('embedded-opentype'), 
+		  url('fonts/MetricHPE-Web-Regular.woff') 	format('woff');	
+	font-weight: normal;
+	font-style:normal;
+	} 
+
+@font-face { 
+	font-family: 'Metric Bold'; 
+	src: url('fonts/MetricHPE-Web-Bold.eot'); 
+	src: url('fonts/MetricHPE-Web-Bold.eot?#iefix') format('embedded-opentype'), 
+		url('fonts/MetricHPE-Web-Bold.woff') 	format('woff');	
+	font-weight: normal;
+	font-style:normal;	
+	} 
+
+@font-face { 
+	font-family: 'Metric Semibold'; 
+	src: url('fonts/MetricHPE-Web-Semibold.eot'); 
+	src: url('fonts/MMetricHPE-Web-Semibold?#iefix') format('embedded-opentype'), 
+		url('fonts/MetricHPE-Web-Semibold.woff') 	format('woff');	
+	font-weight: normal;
+	font-style:normal;		
+	} 
+
+@font-face { 
+	font-family: 'Metric Light'; 
+	src: url('fonts/MetricHPE-Web-Light.eot'); 
+	src: url('fonts/MetricHPE-Web-Light?#iefix') format('embedded-opentype'), 
+		url('fonts/MetricHPE-Web-Light.woff') 	format('woff');	
+	font-weight: normal;
+	font-style:normal;		
+	font-weight: 100; 
+	} 
 
 
 @font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('fonts/glyphicons-halflings-regular.eot');
-  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
-  url('fonts/glyphicons-halflings-regular.woff') format('woff'), 
-  url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
-  url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
-}
+	font-family: 'Glyphicons Halflings';
+	src: url('fonts/glyphicons-halflings-regular.eot');
+	src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+	url('fonts/glyphicons-halflings-regular.woff') format('woff'), 
+	url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+	url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+	}
 
 .glyphicon {
-  position: relative;
-  top: 1px;
-  display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  -webkit-font-smoothing: antialiased;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -moz-osx-font-smoothing: grayscale;
-}
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-moz-osx-font-smoothing: grayscale;
+	}
+
 /*
 @font-face { 
 	font-family: 'YourWebFontName'; 

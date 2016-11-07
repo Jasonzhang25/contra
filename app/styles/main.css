@@ -537,7 +537,7 @@ fieldset[disabled] .btn-primary:focus,
 fieldset[disabled] .btn-primary:hover {
     background-color: #999;
     /*color: #999;*/
-    border-color: #999;
+    border-color: #fff;
 }
 .btn-primary .badge {
     color: #5d9cec;
@@ -699,7 +699,7 @@ fieldset[disabled] .btn-danger:active,
 fieldset[disabled] .btn-danger:focus,
 fieldset[disabled] .btn-danger:hover {
     background-color: #f05050;
-    border-color: #f04b4b;
+    border-color: #fff;
 }
 .btn-danger .badge {
     color: #f05050;
@@ -1412,6 +1412,10 @@ color: #fff;
 }
 .right-margin-15 {
     margin-right: -15px;
+}
+.lr-margin-15 {
+    margin-left: -15px;
+    margin-right: -15px;    
 }
 .left-margin-30 {
     margin-left: -30px;
