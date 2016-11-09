@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />  
     <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.css" />
     <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.min.css" />
-    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />    
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -38,8 +38,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
- 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -48,22 +47,22 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+
     <script src="bower_components/angular-nvd3/dist/angular-nvd3.min.js"></script>
     <script src="bower_components/d3/d3.js"></script>
     <script src="bower_components/nvd3/build/nv.d3.js"></script>
-<!--    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
-    <script src="bower_components/angular-ui-date/dist/date.js"></script>
--->    
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
 
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-date/dist/date.js"></script>
     <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
     <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
-           
     <!-- endbower -->
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>    
     <!-- endbuild -->
-
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/nvd3/build/nv.d3.js"></script>
     <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -92,8 +91,8 @@
     <script src="scripts/controllers/test-directive2.js"></script>
     <script src="scripts/controllers/canvastest.js"></script>      
     <script src="scripts/controllers/canvas.js"></script>
-    <script src="scripts/controllers/expandablegrid.js"></script>
- 
+    <script src="scripts/controllers/expandablegrid.js"></script> 
+    <script src="scrollUp/jquery.scrollUp.js"></script>
 
     <script src="sharedcomponents/detailedittoolbar/detail-edit-toolbar.js"></script>   
     <script src="sharedcomponents/toolbar/panel-toolbar.js"></script>
@@ -110,30 +109,5 @@
     <script src="phone-detail/phone-detail.module.js"></script>      
     <script src="phone-detail/phone-detail.component.js"></script>    
 
-<script src="scripts/scrollUp.js"></script>
-<script type="text/javascript">
-  $(function () {
-    $.scrollUp({
-      scrollName: 'scrollUp', // Element ID
-      topDistance: '300', // Distance from top before showing element (px)
-      topSpeed: 300, // Speed back to top (ms)
-      animation: 'fade', // Fade, slide, none
-      animationInSpeed: 200, // Animation in speed (ms)
-      animationOutSpeed: 200, // Animation out speed (ms)
-      scrollText: 'Scroll to top', // Text for element
-      activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
-    });
-  });
-</script>
-
-<style type="text/css">
-  #scrollUp {
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background: #555;
-    color: #fff;
-  }
-</style>
 </body>
 </html>

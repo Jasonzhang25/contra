@@ -118,7 +118,11 @@ angular
       .when('/expand', {
         templateUrl: 'views/expandablegrid.html',
         controller: 'expandableGridCtrl'
-      })                                                          
+      })
+      .when('/scrollup', {
+        templateUrl: 'views/scrollup.html',
+        controller: 'scrollupCtrl'
+      })                                                             
       .otherwise({
         redirectTo: '/'
       });
