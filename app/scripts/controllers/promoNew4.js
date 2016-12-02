@@ -14,15 +14,32 @@ angular.module('contraApp')
     $scope.warningFlag = false;
   };
 
+var siteNameLink = 
+'<div class="ui-grid-cell-contents" title="{{COL_FIELD}}"><a ui-sref="sites.site_card({siteid: row.entity._id})">{{COL_FIELD}}</a></div>';
+
   $scope.gridOptions = {
     columnDefs: [
-      { name: 'name', width: 200 },
-      { name: 'gender',  width: 100},
+      {field: 'In',  width: 80, cellTemplate: '<span class="bg-green">opt-in</span>'},      
+      {field: 'Out',  width: 80, cellTemplate: '<span class="bg-red">opt-out</span>'},
+      {field: 'Updated',  width: 80, cellTemplate: '<span class="bg-green">updated</span>'},   
+      {field: 'Added',  width: 80, cellTemplate: '<span class="bg-green">added</span>'},   
+      {field: 'None',  width: 80, cellTemplate: '<span class="bg-gray">none</span>'}, 
+
+      {field: 'In/Out',  width: 80, cellTemplate: '<i class="fa fa-check-circle table-icon-green" aria-hidden="true"></i>', cellTooltip: 'Jason tooltip testing'},  
+      {field: 'In/Out',  width: 80, cellTemplate: '<i class="fa fa-check-circle table-icon-gray" aria-hidden="true"></i>'},        
+      {field: 'Revert',  width: 80, cellTemplate: '<i class="fa fa-undo table-icon-green" aria-hidden="true"></i>'},   
+      {field: 'Follow',  width: 80, cellTemplate: '<i class="fa fa-clone table-icon-green" aria-hidden="true"></i>'},                                  
+      
+      { name: 'name', cellTooltip: '<div class="tooltis-bg"><div class="tooltips-header">Tooltips Title</div><p class="tooltips-content">This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all ‘No Touch’ deals that will be active across EMEA during the duration of the event</p></div>', cellTemplate: siteNameLink, width: 200 },
+      { name: 'gender',cellTooltip: 
+        function( row, col ) {
+          return 'Title: ' + row.entity.name + ' Content: ' + row.entity.company;
+        }, width: 100},
       { name: 'age', width: 100 },
       { name: 'company', width: 200 },
       { name: 'registered', width: 300 },
       { name: 'state',  width: 100 },
-      { name: 'balance'}
+      { name: 'balance', minWidth: 160}
     ],
     onRegisterApi: function( gridApi ) {
       $scope.gridApi = gridApi;
@@ -84,6 +101,7 @@ angular.module('contraApp')
     console.log(aggregatesTree);
   };
 }])
+
 .filter('mapGender', function() {
   var genderHash = {
     1: 'male',

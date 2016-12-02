@@ -69,9 +69,9 @@ angular
         templateUrl: 'views/login.html',
         controller: 'loginCtrl'
       })
-      .when('/mainbackup', {
-        templateUrl: 'views/mainbackup.html',
-        controller: 'mainbackupCtrl'
+      .when('/tooltips', {
+        templateUrl: 'views/tooltips.html',
+        controller: 'tooltipsCtrl'
       })
       .when('/loading', {
         templateUrl: 'views/loading.html',

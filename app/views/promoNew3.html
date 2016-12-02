@@ -30,7 +30,7 @@
       <a class="toggle-btn">
         <i class="fa fa-bars"></i>
       </a>
-      <span>
+      <span class="droid-icon">
         <img src="images/droid.png" class="projecticon"></span>
 
       <!--toggle button end-->
@@ -187,7 +187,45 @@
                   </h3>
                 </div>
                 <div class="panel-body">
-                  <nvd3 options='options' data='data'></nvd3>
+                  <div class="row ">
+                    <div class="col-sm-12 col-md-12  col-lgf-12">
+                        <div class="col-sm-4 col-md-4  col-lgf-4">Duration</div>
+                        <div class="col-sm-4 col-md-4  col-lgf-4 ng-binding">Level 0</div>
+                        <div class="col-sm-4 col-md-4  col-lgf-4">
+                          <a ata-container="body" href="" 
+                            title="<div class='tooltips-header-green'>ROI Feasibility Guardrail</div>
+                            <p class='tooltips-content'>Description: This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all ‘No Touch’ deals that will be active across EMEA during the duration of the event.</p>
+                            <p class='tooltips-content'>
+                              Rule: <br />
+                              GREEN: If 0% <= ROI <= 10% <br />
+                              AMBER: If 10% < ROI <= 20% <br />
+                              RED: If ROI <0% or ROI > 20%
+                            </p>">
+                            <i class="fa fa-circle fa-lg table-icon-green" aria-hidden="true"></i>
+                          </a> 
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12  col-lgf-12">
+                      <div class="col-sm-4 col-md-4  col-lgf-4">ROI Feasibility</div>
+                      <div class="col-sm-4 col-md-4  col-lgf-4 ng-binding">Level 1</div>                      
+                      <div class="col-sm-4 col-md-4  col-lgf-4"><a ata-container="body" href="" 
+                        title="<div class='tooltips-header-red'>ROI Feasibility Guardrail</div>
+                        <p class='tooltips-content'>Description: This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all ‘No Touch’ deals that will be active across EMEA during the duration of the event.</p>
+                        <p class='tooltips-content'>
+                          Rule: <br />
+                          GREEN: If 0% <= ROI <= 10% <br />
+                          AMBER: If 10% < ROI <= 20% <br />
+                          RED: If ROI <0% or ROI > 20%
+                        </p>">
+                       <i class="fa fa-circle fa-lg table-icon-warning"  aria-hidden="true"></i></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-12  col-lgf-12 small tb-padding20">
+                    <i class="fa fa-lightbulb-o right-margin5" aria-hidden="true"></i>
+                    Tooltip on mouseover for circle status icon. 
+                  </div>  
                 </div>
               </div>
             </div>

@@ -1,10 +1,10 @@
-<link rel="stylesheet" href="styles/step_descriptor.css"/>
-<link rel="stylesheet" href="styles/process-bar.css"/>
+
 <link rel="stylesheet" href="styles/left-menu.css"/>
 
 <script src="scripts/modernizr.min.js"></script>
 <script src="scripts/jquery.nicescroll.js"></script>
 <script src="scripts/scripts.js"></script>
+
 
 <section>
   <!-- left side start-->
@@ -33,7 +33,7 @@
       <a class="toggle-btn">
         <i class="fa fa-bars"></i>
       </a>
-      <span>
+      <span class="droid-icon">
         <img src="images/droid.png" class="projecticon">
       </span>
 
@@ -70,25 +70,42 @@
               <label>Event Level Guardrail</label>
               <span class="status-title-divide">
                 <span>Duration</span> 
-                <i class="fa fa-circle fa-lg table-icon-green lr-padding10" aria-hidden="true"></i>
+                <a href="#" data-toggle="tooltip" title="<div class='tooltips-header-green'>Tooltips Title</div><div class='tooltips-content'>This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all ‘No Touch’ deals that will be active across EMEA during the duration of the event</div>">
+                  <i class="fa fa-circle table-icon-green lr-padding10" aria-hidden="true"></i>
+                </a>
               </span>
 
               <span class="status-title-divide">
                 <span>ROI</span> 
-                <i class="fa fa-circle fa-lg table-icon-warning lr-padding10" aria-hidden="true"></i>
+                <a href="#" data-toggle="tooltip" title="<div class='tooltips-header-red'>ROI Feasibility Guardrail</div><p class='tooltips-content'>This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all ‘No Touch’ deals that will be active across EMEA during the duration of the event</p>">
+                  <i class="fa fa-circle table-icon-warning lr-padding10" aria-hidden="true"></i>
+                </a>
+              </span>
+
+              <span class="status-title-divide">
+                <span>Default</span> 
+                <a href="#" data-toggle="tooltip" title="<div class='tooltips-header-default'>ROI Feasibility Guardrail</div><p class='tooltips-content'>This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all ‘No Touch’ deals that will be active across EMEA during the duration of the event</p>">
+                  <i class="fa fa-circle table-icon-gray lr-padding10" aria-hidden="true"></i>
+                </a>
+              </span>
+
+              <span class="status-title-divide">
+                <span>Yellow</span> 
+                <a href="#" data-toggle="tooltip" title="<div class='tooltips-header-yellow'>ROI Feasibility Guardrail</div><p class='tooltips-content'>This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all ‘No Touch’ deals that will be active across EMEA during the duration of the event</p>">
+                  <i class="fa fa-circle table-icon-approving lr-padding10" aria-hidden="true"></i>
+                </a>
               </span>
 
               <span class="pull-right ">
-              <span>Approved: </span> <i class="fa fa-check-circle-o table-icon-green iconPaddingLeft5 right-margin30" aria-hidden="true"></i>
+                <span>Approved: </span> <i class="fa fa-check-circle-o table-icon-green iconPaddingLeft5 right-margin30" aria-hidden="true"></i>
                 <span>Pending: </span> <i class="fa fa-question-circle-o table-icon-approving iconPaddingLeft5 right-margin30" aria-hidden="true"></i>
                 <span>Rejected: </span> <i class="fa fa-ban table-icon-warning iconPaddingLeft5" aria-hidden="true"></i>
               </span>
+            </div>   
 
-            </div>          
 
             <div>
               <table class="table table-condensed table-bordered">
-
                 <tbody>
                 <tr>
                   <th class="text-center process-guadrail-approved">Level1</th>
@@ -172,8 +189,24 @@
               </table>  
             </div>
 
+            <div>
+              <label>SKU Detail Approval</label>
+                <span class="status-title-divide">
+                  <span>In/out:</span>
+                  <i class="fa fa-check-circle lr-padding10 table-icon-green" aria-hidden="true"></i>                
+                </span>
 
-            <label>SKU Detail Approval</label>
+                <span class="status-title-divide">
+                  <span>Revert:</span>
+                  <i class="fa fa-undo lr-padding10 table-icon-green" aria-hidden="true"></i>                
+                </span>
+
+                <span class="status-title-divide">
+                  <span>Follow:</span> 
+                  <i class="fa fa-clone lr-padding10 table-icon-green" aria-hidden="true"></i>                
+                </span>                                          
+            </div>  
+
             <div id="grid1" ui-grid="gridOptions" ui-grid-grouping class="grid"></div>
 
             <div class="top-padding20">
@@ -404,3 +437,4 @@
   </div>
 <!-- main content end-->
 </section>
+
