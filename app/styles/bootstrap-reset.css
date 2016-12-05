@@ -443,38 +443,29 @@ border-radius: 0px;
 /*********************************************************/
 /*Tooltip reset*/
 /*********************************************************/
-
-.tooltis-bg {
-  width: 300px;
-}
-
-.tooltips-header-default {
-  color: #fff;
-  background-color: #656565;
+.tooltips-header {
+  color: #656565;
+  background-color: #fff;
   padding: 0px 5px;
 }
 
-.tooltips-header-green {
-  color: #fff;
-  background-color: #00b388;
-  padding: 0px 5px;
+.tooltips-green {
+  color: #00b388;
 }
 
-.tooltips-header-yellow {
-  color: #fff;
-  background-color: #ffd042;
-  padding: 0px 5px;
+.tooltips-yellow {
+  color: #ffd042;
 }
 
-.tooltips-header-red {
-  color: #fff;
-  background-color: #f04953;
-  padding: 0px 5px;
+.tooltips-red {
+  color: #f04953;
 }
 
 .tooltips-content {
   color: #656565;
   background-color: #fff;
   /*opacity: .9;*/
-  padding: 5px 10px;
+  padding: 0px 10px;
+  padding-bottom: 5px;
+  line-height: 150%;
 }
