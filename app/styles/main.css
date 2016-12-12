@@ -998,11 +998,11 @@ button.ctm-content {
 }
 .vertical-center-view{
     padding-top: 150px;
-    margin-left: -20px;
+    margin: 0 auto;
 }
 .vertical-up-down {
-    padding-top: 140px;
-    padding-left: 10%;
+    padding-top: 150px;
+    margin: 0 auto;
 }
 
 .chart-header {
