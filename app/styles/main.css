@@ -1041,6 +1041,23 @@ button.ctm-content {
     text-align: left;
     opacity: 0.9;
 }
+#form-auth {
+    width: 600px;
+    display: inline-block;
+    position: relative;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    text-align: left;
+    opacity: 0.9;
+}
+.auth-text-wrapper {
+    text-align: center;
+    margin: 13px 0px 13px 0px;
+}
 .login-text-wrapper {
     text-align: center;
     margin: 9px 0px 13px 0px;
@@ -1260,7 +1277,7 @@ color: #fff;
     color: #ffd042;
 }
 .error {
-    color: #d62728;
+    color: #f04953;
 }
 
 .default {

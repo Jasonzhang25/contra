@@ -69,10 +69,6 @@ angular
         templateUrl: 'views/login.html',
         controller: 'loginCtrl'
       })
-      .when('/tooltips', {
-        templateUrl: 'views/tooltips.html',
-        controller: 'tooltipsCtrl'
-      })
       .when('/loading', {
         templateUrl: 'views/loading.html',
         controller: 'loadingCtrl'
@@ -122,7 +118,11 @@ angular
       .when('/scrollup', {
         templateUrl: 'views/scrollup.html',
         controller: 'scrollupCtrl'
-      })                                                             
+      })  
+      .when('/auth', {
+        templateUrl: 'views/authentication.html',
+        controller: 'authCtrl'
+      })                                                                  
       .otherwise({
         redirectTo: '/'
       });

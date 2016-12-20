@@ -14,12 +14,10 @@ angular.module('contraApp')
     $scope.warningFlag = false;
   };
 
-var siteNameLink = 
-'<div class="ui-grid-cell-contents" title="{{COL_FIELD}}"><a ui-sref="sites.site_card({siteid: row.entity._id})">{{COL_FIELD}}</a></div>';
 
   $scope.gridOptions = {
     columnDefs: [
-      {field: 'In',  width: 80, cellTemplate: '<span class="bg-green">opt-in</span>'},      
+      {field: 'In',  width: 80, cellTemplate: '<span class="bg-green">opt-in</span>',  pinnedLeft:true},      
       {field: 'Out',  width: 80, cellTemplate: '<span class="bg-red">opt-out</span>'},
       {field: 'Updated',  width: 80, cellTemplate: '<span class="bg-green">updated</span>'},   
       {field: 'Added',  width: 80, cellTemplate: '<span class="bg-green">added</span>'},   
@@ -31,10 +29,7 @@ var siteNameLink =
       {field: 'Follow',  width: 80, cellTemplate: '<i class="fa fa-clone table-icon-green" aria-hidden="true"></i>'},                                  
       
       { name: 'name', cellTooltip: '<div class="tooltips-header"><label>Tooltip Name</label></div><div class="tooltips-content">This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all \'No Touch\' deals that will be active across EMEA during the duration of the event</div>',  width: 200 },
-      { name: 'gender',cellTooltip: 
-        function( row, col ) {
-          return 'Title: ' + row.entity.name + ' Content: ' + row.entity.company;
-        }, width: 100},
+      { name: 'gender', width: 100},
       { name: 'age', width: 100 },
       { name: 'company', width: 200 },
       { name: 'registered', width: 300 },
@@ -75,7 +70,7 @@ var siteNameLink =
  
   $scope.getAggregates = function() {
     var aggregatesTree = [];
-    var gender
+    var gender;
  
     var recursiveExtract = function( treeChildren ) {
       return treeChildren.map( function( node ) {
