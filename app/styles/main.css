@@ -1404,6 +1404,9 @@ color: #fff;
 .top-margin10 {
     margin-top: 10px;
 }
+.top-margin-10 {
+    margin-top: -10px;
+}
 .lr-margin10 {
     margin-left: 10px;
     margin-right: 10px;
@@ -1422,6 +1425,9 @@ color: #fff;
 }
 .right-margin10 {
     margin-right: 10px;
+}
+.right-margin15 {
+    margin-right: 15px;
 }
 .right-margin20 {
     margin-right: 20px;
@@ -1678,4 +1684,23 @@ input[type="checkbox"]:checked + span:before {
         text-decoration: none;
         }
 
+/* click panel header can open or close panel body*/
+/***************************************************/
+.accordion-toggle { 
+    display: block; 
+}
+.panel-title>a:focus, .panel-title>a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.panel-group {
+    margin-bottom: 10px;
+}
 
+.small-text {
+    font-size: 80%;
+}
+
+.ui-grid-cell.ui-grid-disable-selection.ui-grid-row-header-cell {
+  pointer-events: auto;
+}

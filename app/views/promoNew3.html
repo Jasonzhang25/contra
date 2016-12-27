@@ -52,7 +52,16 @@
         </ul>
       </div>
 
-      <div id="myTabContent" class="tab-content top-margin10">
+      <uib-accordion>
+          <div uib-accordion-group class="panel-default" is-open="status.open">
+            <uib-accordion-heading>
+            Event Design <span class="small-text">(Show/Hide)</span> <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+            </uib-accordion-heading>
+              add your content          
+          </div>
+      </uib-accordion>
+
+      <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade in active" id="Tab1">
           <div class="row">
             <div class="col-sm-12 col-md-12  col-lgf-12">
@@ -115,16 +124,16 @@
                           <tr>
 
                             <td>Total NTP Spend</td>
-                            <td colspan="3" class="table-hcenter ng-binding" ng-bind="BusinessCase.TotalNTPSpeed|currency:'$':0">$305,601</td>
+                            <td colspan="3" class="table-hcenter ng-binding">$305,601</td>
                           </tr>
                           <tr>
                             <th>ROI Analysis</th>
-                            <td colspan="4" class="table-hcenter ng-binding" ng-bind="BusinessCase.ROIAnalysis|Percentage">-362.0%</td>
+                            <td colspan="4" class="table-hcenter ng-binding">-362.0%</td>
                           </tr>
                           <tr>
                             <th>Volume Feasibility</th>
-                            <td colspan="2" class="table-hcenter ng-binding" ng-bind="BusinessCase.FeasibilityAnalysisBase|Percentage">-30.0%</td>
-                            <td colspan="2" class="table-hcenter ng-binding" ng-bind="BusinessCase.FeasibilityAnalysisHistorical|Percentage">50.0%</td>
+                            <td colspan="2" class="table-hcenter ng-binding">-30.0%</td>
+                            <td colspan="2" class="table-hcenter ng-binding">50.0%</td>
                           </tr>
                           <tr>
                             <th>Event Duration</th>

@@ -29,9 +29,9 @@ angular.module('contraApp')
       {field: 'Follow',  width: 80, cellTemplate: '<i class="fa fa-clone table-icon-green" aria-hidden="true"></i>'},                                  
       
       { name: 'name', cellTooltip: '<div class="tooltips-header"><label>Tooltip Name</label></div><div class="tooltips-content">This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all \'No Touch\' deals that will be active across EMEA during the duration of the event</div>',  width: 200 },
-      { name: 'gender', width: 100},
+      { name: 'name', width: 100},
       { name: 'age', width: 100 },
-      { name: 'company', width: 200 },
+      { name: 'company', cellTemplate: '<div class="input-group"><div class="row"><label class="col-md-4"><input type="radio" name="type" value="Approved"><span>Approved</span></label><label class="col-md-4"><input input type="radio" name="type" value="Pending"><span>Pending</span></label><label class="col-md-4"><input input type="radio" name="type" value="Reject"><span>Reject</span></label></div></div>', width: 300 },
       { name: 'registered', width: 300 },
       { name: 'state',  width: 100 },
       { name: 'balance', minWidth: 160}

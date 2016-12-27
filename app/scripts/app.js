@@ -28,6 +28,7 @@ angular
     'mgcrea.ngStrap',
     'ui.grid.expandable',
     'ui.grid.pinning',
+    'ui.grid.selection'
   ])
   .config(['$locationProvider' ,'$routeProvider',
 
