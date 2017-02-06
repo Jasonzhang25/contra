@@ -190,7 +190,8 @@
                   <div class="col-sm-5 col-md-2  col-lgf-1 col-h">
                     <label class="nowrap">Previous Plan:</label>
                   </div>
-                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h">
+                  <div class="col-sm-7 col-md-4  col-lgf-3 col-h" ng-controller="DemoCtrl as ctrl">
+                  <!--use ui.select to replace it.
                     <div class="dropdown input-group">
                       <button type="button" id="dropdownMenu2" 
                           data-toggle="dropdown" class="btn btn-default form-control ctm-content">
@@ -216,7 +217,13 @@
                         </li>
                       </ul>
                     </div>
-                      
+                  -->  
+                    <ui-select ng-model="ctrl.person.selected" theme="bootstrap">
+                      <ui-select-match placeholder="Choose...">{{$select.selected.name}}</ui-select-match>
+                      <ui-select-choices repeat="item in ctrl.people | filter: $select.search">
+                        <div ng-bind-html="item.name | highlight: $select.search"></div>
+                      </ui-select-choices>
+                    </ui-select>
                   </div>
 
 
@@ -299,6 +306,8 @@
 
           <div class="panel-body">
             <nvd3 options='options' data='data'></nvd3>
+
+            <div class="text-center" style="height: 300px; padding-top:140px; font-size: 20px; font-weight: 700">Historical data not available</div>
           </div>
 
         </section>
