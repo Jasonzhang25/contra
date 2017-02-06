@@ -28,7 +28,9 @@ angular
     'mgcrea.ngStrap',
     'ui.grid.expandable',
     'ui.grid.pinning',
-    'ui.grid.selection'
+    'ui.grid.selection',
+    'angular-loading-bar',
+    'ui.select'
   ])
   .config(['$locationProvider' ,'$routeProvider',
 
@@ -128,4 +130,10 @@ angular
         redirectTo: '/'
       });
   }
-  ]);
+  ])
+  .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.spinnerTemplate = '<div id="blocker"><div class="loading">Loading...</div><div class="cssload-container"><div class="cssload-speeding-wheel"></div></div></div>';
+
+    cfpLoadingBarProvider.loadingBarTemplate = '<div id="loading-bar"><div class="bar"><div class="peg"></div></div></div>';
+  }])
+;
