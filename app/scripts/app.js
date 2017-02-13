@@ -30,7 +30,8 @@ angular
     'ui.grid.pinning',
     'ui.grid.selection',
     'angular-loading-bar',
-    'ui.select'
+    'ui.select',
+    'frapontillo.bootstrap-switch'    
   ])
   .config(['$locationProvider' ,'$routeProvider',
 

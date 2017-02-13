@@ -6,6 +6,19 @@ angular.module('contraApp')
   $scope.isPromoNew4Active = true;
   $scope.warningFlag = false;
 
+  $scope.isSelected = 'yep'; 
+  $scope.onText = 'On';
+  $scope.offText = 'Off';
+  $scope.isActive = true;
+  $scope.size = 'mini';
+  $scope.animate = true;
+  $scope.radioOff = true;
+  $scope.handleWidth = "auto";
+  $scope.labelWidth = "auto";
+  $scope.trueValue = 'yep',
+  $scope.falseValue = 'nope',
+  $scope.inverse = true;  
+
   $scope.setWarningFlag = function(){
     $scope.warningFlag = true;
   };
@@ -23,7 +36,7 @@ angular.module('contraApp')
       {field: 'Added',  width: 80, cellTemplate: '<span class="bg-green">added</span>'},   
       {field: 'None',  width: 80, cellTemplate: '<span class="bg-gray">none</span>'}, 
 
-      {field: 'In/Out',  width: 80, cellTemplate: '<a href="" title="<div class=\'tooltips-header\'><label>Tooltip Name</label></div><div class=\'tooltips-content\'>Description: This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all \'No Touch\' deals that will be active across EMEA during the duration of the event.</div><div class=\'tooltips-content top-padding5\'>Rule:<br /><span class=\'tooltips-green\'>GREEN:</span> If 0% <= ROI <= 10% <br /><span class=\'tooltips-yellow\'>AMBER:</span> If 10% < ROI <= 20% <br /><span class=\'tooltips-red\'>RED:</span> If ROI <0% or ROI > 20%</div>"><i class="fa fa-check-circle table-icon-green" aria-hidden="true"></i></a> <a href="" title="<div class=\'tooltips-header\'><label>Tooltip Name</label></div><div class=\'tooltips-content\'>Description: This guardrail checks the Adjusted Net Price against the BD net price of the SKU present in all \'No Touch\' deals that will be active across EMEA during the duration of the event.</div><div class=\'tooltips-content top-padding5\'>Rule:<br /><span class=\'tooltips-green\'>GREEN:</span> If 0% <= ROI <= 10% <br /><span class=\'tooltips-yellow\'>AMBER:</span> If 10% < ROI <= 20% <br /><span class=\'tooltips-red\'>RED:</span> If ROI <0% or ROI > 20%</div>"><i class="fa fa-check-circle table-icon-gray" aria-hidden="true"></i></a>'},
+      {field: 'In/Out',  width: 80, cellTemplate: '<div style="align: center"><input bs-switch ng-model="isSelected" type="checkbox" switch-active="{{ isActive }}" switch-on-text="In" switch-off-text="Out" switch-on-color="{{ onColor }}" switch-off-color="{{ offColor }}" switch-animate="{{ animate }}" switch-size="mini" switch-label="" switch-icon="{{ icon }}" switch-radio-off="{{ radioOff }}" switch-label-width="{{ labelWidth }}" switch-handle-width="{{ handleWidth }}" switch-wrapper="{{ wrapper }}" ng-true-value="yep" ng-false-value="{{ falseValue }}" switch-inverse= "{{ inverse }}"></div>'},
       {field: 'In/Out',  width: 80, cellTemplate: '<i class="fa fa-check-circle table-icon-gray" aria-hidden="true"></i>'},        
       {field: 'Revert',  width: 80, cellTemplate: '<i class="fa fa-undo table-icon-green" aria-hidden="true"></i>'},   
       {field: 'Follow',  width: 80, cellTemplate: '<i class="fa fa-clone table-icon-green" aria-hidden="true"></i>'},                                  
